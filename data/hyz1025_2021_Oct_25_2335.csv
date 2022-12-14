@@ -1,5 +1,0 @@
-﻿PreCondName,TrgCol,PreConditiong.thisRepN,PreConditiong.thisTrialN,PreConditiong.thisN,PreConditiong.thisIndex,InstrBkg.started,InstrBkg.stopped,TagFig.started,TagFig.stopped,InstrKeyResp.keys,InstrKeyResp.rt,InstrKeyResp.started,InstrKeyResp.stopped,precondBkg.started,precondBkg.stopped,imagePreCond.started,imagePreCond.stopped,BlankBkg.started,BlankBkg.stopped,participant,session,date,expName,psychopyVersion,frameRate,
-,,,,,,41.33666999998968,None,41.33666999998968,None,space,4.425581399991643,41.33666999998968,None,,,,,,,hyz1025,001,2021_Oct_25_2335,FigureTest,2021.2.1,59.40027110704533,
-PreCondition\CS-.BMP,0.4,0,0,0,13,,,,,,,,,45.81048929999815,None,45.81048929999815,None,51.8070841000299,None,hyz1025,001,2021_Oct_25_2335,FigureTest,2021.2.1,59.40027110704533,
-PreCondition\CS+.BMP,-0.1,0,1,1,1,,,,,,,,,58.082260700000916,None,58.082260700000916,64.07222750002984,64.08873419999145,None,hyz1025,001,2021_Oct_25_2335,FigureTest,2021.2.1,59.40027110704533,
-PreCondition\CS-.BMP,0.4,0,2,2,12,,,,,,,,,70.14696400001412,None,70.14696400001412,76.1387557000271,76.15532319998601,None,hyz1025,001,2021_Oct_25_2335,FigureTest,2021.2.1,59.40027110704533,
