@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Thu Dec  1 06:12:08 2022
+    on Wed Dec 14 03:43:33 2022
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participan
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2022_11_TCET_Task/2022_11_TCET_Faissal_Test4_1129/FigureViewingCS_Huang_v3_1101_lastrun.py',
+    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2022_11_TCET_Task/2022_11_TCET_Faissal_Test4_1129/FigureViewingCS_Huang_v3_1101 (1)_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -99,7 +99,7 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 import random
 parallelTrigger = False
 
-isChinese = True
+isChinese = False
 
 if isChinese == True:
     instructionFolder = 'Instructions_CN'
