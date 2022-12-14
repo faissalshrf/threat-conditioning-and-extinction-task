@@ -1,0 +1,778 @@
+3.5398 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+3.6919 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+4.3186 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+4.4785 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+13.9105 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000256DD669FD0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000256DD6BC470>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+13.9106 	EXP 	window1: mouseVisible = True
+13.9106 	EXP 	window1: recordFrameIntervals = False
+14.0771 	EXP 	window1: recordFrameIntervals = True
+14.2606 	EXP 	window1: recordFrameIntervals = False
+14.8193 	EXP 	Created InstrBkg3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='InstrBkg3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+22.2057 	EXP 	Created TagFig3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='InstructionExtinction.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+22.2071 	EXP 	Created ExtBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='ExtBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+22.2704 	EXP 	Created Ext_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Ext_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 1. ]), texRes=128.0, units='norm', win=Window(...))
+22.2717 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1, name='BlankBkg', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+22.2729 	EXP 	Created Bkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='Bkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+22.2778 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+22.2851 	EXP 	window1: mouseVisible = True
+22.3484 	EXP 	Created Scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-2, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelHeight=0.05, labelWrapWidth=None, labels=list(...), name='Scale', opacity=None, pos=(0, -0.6), readOnly=False, self=UNKNOWN, size=(1.2, 0.05), startValue=None, style=method-wrapper(...), styleTweaks=method-wrapper(...), ticks=array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10]), units='norm', win=Window(...))
+22.3632 	EXP 	Created EndTxt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Microsoft YaHei', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='EndTxt', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='谢谢您的参与！', units='norm', win=Window(...), wrapWidth=1)
+22.4660 	EXP 	Scale: autoLog = True
+22.4660 	EXP 	Scale: markerPos = None
+22.4660 	EXP 	Scale: rating = None
+22.4660 	EXP 	Scale: markerPos = None
+22.4660 	EXP 	Scale: contrast = 1.0
+22.4660 	EXP 	Scale: autoLog = True
+22.4660 	EXP 	Scale: styleTweaks = []
+22.4660 	EXP 	Scale: style = 'rating'
+22.4660 	EXP 	Scale: styleTweaks = []
+22.4660 	EXP 	InstrBkg3: autoDraw = True
+22.4660 	EXP 	TagFig3: autoDraw = True
+25.1710 	DATA 	Keypress: space
+25.1791 	EXP 	Created sequence: sequential, trialTypes=1, nReps=3, seed=None
+25.1792 	EXP 	New trial (rep=0, index=0): None
+25.1874 	EXP 	Imported Extinction1.xlsx as conditions, 20 conditions, 2 params
+25.1877 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+25.1879 	EXP 	New trial (rep=0, index=0): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+25.2119 	EXP 	InstrBkg3: autoDraw = False
+25.2119 	EXP 	TagFig3: autoDraw = False
+25.2119 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+25.2119 	EXP 	ExtBkg: autoDraw = True
+25.2119 	EXP 	Ext_image: autoDraw = True
+26.2092 	EXP 	ExtBkg: autoDraw = False
+26.2092 	EXP 	Ext_image: autoDraw = False
+26.2092 	EXP 	BlankBkg: autoDraw = True
+26.4282 	EXP 	New trial (rep=0, index=1): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+26.4499 	EXP 	BlankBkg: autoDraw = False
+26.4499 	EXP 	BlankBkg: autoDraw = False
+26.4499 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+26.4499 	EXP 	ExtBkg: autoDraw = True
+26.4499 	EXP 	Ext_image: autoDraw = True
+27.4438 	EXP 	ExtBkg: autoDraw = False
+27.4438 	EXP 	Ext_image: autoDraw = False
+27.4438 	EXP 	BlankBkg: autoDraw = True
+27.5790 	EXP 	New trial (rep=0, index=2): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+27.5923 	EXP 	BlankBkg: autoDraw = False
+27.5923 	EXP 	BlankBkg: autoDraw = False
+27.5923 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+27.5923 	EXP 	ExtBkg: autoDraw = True
+27.5923 	EXP 	Ext_image: autoDraw = True
+28.5935 	EXP 	ExtBkg: autoDraw = False
+28.5935 	EXP 	Ext_image: autoDraw = False
+28.5935 	EXP 	ExtBkg: autoDraw = False
+28.5935 	EXP 	Ext_image: autoDraw = False
+28.5935 	EXP 	BlankBkg: autoDraw = True
+28.7289 	EXP 	New trial (rep=0, index=3): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+28.7422 	EXP 	BlankBkg: autoDraw = False
+28.7422 	EXP 	BlankBkg: autoDraw = False
+28.7422 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+28.7422 	EXP 	ExtBkg: autoDraw = True
+28.7422 	EXP 	Ext_image: autoDraw = True
+29.7422 	EXP 	ExtBkg: autoDraw = False
+29.7422 	EXP 	Ext_image: autoDraw = False
+29.7422 	EXP 	ExtBkg: autoDraw = False
+29.7422 	EXP 	Ext_image: autoDraw = False
+29.7422 	EXP 	BlankBkg: autoDraw = True
+29.8271 	EXP 	New trial (rep=0, index=4): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+29.8420 	EXP 	BlankBkg: autoDraw = False
+29.8420 	EXP 	BlankBkg: autoDraw = False
+29.8420 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+29.8420 	EXP 	ExtBkg: autoDraw = True
+29.8420 	EXP 	Ext_image: autoDraw = True
+30.8424 	EXP 	ExtBkg: autoDraw = False
+30.8424 	EXP 	Ext_image: autoDraw = False
+30.8424 	EXP 	ExtBkg: autoDraw = False
+30.8424 	EXP 	Ext_image: autoDraw = False
+30.8424 	EXP 	BlankBkg: autoDraw = True
+30.9436 	EXP 	New trial (rep=0, index=5): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+30.9588 	EXP 	BlankBkg: autoDraw = False
+30.9588 	EXP 	BlankBkg: autoDraw = False
+30.9588 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+30.9588 	EXP 	ExtBkg: autoDraw = True
+30.9588 	EXP 	Ext_image: autoDraw = True
+31.9586 	EXP 	ExtBkg: autoDraw = False
+31.9586 	EXP 	Ext_image: autoDraw = False
+31.9586 	EXP 	ExtBkg: autoDraw = False
+31.9586 	EXP 	Ext_image: autoDraw = False
+31.9586 	EXP 	BlankBkg: autoDraw = True
+31.9982 	EXP 	New trial (rep=0, index=6): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+32.0124 	EXP 	BlankBkg: autoDraw = False
+32.0124 	EXP 	BlankBkg: autoDraw = False
+32.0124 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+32.0124 	EXP 	ExtBkg: autoDraw = True
+32.0124 	EXP 	Ext_image: autoDraw = True
+33.0252 	EXP 	ExtBkg: autoDraw = False
+33.0252 	EXP 	Ext_image: autoDraw = False
+33.0252 	EXP 	BlankBkg: autoDraw = True
+33.1315 	EXP 	New trial (rep=0, index=7): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+33.1687 	EXP 	BlankBkg: autoDraw = False
+33.1687 	EXP 	BlankBkg: autoDraw = False
+33.1687 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+33.1687 	EXP 	ExtBkg: autoDraw = True
+33.1687 	EXP 	Ext_image: autoDraw = True
+34.1583 	EXP 	ExtBkg: autoDraw = False
+34.1583 	EXP 	Ext_image: autoDraw = False
+34.1583 	EXP 	BlankBkg: autoDraw = True
+34.4145 	EXP 	New trial (rep=0, index=8): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+34.4345 	EXP 	BlankBkg: autoDraw = False
+34.4345 	EXP 	BlankBkg: autoDraw = False
+34.4345 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+34.4345 	EXP 	ExtBkg: autoDraw = True
+34.4345 	EXP 	Ext_image: autoDraw = True
+35.4423 	EXP 	ExtBkg: autoDraw = False
+35.4423 	EXP 	Ext_image: autoDraw = False
+35.4423 	EXP 	BlankBkg: autoDraw = True
+35.4940 	EXP 	New trial (rep=0, index=9): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+35.5183 	EXP 	BlankBkg: autoDraw = False
+35.5183 	EXP 	BlankBkg: autoDraw = False
+35.5183 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+35.5183 	EXP 	ExtBkg: autoDraw = True
+35.5183 	EXP 	Ext_image: autoDraw = True
+36.5097 	EXP 	ExtBkg: autoDraw = False
+36.5097 	EXP 	Ext_image: autoDraw = False
+36.5097 	EXP 	BlankBkg: autoDraw = True
+36.6763 	EXP 	New trial (rep=0, index=10): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+36.6993 	EXP 	BlankBkg: autoDraw = False
+36.6993 	EXP 	BlankBkg: autoDraw = False
+36.6993 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+36.6993 	EXP 	ExtBkg: autoDraw = True
+36.6993 	EXP 	Ext_image: autoDraw = True
+37.7077 	EXP 	ExtBkg: autoDraw = False
+37.7077 	EXP 	Ext_image: autoDraw = False
+37.7077 	EXP 	BlankBkg: autoDraw = True
+37.8772 	EXP 	New trial (rep=0, index=11): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+37.8912 	EXP 	BlankBkg: autoDraw = False
+37.8912 	EXP 	BlankBkg: autoDraw = False
+37.8912 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+37.8912 	EXP 	ExtBkg: autoDraw = True
+37.8912 	EXP 	Ext_image: autoDraw = True
+38.8909 	EXP 	ExtBkg: autoDraw = False
+38.8909 	EXP 	Ext_image: autoDraw = False
+38.8909 	EXP 	ExtBkg: autoDraw = False
+38.8909 	EXP 	Ext_image: autoDraw = False
+38.8909 	EXP 	BlankBkg: autoDraw = True
+39.0775 	EXP 	New trial (rep=0, index=12): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+39.0940 	EXP 	BlankBkg: autoDraw = False
+39.0940 	EXP 	BlankBkg: autoDraw = False
+39.0940 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+39.0940 	EXP 	ExtBkg: autoDraw = True
+39.0940 	EXP 	Ext_image: autoDraw = True
+40.1079 	EXP 	ExtBkg: autoDraw = False
+40.1079 	EXP 	Ext_image: autoDraw = False
+40.1079 	EXP 	BlankBkg: autoDraw = True
+40.4099 	EXP 	New trial (rep=0, index=13): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+40.4326 	EXP 	BlankBkg: autoDraw = False
+40.4326 	EXP 	BlankBkg: autoDraw = False
+40.4326 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+40.4326 	EXP 	ExtBkg: autoDraw = True
+40.4326 	EXP 	Ext_image: autoDraw = True
+41.4243 	EXP 	ExtBkg: autoDraw = False
+41.4243 	EXP 	Ext_image: autoDraw = False
+41.4243 	EXP 	BlankBkg: autoDraw = True
+41.5427 	EXP 	New trial (rep=0, index=14): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+41.5657 	EXP 	BlankBkg: autoDraw = False
+41.5657 	EXP 	BlankBkg: autoDraw = False
+41.5657 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+41.5657 	EXP 	ExtBkg: autoDraw = True
+41.5657 	EXP 	Ext_image: autoDraw = True
+42.5745 	EXP 	ExtBkg: autoDraw = False
+42.5745 	EXP 	Ext_image: autoDraw = False
+42.5745 	EXP 	BlankBkg: autoDraw = True
+42.7289 	EXP 	New trial (rep=0, index=15): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+42.7546 	EXP 	BlankBkg: autoDraw = False
+42.7546 	EXP 	BlankBkg: autoDraw = False
+42.7546 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+42.7546 	EXP 	ExtBkg: autoDraw = True
+42.7546 	EXP 	Ext_image: autoDraw = True
+43.7577 	EXP 	ExtBkg: autoDraw = False
+43.7577 	EXP 	Ext_image: autoDraw = False
+43.7577 	EXP 	BlankBkg: autoDraw = True
+43.9429 	EXP 	New trial (rep=0, index=16): {'ExtName': 'Extinction\\CS-1.BMP', 'TrgCol': 0.4}
+43.9573 	EXP 	BlankBkg: autoDraw = False
+43.9573 	EXP 	BlankBkg: autoDraw = False
+43.9573 	EXP 	Ext_image: image = 'Extinction\\CS-1.BMP'
+43.9573 	EXP 	ExtBkg: autoDraw = True
+43.9573 	EXP 	Ext_image: autoDraw = True
+44.9574 	EXP 	ExtBkg: autoDraw = False
+44.9574 	EXP 	Ext_image: autoDraw = False
+44.9574 	EXP 	ExtBkg: autoDraw = False
+44.9574 	EXP 	Ext_image: autoDraw = False
+44.9574 	EXP 	BlankBkg: autoDraw = True
+45.0257 	EXP 	New trial (rep=0, index=17): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+45.0496 	EXP 	BlankBkg: autoDraw = False
+45.0496 	EXP 	BlankBkg: autoDraw = False
+45.0496 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+45.0496 	EXP 	ExtBkg: autoDraw = True
+45.0496 	EXP 	Ext_image: autoDraw = True
+46.0413 	EXP 	ExtBkg: autoDraw = False
+46.0413 	EXP 	Ext_image: autoDraw = False
+46.0413 	EXP 	BlankBkg: autoDraw = True
+46.2296 	EXP 	New trial (rep=0, index=18): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+46.2513 	EXP 	BlankBkg: autoDraw = False
+46.2513 	EXP 	BlankBkg: autoDraw = False
+46.2513 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+46.2513 	EXP 	ExtBkg: autoDraw = True
+46.2513 	EXP 	Ext_image: autoDraw = True
+47.2573 	EXP 	ExtBkg: autoDraw = False
+47.2573 	EXP 	Ext_image: autoDraw = False
+47.2573 	EXP 	BlankBkg: autoDraw = True
+47.4425 	EXP 	New trial (rep=0, index=19): {'ExtName': 'Extinction\\CS+1.BMP', 'TrgCol': -0.1}
+47.4566 	EXP 	BlankBkg: autoDraw = False
+47.4566 	EXP 	BlankBkg: autoDraw = False
+47.4566 	EXP 	Ext_image: image = 'Extinction\\CS+1.BMP'
+47.4566 	EXP 	ExtBkg: autoDraw = True
+47.4566 	EXP 	Ext_image: autoDraw = True
+48.4584 	EXP 	ExtBkg: autoDraw = False
+48.4584 	EXP 	Ext_image: autoDraw = False
+48.4584 	EXP 	BlankBkg: autoDraw = True
+48.6127 	EXP 	Imported Rating1.xlsx as conditions, 2 conditions, 2 params
+48.6130 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+48.6131 	EXP 	New trial (rep=0, index=0): {'ratingName': 'Rating\\ratingCS+1.png', 'TrgCol': -0.1}
+52.6180 	EXP 	BlankBkg: autoDraw = False
+52.6180 	EXP 	BlankBkg: autoDraw = False
+52.6180 	EXP 	image: image = 'Rating\\ratingCS+1.png'
+52.6180 	EXP 	Scale: markerPos = None
+52.6180 	EXP 	Scale: markerPos = None
+52.6180 	EXP 	Scale: rating = None
+52.6180 	EXP 	Bkg: autoDraw = True
+52.6180 	EXP 	image: autoDraw = True
+52.6180 	EXP 	Scale: autoDraw = True
+53.6908 	DATA 	Mouse: Left button down, pos=(540,206)
+53.7085 	EXP 	Scale: markerPos = 2.2187499999999996
+53.7250 	EXP 	Scale: markerPos = 2.2187499999999996
+53.7415 	EXP 	Scale: markerPos = 2.2187499999999996
+53.7583 	EXP 	Scale: markerPos = 2.2187499999999996
+53.7750 	EXP 	Scale: markerPos = 2.2187499999999996
+53.7935 	EXP 	Scale: markerPos = 2.2187499999999996
+53.8096 	DATA 	Mouse:  Left button up, pos=(540,205)
+53.8108 	EXP 	Scale: markerPos = 2.2187499999999996
+53.8253 	EXP 	Scale: markerPos = 2.2187499999999996
+53.8253 	EXP 	Scale: rating = 2.2187499999999996
+53.8292 	EXP 	New trial (rep=0, index=1): {'ratingName': 'Rating\\ratingCS-1.png', 'TrgCol': 0.4}
+55.7366 	EXP 	Bkg: autoDraw = False
+55.7366 	EXP 	image: autoDraw = False
+55.7366 	EXP 	Scale: autoDraw = False
+55.7366 	EXP 	image: image = 'Rating\\ratingCS-1.png'
+55.7366 	EXP 	Scale: markerPos = None
+55.7366 	EXP 	Scale: markerPos = None
+55.7366 	EXP 	Scale: rating = None
+55.7366 	EXP 	Bkg: autoDraw = True
+55.7366 	EXP 	image: autoDraw = True
+55.7366 	EXP 	Scale: autoDraw = True
+56.3321 	DATA 	Mouse: Left button down, pos=(498,210)
+56.3323 	DATA 	Mouse:  Left button up, pos=(498,210)
+57.7407 	DATA 	Mouse: Left button down, pos=(481,211)
+57.7557 	EXP 	Scale: markerPos = 1.7578125
+57.7745 	EXP 	Scale: markerPos = 1.7578125
+57.7879 	EXP 	Scale: markerPos = 1.7578125
+57.8046 	EXP 	Scale: markerPos = 1.7578125
+57.8213 	EXP 	Scale: markerPos = 1.7578125
+57.8382 	EXP 	Scale: markerPos = 1.7578125
+57.8548 	EXP 	Scale: markerPos = 1.7578125
+57.8717 	EXP 	Scale: markerPos = 1.7578125
+57.8822 	DATA 	Mouse:  Left button up, pos=(481,212)
+57.8881 	EXP 	Scale: markerPos = 1.7578125
+57.9051 	EXP 	Scale: markerPos = 1.7578125
+57.9051 	EXP 	Scale: rating = 1.7578125
+57.9295 	EXP 	New trial (rep=1, index=0): None
+57.9372 	EXP 	Imported Extinction2.xlsx as conditions, 20 conditions, 2 params
+57.9376 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+57.9378 	EXP 	New trial (rep=0, index=0): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+57.9455 	EXP 	Bkg: autoDraw = False
+57.9455 	EXP 	image: autoDraw = False
+57.9455 	EXP 	Scale: autoDraw = False
+57.9455 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+57.9455 	EXP 	ExtBkg: autoDraw = True
+57.9455 	EXP 	Ext_image: autoDraw = True
+58.9549 	EXP 	ExtBkg: autoDraw = False
+58.9549 	EXP 	Ext_image: autoDraw = False
+58.9549 	EXP 	BlankBkg: autoDraw = True
+59.2251 	EXP 	New trial (rep=0, index=1): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+59.2453 	EXP 	BlankBkg: autoDraw = False
+59.2453 	EXP 	BlankBkg: autoDraw = False
+59.2453 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+59.2453 	EXP 	ExtBkg: autoDraw = True
+59.2453 	EXP 	Ext_image: autoDraw = True
+60.2534 	EXP 	ExtBkg: autoDraw = False
+60.2534 	EXP 	Ext_image: autoDraw = False
+60.2534 	EXP 	BlankBkg: autoDraw = True
+60.3383 	EXP 	New trial (rep=0, index=2): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+60.3533 	EXP 	BlankBkg: autoDraw = False
+60.3533 	EXP 	BlankBkg: autoDraw = False
+60.3533 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+60.3533 	EXP 	ExtBkg: autoDraw = True
+60.3533 	EXP 	Ext_image: autoDraw = True
+61.3534 	EXP 	ExtBkg: autoDraw = False
+61.3534 	EXP 	Ext_image: autoDraw = False
+61.3534 	EXP 	ExtBkg: autoDraw = False
+61.3534 	EXP 	Ext_image: autoDraw = False
+61.3534 	EXP 	BlankBkg: autoDraw = True
+61.4437 	EXP 	New trial (rep=0, index=3): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+61.4594 	EXP 	BlankBkg: autoDraw = False
+61.4594 	EXP 	BlankBkg: autoDraw = False
+61.4594 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+61.4594 	EXP 	ExtBkg: autoDraw = True
+61.4594 	EXP 	Ext_image: autoDraw = True
+62.4716 	EXP 	ExtBkg: autoDraw = False
+62.4716 	EXP 	Ext_image: autoDraw = False
+62.4716 	EXP 	BlankBkg: autoDraw = True
+62.4747 	EXP 	New trial (rep=0, index=4): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+62.4930 	EXP 	BlankBkg: autoDraw = False
+62.4930 	EXP 	BlankBkg: autoDraw = False
+62.4930 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+62.4930 	EXP 	ExtBkg: autoDraw = True
+62.4930 	EXP 	Ext_image: autoDraw = True
+63.5030 	EXP 	ExtBkg: autoDraw = False
+63.5030 	EXP 	Ext_image: autoDraw = False
+63.5030 	EXP 	BlankBkg: autoDraw = True
+63.6384 	EXP 	New trial (rep=0, index=5): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+63.6529 	EXP 	BlankBkg: autoDraw = False
+63.6529 	EXP 	BlankBkg: autoDraw = False
+63.6529 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+63.6529 	EXP 	ExtBkg: autoDraw = True
+63.6529 	EXP 	Ext_image: autoDraw = True
+64.6543 	EXP 	ExtBkg: autoDraw = False
+64.6543 	EXP 	Ext_image: autoDraw = False
+64.6543 	EXP 	ExtBkg: autoDraw = False
+64.6543 	EXP 	Ext_image: autoDraw = False
+64.6543 	EXP 	BlankBkg: autoDraw = True
+64.7566 	EXP 	New trial (rep=0, index=6): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+64.7706 	EXP 	BlankBkg: autoDraw = False
+64.7706 	EXP 	BlankBkg: autoDraw = False
+64.7706 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+64.7706 	EXP 	ExtBkg: autoDraw = True
+64.7706 	EXP 	Ext_image: autoDraw = True
+65.7703 	EXP 	ExtBkg: autoDraw = False
+65.7703 	EXP 	Ext_image: autoDraw = False
+65.7703 	EXP 	ExtBkg: autoDraw = False
+65.7703 	EXP 	Ext_image: autoDraw = False
+65.7703 	EXP 	BlankBkg: autoDraw = True
+65.8716 	EXP 	New trial (rep=0, index=7): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+65.8864 	EXP 	BlankBkg: autoDraw = False
+65.8864 	EXP 	BlankBkg: autoDraw = False
+65.8864 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+65.8864 	EXP 	ExtBkg: autoDraw = True
+65.8864 	EXP 	Ext_image: autoDraw = True
+66.8866 	EXP 	ExtBkg: autoDraw = False
+66.8866 	EXP 	Ext_image: autoDraw = False
+66.8866 	EXP 	ExtBkg: autoDraw = False
+66.8866 	EXP 	Ext_image: autoDraw = False
+66.8866 	EXP 	BlankBkg: autoDraw = True
+66.9892 	EXP 	New trial (rep=0, index=8): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+67.0048 	EXP 	BlankBkg: autoDraw = False
+67.0048 	EXP 	BlankBkg: autoDraw = False
+67.0048 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+67.0048 	EXP 	ExtBkg: autoDraw = True
+67.0048 	EXP 	Ext_image: autoDraw = True
+68.0038 	EXP 	ExtBkg: autoDraw = False
+68.0038 	EXP 	Ext_image: autoDraw = False
+68.0038 	EXP 	ExtBkg: autoDraw = False
+68.0038 	EXP 	Ext_image: autoDraw = False
+68.0038 	EXP 	BlankBkg: autoDraw = True
+68.1923 	EXP 	New trial (rep=0, index=9): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+68.2144 	EXP 	BlankBkg: autoDraw = False
+68.2144 	EXP 	BlankBkg: autoDraw = False
+68.2144 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+68.2144 	EXP 	ExtBkg: autoDraw = True
+68.2144 	EXP 	Ext_image: autoDraw = True
+69.2196 	EXP 	ExtBkg: autoDraw = False
+69.2196 	EXP 	Ext_image: autoDraw = False
+69.2196 	EXP 	BlankBkg: autoDraw = True
+69.2712 	EXP 	New trial (rep=0, index=10): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+69.2860 	EXP 	BlankBkg: autoDraw = False
+69.2860 	EXP 	BlankBkg: autoDraw = False
+69.2860 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+69.2860 	EXP 	ExtBkg: autoDraw = True
+69.2860 	EXP 	Ext_image: autoDraw = True
+70.2869 	EXP 	ExtBkg: autoDraw = False
+70.2869 	EXP 	Ext_image: autoDraw = False
+70.2869 	EXP 	ExtBkg: autoDraw = False
+70.2869 	EXP 	Ext_image: autoDraw = False
+70.2869 	EXP 	BlankBkg: autoDraw = True
+70.4208 	EXP 	New trial (rep=0, index=11): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+70.4357 	EXP 	BlankBkg: autoDraw = False
+70.4357 	EXP 	BlankBkg: autoDraw = False
+70.4357 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+70.4357 	EXP 	ExtBkg: autoDraw = True
+70.4357 	EXP 	Ext_image: autoDraw = True
+71.4361 	EXP 	ExtBkg: autoDraw = False
+71.4361 	EXP 	Ext_image: autoDraw = False
+71.4361 	EXP 	ExtBkg: autoDraw = False
+71.4361 	EXP 	Ext_image: autoDraw = False
+71.4361 	EXP 	BlankBkg: autoDraw = True
+71.6386 	EXP 	New trial (rep=0, index=12): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+71.6534 	EXP 	BlankBkg: autoDraw = False
+71.6534 	EXP 	BlankBkg: autoDraw = False
+71.6534 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+71.6534 	EXP 	ExtBkg: autoDraw = True
+71.6534 	EXP 	Ext_image: autoDraw = True
+72.6524 	EXP 	ExtBkg: autoDraw = False
+72.6524 	EXP 	Ext_image: autoDraw = False
+72.6524 	EXP 	ExtBkg: autoDraw = False
+72.6524 	EXP 	Ext_image: autoDraw = False
+72.6524 	EXP 	BlankBkg: autoDraw = True
+72.8875 	EXP 	New trial (rep=0, index=13): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+72.9021 	EXP 	BlankBkg: autoDraw = False
+72.9021 	EXP 	BlankBkg: autoDraw = False
+72.9021 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+72.9021 	EXP 	ExtBkg: autoDraw = True
+72.9021 	EXP 	Ext_image: autoDraw = True
+73.9021 	EXP 	ExtBkg: autoDraw = False
+73.9021 	EXP 	Ext_image: autoDraw = False
+73.9021 	EXP 	ExtBkg: autoDraw = False
+73.9021 	EXP 	Ext_image: autoDraw = False
+73.9021 	EXP 	BlankBkg: autoDraw = True
+74.0066 	EXP 	New trial (rep=0, index=14): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+74.0246 	EXP 	BlankBkg: autoDraw = False
+74.0246 	EXP 	BlankBkg: autoDraw = False
+74.0246 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+74.0246 	EXP 	ExtBkg: autoDraw = True
+74.0246 	EXP 	Ext_image: autoDraw = True
+75.0371 	EXP 	ExtBkg: autoDraw = False
+75.0371 	EXP 	Ext_image: autoDraw = False
+75.0371 	EXP 	BlankBkg: autoDraw = True
+75.0555 	EXP 	New trial (rep=0, index=15): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+75.0703 	EXP 	BlankBkg: autoDraw = False
+75.0703 	EXP 	BlankBkg: autoDraw = False
+75.0703 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+75.0703 	EXP 	ExtBkg: autoDraw = True
+75.0703 	EXP 	Ext_image: autoDraw = True
+76.0854 	EXP 	ExtBkg: autoDraw = False
+76.0854 	EXP 	Ext_image: autoDraw = False
+76.0854 	EXP 	BlankBkg: autoDraw = True
+76.2913 	EXP 	New trial (rep=0, index=16): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+76.3145 	EXP 	BlankBkg: autoDraw = False
+76.3145 	EXP 	BlankBkg: autoDraw = False
+76.3145 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+76.3145 	EXP 	ExtBkg: autoDraw = True
+76.3145 	EXP 	Ext_image: autoDraw = True
+77.3185 	EXP 	ExtBkg: autoDraw = False
+77.3185 	EXP 	Ext_image: autoDraw = False
+77.3185 	EXP 	BlankBkg: autoDraw = True
+77.4369 	EXP 	New trial (rep=0, index=17): {'ExtName': 'Extinction\\CS+2.BMP', 'TrgCol': -0.1}
+77.4517 	EXP 	BlankBkg: autoDraw = False
+77.4517 	EXP 	BlankBkg: autoDraw = False
+77.4517 	EXP 	Ext_image: image = 'Extinction\\CS+2.BMP'
+77.4517 	EXP 	ExtBkg: autoDraw = True
+77.4517 	EXP 	Ext_image: autoDraw = True
+78.4519 	EXP 	ExtBkg: autoDraw = False
+78.4519 	EXP 	Ext_image: autoDraw = False
+78.4519 	EXP 	ExtBkg: autoDraw = False
+78.4519 	EXP 	Ext_image: autoDraw = False
+78.4519 	EXP 	BlankBkg: autoDraw = True
+78.5204 	EXP 	New trial (rep=0, index=18): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+78.5348 	EXP 	BlankBkg: autoDraw = False
+78.5348 	EXP 	BlankBkg: autoDraw = False
+78.5348 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+78.5348 	EXP 	ExtBkg: autoDraw = True
+78.5348 	EXP 	Ext_image: autoDraw = True
+79.5349 	EXP 	ExtBkg: autoDraw = False
+79.5349 	EXP 	Ext_image: autoDraw = False
+79.5349 	EXP 	ExtBkg: autoDraw = False
+79.5349 	EXP 	Ext_image: autoDraw = False
+79.5349 	EXP 	BlankBkg: autoDraw = True
+79.7243 	EXP 	New trial (rep=0, index=19): {'ExtName': 'Extinction\\CS-2.BMP', 'TrgCol': 0.4}
+79.7398 	EXP 	BlankBkg: autoDraw = False
+79.7398 	EXP 	BlankBkg: autoDraw = False
+79.7398 	EXP 	Ext_image: image = 'Extinction\\CS-2.BMP'
+79.7398 	EXP 	ExtBkg: autoDraw = True
+79.7398 	EXP 	Ext_image: autoDraw = True
+80.7517 	EXP 	ExtBkg: autoDraw = False
+80.7517 	EXP 	Ext_image: autoDraw = False
+80.7517 	EXP 	BlankBkg: autoDraw = True
+80.8040 	EXP 	Imported Rating2.xlsx as conditions, 2 conditions, 2 params
+80.8042 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+80.8044 	EXP 	New trial (rep=0, index=0): {'ratingName': 'Rating\\ratingCS+2.png', 'TrgCol': -0.1}
+82.2601 	EXP 	BlankBkg: autoDraw = False
+82.2601 	EXP 	BlankBkg: autoDraw = False
+82.2601 	EXP 	image: image = 'Rating\\ratingCS+2.png'
+82.2601 	EXP 	Scale: markerPos = None
+82.2601 	EXP 	Scale: markerPos = None
+82.2601 	EXP 	Scale: rating = None
+82.2601 	EXP 	Bkg: autoDraw = True
+82.2601 	EXP 	image: autoDraw = True
+82.2601 	EXP 	Scale: autoDraw = True
+88.2345 	DATA 	Mouse: Left button down, pos=(538,200)
+88.3384 	DATA 	Mouse:  Left button up, pos=(539,200)
+88.6667 	DATA 	Mouse: Left button down, pos=(532,223)
+88.6849 	EXP 	Scale: markerPos = 2.15625
+88.6956 	EXP 	Scale: markerPos = 2.15625
+88.7135 	EXP 	Scale: markerPos = 2.15625
+88.7295 	EXP 	Scale: markerPos = 2.15625
+88.7456 	EXP 	Scale: markerPos = 2.15625
+88.7635 	EXP 	Scale: markerPos = 2.15625
+88.7782 	DATA 	Mouse:  Left button up, pos=(532,223)
+88.7797 	EXP 	Scale: markerPos = 2.15625
+88.7957 	EXP 	Scale: markerPos = 2.15625
+88.7957 	EXP 	Scale: rating = 2.15625
+88.8002 	EXP 	New trial (rep=0, index=1): {'ratingName': 'Rating\\ratingCS-2.png', 'TrgCol': 0.4}
+90.2871 	EXP 	Bkg: autoDraw = False
+90.2871 	EXP 	image: autoDraw = False
+90.2871 	EXP 	Scale: autoDraw = False
+90.2871 	EXP 	image: image = 'Rating\\ratingCS-2.png'
+90.2871 	EXP 	Scale: markerPos = None
+90.2871 	EXP 	Scale: markerPos = None
+90.2871 	EXP 	Scale: rating = None
+90.2871 	EXP 	Bkg: autoDraw = True
+90.2871 	EXP 	image: autoDraw = True
+90.2871 	EXP 	Scale: autoDraw = True
+90.6460 	DATA 	Mouse: Left button down, pos=(476,209)
+90.6694 	EXP 	Scale: markerPos = 1.71875
+90.6858 	EXP 	Scale: markerPos = 1.71875
+90.7026 	EXP 	Scale: markerPos = 1.71875
+90.7206 	EXP 	Scale: markerPos = 1.71875
+90.7385 	EXP 	Scale: markerPos = 1.71875
+90.7526 	EXP 	Scale: markerPos = 1.71875
+90.7695 	EXP 	Scale: markerPos = 1.71875
+90.7718 	DATA 	Mouse:  Left button up, pos=(476,208)
+90.7862 	EXP 	Scale: markerPos = 1.71875
+90.7862 	EXP 	Scale: rating = 1.71875
+90.8185 	EXP 	New trial (rep=2, index=0): None
+90.8262 	EXP 	Imported Extinction3.xlsx as conditions, 20 conditions, 2 params
+90.8265 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+90.8267 	EXP 	New trial (rep=0, index=0): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+90.8359 	EXP 	Bkg: autoDraw = False
+90.8359 	EXP 	image: autoDraw = False
+90.8359 	EXP 	Scale: autoDraw = False
+90.8359 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+90.8359 	EXP 	ExtBkg: autoDraw = True
+90.8359 	EXP 	Ext_image: autoDraw = True
+91.8367 	EXP 	ExtBkg: autoDraw = False
+91.8367 	EXP 	Ext_image: autoDraw = False
+91.8367 	EXP 	BlankBkg: autoDraw = True
+92.1873 	EXP 	New trial (rep=0, index=1): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+92.2014 	EXP 	BlankBkg: autoDraw = False
+92.2014 	EXP 	BlankBkg: autoDraw = False
+92.2014 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+92.2014 	EXP 	ExtBkg: autoDraw = True
+92.2014 	EXP 	Ext_image: autoDraw = True
+93.2006 	EXP 	ExtBkg: autoDraw = False
+93.2006 	EXP 	Ext_image: autoDraw = False
+93.2006 	EXP 	ExtBkg: autoDraw = False
+93.2006 	EXP 	Ext_image: autoDraw = False
+93.2006 	EXP 	BlankBkg: autoDraw = True
+93.2570 	EXP 	New trial (rep=0, index=2): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+93.2783 	EXP 	BlankBkg: autoDraw = False
+93.2783 	EXP 	BlankBkg: autoDraw = False
+93.2783 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+93.2783 	EXP 	ExtBkg: autoDraw = True
+93.2783 	EXP 	Ext_image: autoDraw = True
+94.2850 	EXP 	ExtBkg: autoDraw = False
+94.2850 	EXP 	Ext_image: autoDraw = False
+94.2850 	EXP 	BlankBkg: autoDraw = True
+94.4207 	EXP 	New trial (rep=0, index=3): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+94.4366 	EXP 	BlankBkg: autoDraw = False
+94.4366 	EXP 	BlankBkg: autoDraw = False
+94.4366 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+94.4366 	EXP 	ExtBkg: autoDraw = True
+94.4366 	EXP 	Ext_image: autoDraw = True
+95.4343 	EXP 	ExtBkg: autoDraw = False
+95.4343 	EXP 	Ext_image: autoDraw = False
+95.4343 	EXP 	ExtBkg: autoDraw = False
+95.4343 	EXP 	Ext_image: autoDraw = False
+95.4343 	EXP 	BlankBkg: autoDraw = True
+95.8209 	EXP 	New trial (rep=0, index=4): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+95.8443 	EXP 	BlankBkg: autoDraw = False
+95.8443 	EXP 	BlankBkg: autoDraw = False
+95.8443 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+95.8443 	EXP 	ExtBkg: autoDraw = True
+95.8443 	EXP 	Ext_image: autoDraw = True
+96.8524 	EXP 	ExtBkg: autoDraw = False
+96.8524 	EXP 	Ext_image: autoDraw = False
+96.8524 	EXP 	BlankBkg: autoDraw = True
+96.9528 	EXP 	New trial (rep=0, index=5): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+96.9674 	EXP 	BlankBkg: autoDraw = False
+96.9674 	EXP 	BlankBkg: autoDraw = False
+96.9674 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+96.9674 	EXP 	ExtBkg: autoDraw = True
+96.9674 	EXP 	Ext_image: autoDraw = True
+97.9666 	EXP 	ExtBkg: autoDraw = False
+97.9666 	EXP 	Ext_image: autoDraw = False
+97.9666 	EXP 	BlankBkg: autoDraw = True
+98.1024 	EXP 	New trial (rep=0, index=6): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+98.1169 	EXP 	BlankBkg: autoDraw = False
+98.1169 	EXP 	BlankBkg: autoDraw = False
+98.1169 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+98.1169 	EXP 	ExtBkg: autoDraw = True
+98.1169 	EXP 	Ext_image: autoDraw = True
+99.1173 	EXP 	ExtBkg: autoDraw = False
+99.1173 	EXP 	Ext_image: autoDraw = False
+99.1173 	EXP 	ExtBkg: autoDraw = False
+99.1173 	EXP 	Ext_image: autoDraw = False
+99.1173 	EXP 	BlankBkg: autoDraw = True
+99.1702 	EXP 	New trial (rep=0, index=7): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+99.1838 	EXP 	BlankBkg: autoDraw = False
+99.1838 	EXP 	BlankBkg: autoDraw = False
+99.1838 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+99.1838 	EXP 	ExtBkg: autoDraw = True
+99.1838 	EXP 	Ext_image: autoDraw = True
+100.1839 	EXP 	ExtBkg: autoDraw = False
+100.1839 	EXP 	Ext_image: autoDraw = False
+100.1839 	EXP 	ExtBkg: autoDraw = False
+100.1839 	EXP 	Ext_image: autoDraw = False
+100.1839 	EXP 	BlankBkg: autoDraw = True
+100.3363 	EXP 	New trial (rep=0, index=8): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+100.3500 	EXP 	BlankBkg: autoDraw = False
+100.3500 	EXP 	BlankBkg: autoDraw = False
+100.3500 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+100.3500 	EXP 	ExtBkg: autoDraw = True
+100.3500 	EXP 	Ext_image: autoDraw = True
+101.3528 	EXP 	ExtBkg: autoDraw = False
+101.3528 	EXP 	Ext_image: autoDraw = False
+101.3528 	EXP 	ExtBkg: autoDraw = False
+101.3528 	EXP 	Ext_image: autoDraw = False
+101.3528 	EXP 	BlankBkg: autoDraw = True
+101.5022 	EXP 	New trial (rep=0, index=9): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+101.5170 	EXP 	BlankBkg: autoDraw = False
+101.5170 	EXP 	BlankBkg: autoDraw = False
+101.5170 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+101.5170 	EXP 	ExtBkg: autoDraw = True
+101.5170 	EXP 	Ext_image: autoDraw = True
+102.5183 	EXP 	ExtBkg: autoDraw = False
+102.5183 	EXP 	Ext_image: autoDraw = False
+102.5183 	EXP 	BlankBkg: autoDraw = True
+102.7195 	EXP 	New trial (rep=0, index=10): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+102.7349 	EXP 	BlankBkg: autoDraw = False
+102.7349 	EXP 	BlankBkg: autoDraw = False
+102.7349 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+102.7349 	EXP 	ExtBkg: autoDraw = True
+102.7349 	EXP 	Ext_image: autoDraw = True
+103.7343 	EXP 	ExtBkg: autoDraw = False
+103.7343 	EXP 	Ext_image: autoDraw = False
+103.7343 	EXP 	BlankBkg: autoDraw = True
+104.0727 	EXP 	New trial (rep=0, index=11): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+104.0929 	EXP 	BlankBkg: autoDraw = False
+104.0929 	EXP 	BlankBkg: autoDraw = False
+104.0929 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+104.0929 	EXP 	ExtBkg: autoDraw = True
+104.0929 	EXP 	Ext_image: autoDraw = True
+105.1014 	EXP 	ExtBkg: autoDraw = False
+105.1014 	EXP 	Ext_image: autoDraw = False
+105.1014 	EXP 	BlankBkg: autoDraw = True
+105.2203 	EXP 	New trial (rep=0, index=12): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+105.2384 	EXP 	BlankBkg: autoDraw = False
+105.2384 	EXP 	BlankBkg: autoDraw = False
+105.2384 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+105.2384 	EXP 	ExtBkg: autoDraw = True
+105.2384 	EXP 	Ext_image: autoDraw = True
+106.2517 	EXP 	ExtBkg: autoDraw = False
+106.2517 	EXP 	Ext_image: autoDraw = False
+106.2517 	EXP 	BlankBkg: autoDraw = True
+106.3559 	EXP 	New trial (rep=0, index=13): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+106.3769 	EXP 	BlankBkg: autoDraw = False
+106.3769 	EXP 	BlankBkg: autoDraw = False
+106.3769 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+106.3769 	EXP 	ExtBkg: autoDraw = True
+106.3769 	EXP 	Ext_image: autoDraw = True
+107.3836 	EXP 	ExtBkg: autoDraw = False
+107.3836 	EXP 	Ext_image: autoDraw = False
+107.3836 	EXP 	BlankBkg: autoDraw = True
+107.4515 	EXP 	New trial (rep=0, index=14): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+107.4660 	EXP 	BlankBkg: autoDraw = False
+107.4660 	EXP 	BlankBkg: autoDraw = False
+107.4660 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+107.4660 	EXP 	ExtBkg: autoDraw = True
+107.4660 	EXP 	Ext_image: autoDraw = True
+108.4661 	EXP 	ExtBkg: autoDraw = False
+108.4661 	EXP 	Ext_image: autoDraw = False
+108.4661 	EXP 	BlankBkg: autoDraw = True
+108.5848 	EXP 	New trial (rep=0, index=15): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+108.5997 	EXP 	BlankBkg: autoDraw = False
+108.5997 	EXP 	BlankBkg: autoDraw = False
+108.5997 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+108.5997 	EXP 	ExtBkg: autoDraw = True
+108.5997 	EXP 	Ext_image: autoDraw = True
+109.6020 	EXP 	ExtBkg: autoDraw = False
+109.6020 	EXP 	Ext_image: autoDraw = False
+109.6020 	EXP 	ExtBkg: autoDraw = False
+109.6020 	EXP 	Ext_image: autoDraw = False
+109.6020 	EXP 	BlankBkg: autoDraw = True
+109.7191 	EXP 	New trial (rep=0, index=16): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+109.7345 	EXP 	BlankBkg: autoDraw = False
+109.7345 	EXP 	BlankBkg: autoDraw = False
+109.7345 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+109.7345 	EXP 	ExtBkg: autoDraw = True
+109.7345 	EXP 	Ext_image: autoDraw = True
+110.7339 	EXP 	ExtBkg: autoDraw = False
+110.7339 	EXP 	Ext_image: autoDraw = False
+110.7339 	EXP 	ExtBkg: autoDraw = False
+110.7339 	EXP 	Ext_image: autoDraw = False
+110.7339 	EXP 	BlankBkg: autoDraw = True
+110.8553 	EXP 	New trial (rep=0, index=17): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+110.8707 	EXP 	BlankBkg: autoDraw = False
+110.8707 	EXP 	BlankBkg: autoDraw = False
+110.8707 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+110.8707 	EXP 	ExtBkg: autoDraw = True
+110.8707 	EXP 	Ext_image: autoDraw = True
+111.8835 	EXP 	ExtBkg: autoDraw = False
+111.8835 	EXP 	Ext_image: autoDraw = False
+111.8835 	EXP 	BlankBkg: autoDraw = True
+112.0359 	EXP 	New trial (rep=0, index=18): {'ExtName': 'Extinction\\CS+3.BMP', 'TrgCol': -0.1}
+112.0494 	EXP 	BlankBkg: autoDraw = False
+112.0494 	EXP 	BlankBkg: autoDraw = False
+112.0494 	EXP 	Ext_image: image = 'Extinction\\CS+3.BMP'
+112.0494 	EXP 	ExtBkg: autoDraw = True
+112.0494 	EXP 	Ext_image: autoDraw = True
+113.0487 	EXP 	ExtBkg: autoDraw = False
+113.0487 	EXP 	Ext_image: autoDraw = False
+113.0487 	EXP 	ExtBkg: autoDraw = False
+113.0487 	EXP 	Ext_image: autoDraw = False
+113.0487 	EXP 	BlankBkg: autoDraw = True
+113.1527 	EXP 	New trial (rep=0, index=19): {'ExtName': 'Extinction\\CS-3.BMP', 'TrgCol': 0.4}
+113.1688 	EXP 	BlankBkg: autoDraw = False
+113.1688 	EXP 	BlankBkg: autoDraw = False
+113.1688 	EXP 	Ext_image: image = 'Extinction\\CS-3.BMP'
+113.1688 	EXP 	ExtBkg: autoDraw = True
+113.1688 	EXP 	Ext_image: autoDraw = True
+114.1826 	EXP 	ExtBkg: autoDraw = False
+114.1826 	EXP 	Ext_image: autoDraw = False
+114.1826 	EXP 	BlankBkg: autoDraw = True
+114.2731 	EXP 	Imported Rating3.xlsx as conditions, 2 conditions, 2 params
+114.2734 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+114.2736 	EXP 	New trial (rep=0, index=0): {'ratingName': 'Rating\\ratingCS+3.png', 'TrgCol': -0.1}
+115.7523 	EXP 	BlankBkg: autoDraw = False
+115.7523 	EXP 	BlankBkg: autoDraw = False
+115.7523 	EXP 	image: image = 'Rating\\ratingCS+3.png'
+115.7523 	EXP 	Scale: markerPos = None
+115.7523 	EXP 	Scale: markerPos = None
+115.7523 	EXP 	Scale: rating = None
+115.7523 	EXP 	Bkg: autoDraw = True
+115.7523 	EXP 	image: autoDraw = True
+115.7523 	EXP 	Scale: autoDraw = True
+120.7603 	DATA 	Mouse: Left button down, pos=(490,218)
+120.7725 	EXP 	Scale: markerPos = 1.828125
+120.7898 	EXP 	Scale: markerPos = 1.828125
+120.8064 	EXP 	Scale: markerPos = 1.828125
+120.8230 	EXP 	Scale: markerPos = 1.828125
+120.8396 	EXP 	Scale: markerPos = 1.828125
+120.8562 	EXP 	Scale: markerPos = 1.828125
+120.8671 	DATA 	Mouse:  Left button up, pos=(490,218)
+120.8734 	EXP 	Scale: markerPos = 1.828125
+120.8896 	EXP 	Scale: markerPos = 1.828125
+120.8896 	EXP 	Scale: rating = 1.828125
+120.8936 	EXP 	New trial (rep=0, index=1): {'ratingName': 'Rating\\ratingCS-3.png', 'TrgCol': 0.4}
+122.5249 	EXP 	Bkg: autoDraw = False
+122.5249 	EXP 	image: autoDraw = False
+122.5249 	EXP 	Scale: autoDraw = False
+122.5249 	EXP 	image: image = 'Rating\\ratingCS-3.png'
+122.5249 	EXP 	Scale: markerPos = None
+122.5249 	EXP 	Scale: markerPos = None
+122.5249 	EXP 	Scale: rating = None
+122.5249 	EXP 	Bkg: autoDraw = True
+122.5249 	EXP 	image: autoDraw = True
+122.5249 	EXP 	Scale: autoDraw = True
+122.9334 	DATA 	Mouse: Left button down, pos=(512,210)
+122.9616 	EXP 	Scale: markerPos = 2.0
+122.9838 	EXP 	Scale: markerPos = 2.0
+123.0100 	EXP 	Scale: markerPos = 2.0
+123.0319 	EXP 	Scale: markerPos = 2.0
+123.0592 	EXP 	Scale: markerPos = 2.0
+123.0617 	DATA 	Mouse:  Left button up, pos=(512,211)
+123.0823 	EXP 	Scale: markerPos = 2.0
+123.0823 	EXP 	Scale: rating = 2.0
+123.1584 	EXP 	Bkg: autoDraw = False
+123.1584 	EXP 	image: autoDraw = False
+123.1584 	EXP 	Scale: autoDraw = False
+123.1584 	EXP 	EndTxt: autoDraw = True
+128.1119 	EXP 	EndTxt: autoDraw = False
+128.1725 	EXP 	window1: mouseVisible = True

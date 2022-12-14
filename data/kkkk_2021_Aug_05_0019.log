@@ -1,0 +1,522 @@
+2.6618 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+2.8408 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+3.4542 	WARNING 	Font Manager failed to load file C:\WINDOWS\Fonts\方正粗黑宋简体.ttf
+3.6289 	WARNING 	Font Manager failed to load file C:\Windows\Fonts\方正粗黑宋简体.ttf
+9.8859 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E60A7F83C8>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001E60A846B00>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.8864 	EXP 	window1: mouseVisible = True
+9.8864 	EXP 	window1: recordFrameIntervals = False
+10.0525 	EXP 	window1: recordFrameIntervals = True
+10.2364 	EXP 	window1: recordFrameIntervals = False
+10.7415 	EXP 	Created InstrBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1, name='InstrBkg', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+18.2035 	EXP 	Created TagFig = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Instructions.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128, units='norm', win=Window(...))
+18.2049 	EXP 	Created precondBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='precondBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+18.3153 	EXP 	Created imagePreCond = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagePreCond', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 1. ]), texRes=128, units='norm', win=Window(...))
+18.3167 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1, name='BlankBkg', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+18.3180 	EXP 	Created InstrBkg2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='InstrBkg2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+25.6644 	EXP 	Created TagFig2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='PreCondInstruction.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+25.6659 	EXP 	Created CSBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='CSBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+25.7252 	EXP 	Created CS_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='CS_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 1. ]), texRes=128.0, units='norm', win=Window(...))
+25.7268 	EXP 	Created UCSBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='UCSBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+25.7306 	EXP 	Created UCS_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='UCS_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 1. ]), texRes=128.0, units='norm', win=Window(...))
+26.0994 	EXP 	Sound sound_1 set volume 1.000
+26.1016 	EXP 	Created BlankBkg2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='BlankBkg2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+26.1029 	EXP 	Created InstrBkg3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='InstrBkg3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+33.5959 	EXP 	Created TagFig3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='CondInstruction.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+33.5973 	EXP 	Created ExtBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1.0, name='ExtBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+33.7159 	EXP 	Created Ext_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Ext_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.8]), texRes=128.0, units='norm', win=Window(...))
+33.7176 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1, name='BlankBkg', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+33.7189 	EXP 	Created ISIBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=UNKNOWN, interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=UNKNOWN, lineWidth=1, name='ISIBkg', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+41.0912 	EXP 	Created InterSessInstrct = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='ExtinctionInstruction.PNG', interpolate=True, mask=None, maskParams=None, name='InterSessInstrct', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128, units='norm', win=Window(...))
+41.1512 	EXP 	Created EndTxt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Microsoft YaHei', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='EndTxt', opacity=1, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='谢谢您的参与！', units='norm', win=Window(...), wrapWidth=1)
+41.2410 	EXP 	InstrBkg: autoDraw = True
+41.2410 	EXP 	TagFig: autoDraw = True
+42.5788 	EXP 	Imported PreCond1.xlsx as conditions, 10 conditions, 3 params
+42.5791 	EXP 	Created sequence: random, trialTypes=10, nReps=1, seed=None
+42.5794 	EXP 	New trial (rep=0, index=0): {'PicFileName': 'PreCond1\\CS+.PNG', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+42.5854 	DATA 	Keypress: space
+42.5874 	EXP 	InstrBkg: autoDraw = False
+42.5874 	EXP 	TagFig: autoDraw = False
+42.5874 	EXP 	imagePreCond: image = 'PreCond1\\CS+.PNG'
+42.5874 	EXP 	precondBkg: autoDraw = True
+42.5874 	EXP 	imagePreCond: autoDraw = True
+43.5847 	EXP 	imagePreCond: autoDraw = False
+43.6011 	EXP 	precondBkg: autoDraw = False
+43.6011 	EXP 	imagePreCond: autoDraw = False
+43.6011 	EXP 	BlankBkg: autoDraw = True
+45.7524 	EXP 	New trial (rep=0, index=1): {'PicFileName': 'PreCond1\\CS-.PNG', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+45.7671 	EXP 	BlankBkg: autoDraw = False
+45.7671 	EXP 	BlankBkg: autoDraw = False
+45.7671 	EXP 	imagePreCond: image = 'PreCond1\\CS-.PNG'
+45.7671 	EXP 	precondBkg: autoDraw = True
+45.7671 	EXP 	imagePreCond: autoDraw = True
+46.7508 	EXP 	imagePreCond: autoDraw = False
+46.7674 	EXP 	precondBkg: autoDraw = False
+46.7674 	EXP 	precondBkg: autoDraw = False
+46.7674 	EXP 	imagePreCond: autoDraw = False
+46.7674 	EXP 	BlankBkg: autoDraw = True
+48.8690 	EXP 	New trial (rep=0, index=2): {'PicFileName': 'PreCond1\\CS+.PNG', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+48.8840 	EXP 	BlankBkg: autoDraw = False
+48.8840 	EXP 	BlankBkg: autoDraw = False
+48.8840 	EXP 	imagePreCond: image = 'PreCond1\\CS+.PNG'
+48.8840 	EXP 	precondBkg: autoDraw = True
+48.8840 	EXP 	imagePreCond: autoDraw = True
+49.8674 	EXP 	imagePreCond: autoDraw = False
+49.8836 	EXP 	precondBkg: autoDraw = False
+49.8836 	EXP 	precondBkg: autoDraw = False
+49.8836 	EXP 	imagePreCond: autoDraw = False
+49.8836 	EXP 	BlankBkg: autoDraw = True
+52.0699 	EXP 	New trial (rep=0, index=3): {'PicFileName': 'PreCond1\\CS-.PNG', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+52.0835 	EXP 	BlankBkg: autoDraw = False
+52.0835 	EXP 	BlankBkg: autoDraw = False
+52.0835 	EXP 	imagePreCond: image = 'PreCond1\\CS-.PNG'
+52.0835 	EXP 	precondBkg: autoDraw = True
+52.0835 	EXP 	imagePreCond: autoDraw = True
+53.0666 	EXP 	imagePreCond: autoDraw = False
+53.0831 	EXP 	precondBkg: autoDraw = False
+53.0831 	EXP 	precondBkg: autoDraw = False
+53.0831 	EXP 	imagePreCond: autoDraw = False
+53.0831 	EXP 	BlankBkg: autoDraw = True
+55.2694 	EXP 	New trial (rep=0, index=4): {'PicFileName': 'PreCond1\\CS-.PNG', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+55.2834 	EXP 	BlankBkg: autoDraw = False
+55.2834 	EXP 	BlankBkg: autoDraw = False
+55.2834 	EXP 	imagePreCond: image = 'PreCond1\\CS-.PNG'
+55.2834 	EXP 	precondBkg: autoDraw = True
+55.2834 	EXP 	imagePreCond: autoDraw = True
+56.2665 	EXP 	imagePreCond: autoDraw = False
+56.2852 	EXP 	precondBkg: autoDraw = False
+56.2852 	EXP 	precondBkg: autoDraw = False
+56.2852 	EXP 	imagePreCond: autoDraw = False
+56.2852 	EXP 	BlankBkg: autoDraw = True
+58.5349 	EXP 	New trial (rep=0, index=5): {'PicFileName': 'PreCond1\\CS-.PNG', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+58.5493 	EXP 	BlankBkg: autoDraw = False
+58.5493 	EXP 	BlankBkg: autoDraw = False
+58.5493 	EXP 	imagePreCond: image = 'PreCond1\\CS-.PNG'
+58.5493 	EXP 	precondBkg: autoDraw = True
+58.5493 	EXP 	imagePreCond: autoDraw = True
+59.5330 	EXP 	imagePreCond: autoDraw = False
+59.5497 	EXP 	precondBkg: autoDraw = False
+59.5497 	EXP 	precondBkg: autoDraw = False
+59.5497 	EXP 	imagePreCond: autoDraw = False
+59.5497 	EXP 	BlankBkg: autoDraw = True
+61.6343 	EXP 	New trial (rep=0, index=6): {'PicFileName': 'PreCond1\\CS+.PNG', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+61.6490 	EXP 	BlankBkg: autoDraw = False
+61.6490 	EXP 	BlankBkg: autoDraw = False
+61.6490 	EXP 	imagePreCond: image = 'PreCond1\\CS+.PNG'
+61.6490 	EXP 	precondBkg: autoDraw = True
+61.6490 	EXP 	imagePreCond: autoDraw = True
+62.6325 	EXP 	imagePreCond: autoDraw = False
+62.6514 	EXP 	precondBkg: autoDraw = False
+62.6514 	EXP 	precondBkg: autoDraw = False
+62.6514 	EXP 	imagePreCond: autoDraw = False
+62.6514 	EXP 	BlankBkg: autoDraw = True
+64.7847 	EXP 	New trial (rep=0, index=7): {'PicFileName': 'PreCond1\\CS-.PNG', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+64.7988 	EXP 	BlankBkg: autoDraw = False
+64.7988 	EXP 	BlankBkg: autoDraw = False
+64.7988 	EXP 	imagePreCond: image = 'PreCond1\\CS-.PNG'
+64.7988 	EXP 	precondBkg: autoDraw = True
+64.7988 	EXP 	imagePreCond: autoDraw = True
+65.7820 	EXP 	imagePreCond: autoDraw = False
+65.7989 	EXP 	precondBkg: autoDraw = False
+65.7989 	EXP 	precondBkg: autoDraw = False
+65.7989 	EXP 	imagePreCond: autoDraw = False
+65.7989 	EXP 	BlankBkg: autoDraw = True
+67.9503 	EXP 	New trial (rep=0, index=8): {'PicFileName': 'PreCond1\\CS+.PNG', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+67.9652 	EXP 	BlankBkg: autoDraw = False
+67.9652 	EXP 	BlankBkg: autoDraw = False
+67.9652 	EXP 	imagePreCond: image = 'PreCond1\\CS+.PNG'
+67.9652 	EXP 	precondBkg: autoDraw = True
+67.9652 	EXP 	imagePreCond: autoDraw = True
+68.9484 	EXP 	imagePreCond: autoDraw = False
+68.9648 	EXP 	precondBkg: autoDraw = False
+68.9648 	EXP 	precondBkg: autoDraw = False
+68.9648 	EXP 	imagePreCond: autoDraw = False
+68.9648 	EXP 	BlankBkg: autoDraw = True
+71.0331 	EXP 	New trial (rep=0, index=9): {'PicFileName': 'PreCond1\\CS+.PNG', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+71.0485 	EXP 	BlankBkg: autoDraw = False
+71.0485 	EXP 	BlankBkg: autoDraw = False
+71.0485 	EXP 	imagePreCond: image = 'PreCond1\\CS+.PNG'
+71.0485 	EXP 	precondBkg: autoDraw = True
+71.0485 	EXP 	imagePreCond: autoDraw = True
+72.0312 	EXP 	imagePreCond: autoDraw = False
+72.0479 	EXP 	precondBkg: autoDraw = False
+72.0479 	EXP 	precondBkg: autoDraw = False
+72.0479 	EXP 	imagePreCond: autoDraw = False
+72.0479 	EXP 	BlankBkg: autoDraw = True
+74.3332 	EXP 	BlankBkg: autoDraw = False
+74.3332 	EXP 	BlankBkg: autoDraw = False
+74.3332 	EXP 	InstrBkg2: autoDraw = True
+74.3332 	EXP 	TagFig2: autoDraw = True
+81.9746 	EXP 	Imported Conditioning.xlsx as conditions, 20 conditions, 5 params
+81.9749 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+81.9751 	EXP 	New trial (rep=0, index=0): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+81.9811 	DATA 	Keypress: space
+81.9852 	EXP 	InstrBkg2: autoDraw = False
+81.9852 	EXP 	TagFig2: autoDraw = False
+81.9852 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+81.9852 	EXP 	CSBkg: autoDraw = True
+81.9852 	EXP 	CS_image: autoDraw = True
+83.9965 	EXP 	Sound sound_1 started
+83.9968 	EXP 	CSBkg: autoDraw = False
+83.9968 	EXP 	CS_image: autoDraw = False
+83.9968 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+83.9968 	EXP 	UCSBkg: autoDraw = True
+83.9968 	EXP 	UCS_image: autoDraw = True
+85.0515 	EXP 	Sound sound_1 stopped
+85.0571 	EXP 	UCSBkg: autoDraw = False
+85.0571 	EXP 	UCS_image: autoDraw = False
+85.0571 	EXP 	BlankBkg2: autoDraw = True
+87.1821 	EXP 	New trial (rep=0, index=1): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+87.1966 	EXP 	BlankBkg2: autoDraw = False
+87.1966 	EXP 	BlankBkg2: autoDraw = False
+87.1966 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+87.1966 	EXP 	CSBkg: autoDraw = True
+87.1966 	EXP 	CS_image: autoDraw = True
+89.1961 	EXP 	Sound sound_1 started
+89.1962 	EXP 	CSBkg: autoDraw = False
+89.1962 	EXP 	CS_image: autoDraw = False
+89.1962 	EXP 	CSBkg: autoDraw = False
+89.1962 	EXP 	CS_image: autoDraw = False
+89.1962 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+89.1962 	EXP 	UCSBkg: autoDraw = True
+89.1962 	EXP 	UCS_image: autoDraw = True
+90.2472 	EXP 	Sound sound_1 stopped
+90.2535 	EXP 	UCSBkg: autoDraw = False
+90.2535 	EXP 	UCS_image: autoDraw = False
+90.2535 	EXP 	UCSBkg: autoDraw = False
+90.2535 	EXP 	UCS_image: autoDraw = False
+90.2535 	EXP 	BlankBkg2: autoDraw = True
+92.4995 	EXP 	New trial (rep=0, index=2): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+92.5124 	EXP 	BlankBkg2: autoDraw = False
+92.5124 	EXP 	BlankBkg2: autoDraw = False
+92.5124 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+92.5124 	EXP 	CSBkg: autoDraw = True
+92.5124 	EXP 	CS_image: autoDraw = True
+94.5138 	EXP 	Sound sound_1 started
+94.5125 	EXP 	CSBkg: autoDraw = False
+94.5125 	EXP 	CS_image: autoDraw = False
+94.5125 	EXP 	CSBkg: autoDraw = False
+94.5125 	EXP 	CS_image: autoDraw = False
+94.5125 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+94.5125 	EXP 	UCSBkg: autoDraw = True
+94.5125 	EXP 	UCS_image: autoDraw = True
+95.5123 	EXP 	UCSBkg: autoDraw = False
+95.5123 	EXP 	UCS_image: autoDraw = False
+95.5591 	EXP 	Sound sound_1 stopped
+95.5640 	EXP 	UCSBkg: autoDraw = False
+95.5640 	EXP 	UCS_image: autoDraw = False
+95.5640 	EXP 	BlankBkg2: autoDraw = True
+97.8975 	EXP 	New trial (rep=0, index=3): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+97.9141 	EXP 	BlankBkg2: autoDraw = False
+97.9141 	EXP 	BlankBkg2: autoDraw = False
+97.9141 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+97.9141 	EXP 	CSBkg: autoDraw = True
+97.9141 	EXP 	CS_image: autoDraw = True
+99.9298 	EXP 	Sound sound_1 started
+99.9289 	EXP 	CSBkg: autoDraw = False
+99.9289 	EXP 	CS_image: autoDraw = False
+99.9289 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+99.9289 	EXP 	UCSBkg: autoDraw = True
+99.9289 	EXP 	UCS_image: autoDraw = True
+100.9785 	EXP 	Sound sound_1 stopped
+100.9859 	EXP 	UCSBkg: autoDraw = False
+100.9859 	EXP 	UCS_image: autoDraw = False
+100.9859 	EXP 	BlankBkg2: autoDraw = True
+103.2965 	EXP 	New trial (rep=0, index=4): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+103.3114 	EXP 	BlankBkg2: autoDraw = False
+103.3114 	EXP 	BlankBkg2: autoDraw = False
+103.3114 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+103.3114 	EXP 	CSBkg: autoDraw = True
+103.3114 	EXP 	CS_image: autoDraw = True
+105.3124 	EXP 	Sound sound_1 started
+105.3115 	EXP 	CSBkg: autoDraw = False
+105.3115 	EXP 	CS_image: autoDraw = False
+105.3115 	EXP 	CSBkg: autoDraw = False
+105.3115 	EXP 	CS_image: autoDraw = False
+105.3115 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+105.3115 	EXP 	UCSBkg: autoDraw = True
+105.3115 	EXP 	UCS_image: autoDraw = True
+106.3110 	EXP 	UCSBkg: autoDraw = False
+106.3110 	EXP 	UCS_image: autoDraw = False
+106.3206 	EXP 	Sound sound_1 stopped
+106.3283 	EXP 	UCSBkg: autoDraw = False
+106.3283 	EXP 	UCS_image: autoDraw = False
+106.3283 	EXP 	BlankBkg2: autoDraw = True
+108.4794 	EXP 	New trial (rep=0, index=5): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+108.4943 	EXP 	BlankBkg2: autoDraw = False
+108.4943 	EXP 	BlankBkg2: autoDraw = False
+108.4943 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+108.4943 	EXP 	CSBkg: autoDraw = True
+108.4943 	EXP 	CS_image: autoDraw = True
+110.4944 	EXP 	Sound sound_1 started
+110.4944 	EXP 	CSBkg: autoDraw = False
+110.4944 	EXP 	CS_image: autoDraw = False
+110.4944 	EXP 	CSBkg: autoDraw = False
+110.4944 	EXP 	CS_image: autoDraw = False
+110.4944 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+110.4944 	EXP 	UCSBkg: autoDraw = True
+110.4944 	EXP 	UCS_image: autoDraw = True
+111.5527 	EXP 	Sound sound_1 stopped
+111.5747 	EXP 	UCSBkg: autoDraw = False
+111.5747 	EXP 	UCS_image: autoDraw = False
+111.5747 	EXP 	UCSBkg: autoDraw = False
+111.5747 	EXP 	UCS_image: autoDraw = False
+111.5747 	EXP 	BlankBkg2: autoDraw = True
+113.6799 	EXP 	New trial (rep=0, index=6): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+113.6941 	EXP 	BlankBkg2: autoDraw = False
+113.6941 	EXP 	BlankBkg2: autoDraw = False
+113.6941 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+113.6941 	EXP 	CSBkg: autoDraw = True
+113.6941 	EXP 	CS_image: autoDraw = True
+115.6938 	EXP 	Sound sound_1 started
+115.6935 	EXP 	CSBkg: autoDraw = False
+115.6935 	EXP 	CS_image: autoDraw = False
+115.6935 	EXP 	CSBkg: autoDraw = False
+115.6935 	EXP 	CS_image: autoDraw = False
+115.6935 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+115.6935 	EXP 	UCSBkg: autoDraw = True
+115.6935 	EXP 	UCS_image: autoDraw = True
+116.7461 	EXP 	Sound sound_1 stopped
+116.7646 	EXP 	UCSBkg: autoDraw = False
+116.7646 	EXP 	UCS_image: autoDraw = False
+116.7646 	EXP 	UCSBkg: autoDraw = False
+116.7646 	EXP 	UCS_image: autoDraw = False
+116.7646 	EXP 	BlankBkg2: autoDraw = True
+119.0787 	EXP 	New trial (rep=0, index=7): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+119.0932 	EXP 	BlankBkg2: autoDraw = False
+119.0932 	EXP 	BlankBkg2: autoDraw = False
+119.0932 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+119.0932 	EXP 	CSBkg: autoDraw = True
+119.0932 	EXP 	CS_image: autoDraw = True
+121.0942 	EXP 	Sound sound_1 started
+121.0936 	EXP 	CSBkg: autoDraw = False
+121.0936 	EXP 	CS_image: autoDraw = False
+121.0936 	EXP 	CSBkg: autoDraw = False
+121.0936 	EXP 	CS_image: autoDraw = False
+121.0936 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+121.0936 	EXP 	UCSBkg: autoDraw = True
+121.0936 	EXP 	UCS_image: autoDraw = True
+122.0905 	EXP 	Sound sound_1 stopped
+122.1011 	EXP 	UCSBkg: autoDraw = False
+122.1011 	EXP 	UCS_image: autoDraw = False
+122.1011 	EXP 	UCSBkg: autoDraw = False
+122.1011 	EXP 	UCS_image: autoDraw = False
+122.1011 	EXP 	BlankBkg2: autoDraw = True
+124.5615 	EXP 	New trial (rep=0, index=8): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+124.5765 	EXP 	BlankBkg2: autoDraw = False
+124.5765 	EXP 	BlankBkg2: autoDraw = False
+124.5765 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+124.5765 	EXP 	CSBkg: autoDraw = True
+124.5765 	EXP 	CS_image: autoDraw = True
+126.5765 	EXP 	Sound sound_1 started
+126.5771 	EXP 	CSBkg: autoDraw = False
+126.5771 	EXP 	CS_image: autoDraw = False
+126.5771 	EXP 	CSBkg: autoDraw = False
+126.5771 	EXP 	CS_image: autoDraw = False
+126.5771 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+126.5771 	EXP 	UCSBkg: autoDraw = True
+126.5771 	EXP 	UCS_image: autoDraw = True
+127.5870 	EXP 	Sound sound_1 stopped
+127.5962 	EXP 	UCSBkg: autoDraw = False
+127.5962 	EXP 	UCS_image: autoDraw = False
+127.5962 	EXP 	UCSBkg: autoDraw = False
+127.5962 	EXP 	UCS_image: autoDraw = False
+127.5962 	EXP 	BlankBkg2: autoDraw = True
+130.0787 	EXP 	New trial (rep=0, index=9): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+130.0989 	EXP 	BlankBkg2: autoDraw = False
+130.0989 	EXP 	BlankBkg2: autoDraw = False
+130.0989 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+130.0989 	EXP 	CSBkg: autoDraw = True
+130.0989 	EXP 	CS_image: autoDraw = True
+132.1092 	EXP 	Sound sound_1 started
+132.1091 	EXP 	CSBkg: autoDraw = False
+132.1091 	EXP 	CS_image: autoDraw = False
+132.1091 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+132.1091 	EXP 	UCSBkg: autoDraw = True
+132.1091 	EXP 	UCS_image: autoDraw = True
+133.0971 	EXP 	Sound sound_1 stopped
+133.1087 	EXP 	UCSBkg: autoDraw = False
+133.1087 	EXP 	UCS_image: autoDraw = False
+133.1087 	EXP 	BlankBkg2: autoDraw = True
+135.4771 	EXP 	New trial (rep=0, index=10): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+135.4917 	EXP 	BlankBkg2: autoDraw = False
+135.4917 	EXP 	BlankBkg2: autoDraw = False
+135.4917 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+135.4917 	EXP 	CSBkg: autoDraw = True
+135.4917 	EXP 	CS_image: autoDraw = True
+137.4914 	EXP 	Sound sound_1 started
+137.4919 	EXP 	CSBkg: autoDraw = False
+137.4919 	EXP 	CS_image: autoDraw = False
+137.4919 	EXP 	CSBkg: autoDraw = False
+137.4919 	EXP 	CS_image: autoDraw = False
+137.4919 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+137.4919 	EXP 	UCSBkg: autoDraw = True
+137.4919 	EXP 	UCS_image: autoDraw = True
+138.5517 	EXP 	Sound sound_1 stopped
+138.5592 	EXP 	UCSBkg: autoDraw = False
+138.5592 	EXP 	UCS_image: autoDraw = False
+138.5592 	EXP 	BlankBkg2: autoDraw = True
+140.6775 	EXP 	New trial (rep=0, index=11): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+140.6924 	EXP 	BlankBkg2: autoDraw = False
+140.6924 	EXP 	BlankBkg2: autoDraw = False
+140.6924 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+140.6924 	EXP 	CSBkg: autoDraw = True
+140.6924 	EXP 	CS_image: autoDraw = True
+142.7078 	EXP 	Sound sound_1 started
+142.7079 	EXP 	CSBkg: autoDraw = False
+142.7079 	EXP 	CS_image: autoDraw = False
+142.7079 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+142.7079 	EXP 	UCSBkg: autoDraw = True
+142.7079 	EXP 	UCS_image: autoDraw = True
+143.7042 	EXP 	Sound sound_1 stopped
+143.7121 	EXP 	UCSBkg: autoDraw = False
+143.7121 	EXP 	UCS_image: autoDraw = False
+143.7121 	EXP 	BlankBkg2: autoDraw = True
+146.0269 	EXP 	New trial (rep=0, index=12): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+146.0409 	EXP 	BlankBkg2: autoDraw = False
+146.0409 	EXP 	BlankBkg2: autoDraw = False
+146.0409 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+146.0409 	EXP 	CSBkg: autoDraw = True
+146.0409 	EXP 	CS_image: autoDraw = True
+148.0426 	EXP 	Sound sound_1 started
+148.0421 	EXP 	CSBkg: autoDraw = False
+148.0421 	EXP 	CS_image: autoDraw = False
+148.0421 	EXP 	CSBkg: autoDraw = False
+148.0421 	EXP 	CS_image: autoDraw = False
+148.0421 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+148.0421 	EXP 	UCSBkg: autoDraw = True
+148.0421 	EXP 	UCS_image: autoDraw = True
+149.0505 	EXP 	Sound sound_1 stopped
+149.0643 	EXP 	UCSBkg: autoDraw = False
+149.0643 	EXP 	UCS_image: autoDraw = False
+149.0643 	EXP 	UCSBkg: autoDraw = False
+149.0643 	EXP 	UCS_image: autoDraw = False
+149.0643 	EXP 	BlankBkg2: autoDraw = True
+151.3933 	EXP 	New trial (rep=0, index=13): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+151.4067 	EXP 	BlankBkg2: autoDraw = False
+151.4067 	EXP 	BlankBkg2: autoDraw = False
+151.4067 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+151.4067 	EXP 	CSBkg: autoDraw = True
+151.4067 	EXP 	CS_image: autoDraw = True
+153.4070 	EXP 	Sound sound_1 started
+153.4068 	EXP 	CSBkg: autoDraw = False
+153.4068 	EXP 	CS_image: autoDraw = False
+153.4068 	EXP 	CSBkg: autoDraw = False
+153.4068 	EXP 	CS_image: autoDraw = False
+153.4068 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+153.4068 	EXP 	UCSBkg: autoDraw = True
+153.4068 	EXP 	UCS_image: autoDraw = True
+154.3963 	EXP 	Sound sound_1 stopped
+154.4067 	EXP 	UCSBkg: autoDraw = False
+154.4067 	EXP 	UCS_image: autoDraw = False
+154.4067 	EXP 	UCSBkg: autoDraw = False
+154.4067 	EXP 	UCS_image: autoDraw = False
+154.4067 	EXP 	BlankBkg2: autoDraw = True
+156.6921 	EXP 	New trial (rep=0, index=14): {'CSName': 'Cond1\\CS-.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0.4, 'TrgCol2': 0.1}
+156.7088 	EXP 	BlankBkg2: autoDraw = False
+156.7088 	EXP 	BlankBkg2: autoDraw = False
+156.7088 	EXP 	CS_image: image = 'Cond1\\CS-.PNG'
+156.7088 	EXP 	CSBkg: autoDraw = True
+156.7088 	EXP 	CS_image: autoDraw = True
+158.7231 	EXP 	Sound sound_1 started
+158.7231 	EXP 	CSBkg: autoDraw = False
+158.7231 	EXP 	CS_image: autoDraw = False
+158.7231 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+158.7231 	EXP 	UCSBkg: autoDraw = True
+158.7231 	EXP 	UCS_image: autoDraw = True
+159.7512 	EXP 	Sound sound_1 stopped
+159.7602 	EXP 	UCSBkg: autoDraw = False
+159.7602 	EXP 	UCS_image: autoDraw = False
+159.7602 	EXP 	BlankBkg2: autoDraw = True
+162.0416 	EXP 	New trial (rep=0, index=15): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+162.0559 	EXP 	BlankBkg2: autoDraw = False
+162.0559 	EXP 	BlankBkg2: autoDraw = False
+162.0559 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+162.0559 	EXP 	CSBkg: autoDraw = True
+162.0559 	EXP 	CS_image: autoDraw = True
+164.0566 	EXP 	Sound sound_1 started
+164.0598 	EXP 	CSBkg: autoDraw = False
+164.0598 	EXP 	CS_image: autoDraw = False
+164.0598 	EXP 	CSBkg: autoDraw = False
+164.0598 	EXP 	CS_image: autoDraw = False
+164.0598 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+164.0598 	EXP 	UCSBkg: autoDraw = True
+164.0598 	EXP 	UCS_image: autoDraw = True
+165.0577 	EXP 	Sound sound_1 stopped
+165.0893 	EXP 	UCSBkg: autoDraw = False
+165.0893 	EXP 	UCS_image: autoDraw = False
+165.0893 	EXP 	BlankBkg2: autoDraw = True
+167.3073 	EXP 	New trial (rep=0, index=16): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\blank.png', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0, 'TrgCol2': 0}
+167.3218 	EXP 	BlankBkg2: autoDraw = False
+167.3218 	EXP 	BlankBkg2: autoDraw = False
+167.3218 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+167.3218 	EXP 	CSBkg: autoDraw = True
+167.3218 	EXP 	CS_image: autoDraw = True
+172.8725 	EXP 	Sound sound_1 stopped
+172.8846 	EXP 	CSBkg: autoDraw = False
+172.8846 	EXP 	CS_image: autoDraw = False
+172.8846 	EXP 	CSBkg: autoDraw = False
+172.8846 	EXP 	CS_image: autoDraw = False
+172.8846 	EXP 	UCS_image: image = 'Cond1\\blank.png'
+172.8846 	EXP 	UCSBkg: autoDraw = False
+172.8846 	EXP 	UCS_image: autoDraw = False
+172.8846 	EXP 	BlankBkg2: autoDraw = True
+175.0327 	EXP 	New trial (rep=0, index=17): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\blank.png', 'SoundName': 'Sound\\2.wav', 'TrgCol': 0, 'TrgCol2': 0}
+175.0472 	EXP 	BlankBkg2: autoDraw = False
+175.0472 	EXP 	BlankBkg2: autoDraw = False
+175.0472 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+175.0472 	EXP 	CSBkg: autoDraw = True
+175.0472 	EXP 	CS_image: autoDraw = True
+178.0443 	EXP 	Sound sound_1 started
+178.1117 	EXP 	CSBkg: autoDraw = False
+178.1117 	EXP 	CS_image: autoDraw = False
+178.1117 	EXP 	CSBkg: autoDraw = False
+178.1117 	EXP 	CS_image: autoDraw = False
+178.1117 	EXP 	UCS_image: image = 'Cond1\\blank.png'
+178.1117 	EXP 	UCSBkg: autoDraw = True
+178.1117 	EXP 	UCS_image: autoDraw = True
+178.1735 	EXP 	Sound sound_1 stopped
+178.1858 	EXP 	UCSBkg: autoDraw = False
+178.1858 	EXP 	UCS_image: autoDraw = False
+178.1858 	EXP 	BlankBkg2: autoDraw = True
+180.4518 	EXP 	New trial (rep=0, index=18): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+180.4660 	EXP 	BlankBkg2: autoDraw = False
+180.4660 	EXP 	BlankBkg2: autoDraw = False
+180.4660 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+180.4660 	EXP 	CSBkg: autoDraw = True
+180.4660 	EXP 	CS_image: autoDraw = True
+182.5687 	EXP 	Sound sound_1 started
+182.5664 	EXP 	CSBkg: autoDraw = False
+182.5664 	EXP 	CS_image: autoDraw = False
+182.5664 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+182.5664 	EXP 	UCSBkg: autoDraw = True
+182.5664 	EXP 	UCS_image: autoDraw = True
+183.4788 	EXP 	Sound sound_1 stopped
+183.4868 	EXP 	UCSBkg: autoDraw = False
+183.4868 	EXP 	UCS_image: autoDraw = False
+183.4868 	EXP 	BlankBkg2: autoDraw = True
+185.5386 	EXP 	New trial (rep=0, index=19): {'CSName': 'Cond1\\CS+.PNG', 'UCSName': 'Cond1\\UCS.PNG', 'SoundName': 'Sound\\1.wav', 'TrgCol': -0.1, 'TrgCol2': -0.1}
+185.5526 	EXP 	BlankBkg2: autoDraw = False
+185.5526 	EXP 	BlankBkg2: autoDraw = False
+185.5526 	EXP 	CS_image: image = 'Cond1\\CS+.PNG'
+185.5526 	EXP 	CSBkg: autoDraw = True
+185.5526 	EXP 	CS_image: autoDraw = True
+187.5523 	EXP 	Sound sound_1 started
+187.5522 	EXP 	CSBkg: autoDraw = False
+187.5522 	EXP 	CS_image: autoDraw = False
+187.5522 	EXP 	CSBkg: autoDraw = False
+187.5522 	EXP 	CS_image: autoDraw = False
+187.5522 	EXP 	UCS_image: image = 'Cond1\\UCS.PNG'
+187.5522 	EXP 	UCSBkg: autoDraw = True
+187.5522 	EXP 	UCS_image: autoDraw = True
+188.5544 	EXP 	Sound sound_1 stopped
+188.5606 	EXP 	UCSBkg: autoDraw = False
+188.5606 	EXP 	UCS_image: autoDraw = False
+188.5606 	EXP 	UCSBkg: autoDraw = False
+188.5606 	EXP 	UCS_image: autoDraw = False
+188.5606 	EXP 	BlankBkg2: autoDraw = True
+190.8465 	EXP 	BlankBkg2: autoDraw = False
+190.8465 	EXP 	BlankBkg2: autoDraw = False
+190.8465 	EXP 	InstrBkg3: autoDraw = True
+190.8465 	EXP 	TagFig3: autoDraw = True
+192.8057 	DATA 	Keypress: escape
+193.1221 	EXP 	window1: mouseVisible = True
