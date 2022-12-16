@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Wed Dec 14 05:39:32 2022
+    on Fri Dec 16 06:10:40 2022
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participan
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2022_11_TCET_Task/2022_11_TCET_Faissal_Test4_1129/FigureViewingCS_Huang_v3_1101_lastrun.py',
+    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Study 1/2022_11_TCET_Task/3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -99,7 +99,7 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 import random
 parallelTrigger = False
 
-isChinese = False
+isChinese = True
 
 if isChinese == True:
     instructionFolder = 'Instructions_CN'
@@ -164,7 +164,7 @@ Bkg = visual.Rect(
     width=(2, 2)[0], height=(2, 2)[1],
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
+    opacity=1.0, depth=-1.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -172,14 +172,14 @@ image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(1.8, 1.8),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.6), units=None,
     labels=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], ticks=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=0.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
     font='Open Sans', labelHeight=0.05,
-    flip=False, ori=0.0, depth=-2, readOnly=False)
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 fearRating = keyboard.Keyboard()
 
 # --- Initialize components for Routine "CondInst" ---
@@ -248,7 +248,7 @@ Bkg = visual.Rect(
     width=(2, 2)[0], height=(2, 2)[1],
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
+    opacity=1.0, depth=-1.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -256,14 +256,14 @@ image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(1.8, 1.8),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.6), units=None,
     labels=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], ticks=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=0.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
     font='Open Sans', labelHeight=0.05,
-    flip=False, ori=0.0, depth=-2, readOnly=False)
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 fearRating = keyboard.Keyboard()
 
 # --- Initialize components for Routine "ExtInstruction" ---
@@ -327,7 +327,7 @@ Bkg = visual.Rect(
     width=(2, 2)[0], height=(2, 2)[1],
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
+    opacity=1.0, depth=-1.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -335,14 +335,14 @@ image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(1.8, 1.8),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=-2.0)
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.6), units=None,
     labels=['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], ticks=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=0.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
     font='Open Sans', labelHeight=0.05,
-    flip=False, ori=0.0, depth=-2, readOnly=False)
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 fearRating = keyboard.Keyboard()
 
 # --- Initialize components for Routine "EndBlock" ---
@@ -808,6 +808,11 @@ for thisRatingPreCond in RatingPreCond:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from setLang
+    if isChinese == True:
+        ratingName = ratingName_CN
+    else:
+        ratingName = ratingName_EN
     image.setImage(ratingName)
     Scale.reset()
     fearRating.keys = []
@@ -1396,6 +1401,11 @@ for thisRatingCond in RatingCond:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from setLang
+    if isChinese == True:
+        ratingName = ratingName_CN
+    else:
+        ratingName = ratingName_EN
     image.setImage(ratingName)
     Scale.reset()
     fearRating.keys = []
@@ -1917,6 +1927,11 @@ for thisRatingExt in RatingExt:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    # Run 'Begin Routine' code from setLang
+    if isChinese == True:
+        ratingName = ratingName_CN
+    else:
+        ratingName = ratingName_EN
     image.setImage(ratingName)
     Scale.reset()
     fearRating.keys = []
