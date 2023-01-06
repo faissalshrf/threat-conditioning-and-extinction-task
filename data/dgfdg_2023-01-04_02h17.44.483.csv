@@ -1,0 +1,6 @@
+﻿PreCondName,TrgCol,PreCond.thisRepN,PreCond.thisTrialN,PreCond.thisN,PreCond.thisIndex,InstrBkg.started,TagFig.started,InstrKeyResp.started,InstrKeyResp.keys,InstrKeyResp.rt,precondBkg.started,imagePreCond.started,imagePreCond.stopped,BlankBkg.started,BlankBkg.stopped,participant,session,date,expName,psychopyVersion,frameRate,
+,,,,,,14.794962957996177,14.794962957996177,14.794962957996177,space,1.6419861659960588,,,,,,dgfdg,001,2023-01-04_02h17.44.483,FigureTest,2022.2.4,None,
+Stimuli/CS+3.BMP,-0.1,0,0,0,0,,,,,,16.529863499992643,16.529863499992643,22.470598415995482,22.479940457997145,27.01331312500406,dgfdg,001,2023-01-04_02h17.44.483,FigureTest,2022.2.4,None,
+Stimuli/CS+4.BMP,0.4,0,1,1,12,,,,,,27.01331312500406,27.01331312500406,32.991102582993335,33.000614874996245,37.340732540993486,dgfdg,001,2023-01-04_02h17.44.483,FigureTest,2022.2.4,None,
+Stimuli/CS+1.BMP,0.4,0,2,2,7,,,,,,37.340732540993486,37.340732540993486,43.31433350000589,43.330234708002536,47.74110749999818,dgfdg,001,2023-01-04_02h17.44.483,FigureTest,2022.2.4,None,
+,,,,,,,,,,,47.74110749999818,47.74110749999818,,,,,,,,,,

@@ -1,0 +1,154 @@
+9.8771 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+9.8823 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fae3bacfac0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fadfcb91c10>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.8829 	EXP 	window1: mouseVisible = True
+9.8835 	EXP 	window1: mouseVisible = True
+9.8835 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+9.8835 	EXP 	window1: recordFrameIntervals = False
+9.9699 	EXP 	window1: recordFrameIntervals = True
+10.8207 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+13.2835 	EXP 	Created InstrBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1, name='InstrBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.3609 	EXP 	Created TagFig = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Instructions_EN/Slide1.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128, units='norm', win=Window(...))
+13.3619 	EXP 	Created precondBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='precondBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.3667 	EXP 	Created imagePreCond = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imagePreCond', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+13.3677 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1, name='BlankBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.3686 	EXP 	Created Bkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='Bkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.3720 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+13.3837 	EXP 	window1: mouseVisible = True
+13.4991 	EXP 	Created Scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-3, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='Scale', opacity=None, ori=0.0, pos=array([ 0. , -0.6]), readOnly=False, self=UNKNOWN, size=array([1.2 , 0.05]), startValue=None, style='rating', styleTweaks=[], ticks=array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10]), units='norm', win=Window(...))
+13.5000 	EXP 	Created InstrBkg2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='InstrBkg2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.5319 	EXP 	Created TagFig2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Instructions_EN/Slide2.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+13.5329 	EXP 	Created CSBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='CSBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.5367 	EXP 	Created CS_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='CS_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128.0, units='norm', win=Window(...))
+13.5376 	EXP 	Created UCSBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='UCSBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+13.5409 	EXP 	Created UCS_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='UCS_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128.0, units='norm', win=Window(...))
+14.4570 	EXP 	Sound sound_1 set volume 0.300
+14.4585 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1, name='BlankBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.4595 	EXP 	Created Bkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='Bkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.4633 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+14.4653 	EXP 	window1: mouseVisible = True
+14.5491 	EXP 	Created Scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-3, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='Scale', opacity=None, ori=0.0, pos=array([ 0. , -0.6]), readOnly=False, self=UNKNOWN, size=array([1.2 , 0.05]), startValue=None, style='rating', styleTweaks=[], ticks=array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10]), units='norm', win=Window(...))
+14.5502 	EXP 	Created InstrBkg3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='InstrBkg3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.5816 	EXP 	Created TagFig3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Instructions_EN/Slide3.PNG', interpolate=True, mask=None, maskParams=None, name='TagFig3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+14.5826 	EXP 	Created ExtBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='ExtBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.5861 	EXP 	Created Ext_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Ext_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128.0, units='norm', win=Window(...))
+14.5871 	EXP 	Created BlankBkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1, name='BlankBkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.5879 	EXP 	Created Bkg = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.0, name='Bkg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), units='norm', vertices=ndarray(...), win=Window(...))
+14.5912 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1.8]), texRes=128.0, units='norm', win=Window(...))
+14.5929 	EXP 	window1: mouseVisible = True
+14.6757 	EXP 	Created Scale = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-3, fillColor=None, flip=False, font='Open Sans', granularity=0.0, labelColor=None, labelHeight=0.05, labelWrapWidth=None, labels=list(...), lineColor=None, markerColor=None, name='Scale', opacity=None, ori=0.0, pos=array([ 0. , -0.6]), readOnly=False, self=UNKNOWN, size=array([1.2 , 0.05]), startValue=None, style='rating', styleTweaks=[], ticks=array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10]), units='norm', win=Window(...))
+14.7323 	EXP 	Created EndTxt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Microsoft YaHei', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='EndTxt', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='谢谢您！\nThank you!', units='norm', win=Window(...), wrapWidth=1)
+14.7950 	WARNING 	t of last frame was 3974.75ms (=1/0)
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	Scale: markerPos = None
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: contrast = 1.0
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	Scale: markerPos = None
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: contrast = 1.0
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	Scale: markerPos = None
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: styleTweaks = []
+14.7950 	EXP 	Scale: contrast = 1.0
+14.7950 	EXP 	Scale: autoLog = True
+14.7950 	EXP 	InstrBkg: autoDraw = True
+14.7950 	EXP 	TagFig: autoDraw = True
+16.2388 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.2621 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.2623 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.2797 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.2951 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3131 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3132 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3218 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3385 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3559 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3734 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.3814 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.4077 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.4249 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.4339 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.4795 	EXP 	Imported PreCondition1.xlsx as conditions, 15 conditions, 2 params
+16.4811 	EXP 	Created sequence: random, trialTypes=15, nReps=1, seed=None
+16.4814 	EXP 	New trial (rep=0, index=0): {'PreCondName': 'Stimuli/CS+3.BMP', 'TrgCol': -0.1}
+16.5193 	DATA 	Keypress: space
+16.5220 	DATA 	Mouse: wheel shift=(2,0), pos=(635,568)
+16.5299 	WARNING 	t of last frame was 88.83ms (=1/11)
+16.5299 	EXP 	InstrBkg: autoDraw = False
+16.5299 	EXP 	TagFig: autoDraw = False
+16.5299 	EXP 	imagePreCond: image = 'Stimuli/CS+3.BMP'
+16.5299 	EXP 	precondBkg: autoDraw = True
+16.5299 	EXP 	imagePreCond: autoDraw = True
+16.5400 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.5553 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.5716 	DATA 	Mouse: wheel shift=(1,0), pos=(635,568)
+16.5869 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.6036 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.6201 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.6370 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.6535 	DATA 	Mouse: wheel shift=(1,0), pos=(635,568)
+16.6708 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.6868 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7037 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7201 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7374 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7537 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7704 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.7869 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.8037 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.8392 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.8569 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.8904 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+16.8906 	DATA 	Mouse: wheel shift=(0,0), pos=(635,568)
+17.0534 	WARNING 	t of last frame was 22.40ms (=1/44)
+17.3034 	WARNING 	t of last frame was 22.39ms (=1/44)
+17.7534 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+22.4706 	EXP 	imagePreCond: autoDraw = False
+22.4799 	EXP 	precondBkg: autoDraw = False
+22.4799 	EXP 	imagePreCond: autoDraw = False
+22.4799 	EXP 	BlankBkg: autoDraw = True
+26.9898 	EXP 	New trial (rep=0, index=1): {'PreCondName': 'Stimuli/CS+4.BMP', 'TrgCol': 0.4}
+27.0133 	EXP 	BlankBkg: autoDraw = False
+27.0133 	EXP 	BlankBkg: autoDraw = False
+27.0133 	EXP 	imagePreCond: image = 'Stimuli/CS+4.BMP'
+27.0133 	EXP 	precondBkg: autoDraw = True
+27.0133 	EXP 	imagePreCond: autoDraw = True
+32.9911 	EXP 	imagePreCond: autoDraw = False
+33.0006 	EXP 	precondBkg: autoDraw = False
+33.0006 	EXP 	imagePreCond: autoDraw = False
+33.0006 	EXP 	BlankBkg: autoDraw = True
+37.3171 	EXP 	New trial (rep=0, index=2): {'PreCondName': 'Stimuli/CS+1.BMP', 'TrgCol': 0.4}
+37.3407 	EXP 	BlankBkg: autoDraw = False
+37.3407 	EXP 	BlankBkg: autoDraw = False
+37.3407 	EXP 	imagePreCond: image = 'Stimuli/CS+1.BMP'
+37.3407 	EXP 	precondBkg: autoDraw = True
+37.3407 	EXP 	imagePreCond: autoDraw = True
+43.3143 	EXP 	imagePreCond: autoDraw = False
+43.3302 	EXP 	precondBkg: autoDraw = False
+43.3302 	EXP 	imagePreCond: autoDraw = False
+43.3302 	EXP 	BlankBkg: autoDraw = True
+47.7146 	EXP 	New trial (rep=0, index=3): {'PreCondName': 'Stimuli/CS+4.BMP', 'TrgCol': 0.4}
+47.7411 	EXP 	BlankBkg: autoDraw = False
+47.7411 	EXP 	BlankBkg: autoDraw = False
+47.7411 	EXP 	imagePreCond: image = 'Stimuli/CS+4.BMP'
+47.7411 	EXP 	precondBkg: autoDraw = True
+47.7411 	EXP 	imagePreCond: autoDraw = True
+50.1142 	DATA 	Keypress: escape
+50.7411 	EXP 	window1: mouseVisible = True

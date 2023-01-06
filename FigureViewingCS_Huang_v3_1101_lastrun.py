@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Fri Dec 16 06:10:40 2022
+    on Fri Jan  6 02:45:17 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participan
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Study 1/2022_11_TCET_Task/3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
+    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Study 1/2022_11_TCET_Task/V3_3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -99,7 +99,7 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 import random
 parallelTrigger = False
 
-isChinese = True
+isChinese = False
 
 if isChinese == True:
     instructionFolder = 'Instructions_CN'
@@ -739,7 +739,7 @@ for thisPreCond in PreCond:
             BlankBkg.setAutoDraw(True)
         if BlankBkg.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+4-frameTolerance:
+            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
                 BlankBkg.tStop = t  # not accounting for scr refresh
                 BlankBkg.frameNStop = frameN  # exact frame index
@@ -1332,7 +1332,7 @@ for thisCond in Cond:
             BlankBkg.setAutoDraw(True)
         if BlankBkg.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+4-frameTolerance:
+            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
                 BlankBkg.tStop = t  # not accounting for scr refresh
                 BlankBkg.frameNStop = frameN  # exact frame index
@@ -1858,7 +1858,7 @@ for thisExtinction in Extinction:
             BlankBkg.setAutoDraw(True)
         if BlankBkg.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+4-frameTolerance:
+            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
                 BlankBkg.tStop = t  # not accounting for scr refresh
                 BlankBkg.frameNStop = frameN  # exact frame index
