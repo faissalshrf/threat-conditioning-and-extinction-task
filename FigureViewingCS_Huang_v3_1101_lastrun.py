@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Fri Dec 16 06:10:40 2022
+    on Fri Jan 27 15:29:56 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participan
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Study 1/2022_11_TCET_Task/3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
+    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Anxiety & Affective Bias Study/2022_11_TCET_Task/V3_3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -892,7 +892,7 @@ for thisRatingPreCond in RatingPreCond:
             win.callOnFlip(fearRating.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(fearRating.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fearRating.status == STARTED and not waitOnFlip:
-            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','10'], waitRelease=False)
+            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','0'], waitRelease=False)
             _fearRating_allKeys.extend(theseKeys)
             if len(_fearRating_allKeys):
                 fearRating.keys = _fearRating_allKeys[-1].name  # just the last key pressed
@@ -1485,7 +1485,7 @@ for thisRatingCond in RatingCond:
             win.callOnFlip(fearRating.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(fearRating.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fearRating.status == STARTED and not waitOnFlip:
-            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','10'], waitRelease=False)
+            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','0'], waitRelease=False)
             _fearRating_allKeys.extend(theseKeys)
             if len(_fearRating_allKeys):
                 fearRating.keys = _fearRating_allKeys[-1].name  # just the last key pressed
@@ -2011,7 +2011,7 @@ for thisRatingExt in RatingExt:
             win.callOnFlip(fearRating.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(fearRating.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fearRating.status == STARTED and not waitOnFlip:
-            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','10'], waitRelease=False)
+            theseKeys = fearRating.getKeys(keyList=['1','2','3','4','5','6','7','8','9','0'], waitRelease=False)
             _fearRating_allKeys.extend(theseKeys)
             if len(_fearRating_allKeys):
                 fearRating.keys = _fearRating_allKeys[-1].name  # just the last key pressed
