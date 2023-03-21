@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Tue Jan 31 16:42:53 2023
+    on Fri Mar 10 11:52:19 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -54,7 +54,7 @@ filename = _thisDir + os.sep + u'data' + os.sep + '%s_%s' % (expInfo['participan
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/My Drive/Research/2022 – Oxford Tan Lab/2023 – Anxiety & Affective Bias Study/2022_11_TCET_Task/V3_3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
+    originPath='/Users/faissal/Library/CloudStorage/OneDrive-Nexus365/2023 – NAP Study/TCET_Task/V3_3Faces/FigureViewingCS_Huang_v3_1101_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -106,10 +106,10 @@ if isChinese == True:
 else:
     instructionFolder = 'Instructions_EN'
 
-#if parallelTrigger == True:
-#    from psychopy import parallel
-#    port = parallel.ParallelPort(address=0x0378)
-#    port.setData(0)
+if parallelTrigger == True:
+    from psychopy import parallel
+    port = parallel.ParallelPort(address=0x0378)
+    port.setData(0)
 
 random.seed()
 SetNums = [1,2,3]
@@ -307,8 +307,8 @@ Ext_image = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=-1.0)
 # Run 'Begin Experiment' code from EachTrial_3
 if parallelTrigger == True:
-#   ParaleData = 50
-   ParaleData = int((TrgCol+0.6)*40+20)
+   ParaleData = 50
+   #ParaleData = int((TrgCol+0.6)*40+20)
    port.setData(ParaleData)
    core.wait(0.02)
    port.setData(0)
@@ -347,7 +347,7 @@ fearRating = keyboard.Keyboard()
 
 # --- Initialize components for Routine "EndBlock" ---
 EndTxt = visual.TextStim(win=win, name='EndTxt',
-    text='谢谢您！\nThank you!',
+    text='测试结束，请叫医生\nThank you!',
     font='Microsoft YaHei',
     pos=[0, 0], height=0.2, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -606,9 +606,9 @@ for thisPreCond in PreCond:
     if parallelTrigger == True:
        ParaleData = 50  #Faissal
        #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
-       #port.setData(ParaleData) #Faissal
+       port.setData(ParaleData) #Faissal
        core.wait(0.02)
-       #port.setData(0) #Faissal
+       port.setData(0) #Faissal
     # keep track of which components have finished
     trialPreCondComponents = [precondBkg, imagePreCond]
     for thisComponent in trialPreCondComponents:
@@ -1080,8 +1080,8 @@ for thisCond in Cond:
     CS_image.setImage(CSName)
     # Run 'Begin Routine' code from EachTrial_2
     if parallelTrigger == True:
-    #   ParaleData = 50
-       ParaleData = int((TrgCol+0.6)*40+20)
+       ParaleData = 50
+       #ParaleData = int((TrgCol+0.6)*40+20)
        port.setData(ParaleData)
        core.wait(0.02)
        port.setData(0)
