@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Tue Apr  4 16:10:46 2023
+    on Tue May  9 16:02:09 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -52,7 +52,7 @@ filename = _thisDir + os.sep + 'data/%s/%s-%s' %(expInfo['Participant_ID'], expI
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/faissal/Library/CloudStorage/OneDrive-Nexus365/2023 – NAP Study/TCET_Task/V3_3Faces/TCET_V3_lastrun.py',
+    originPath='/Users/faissal/Library/CloudStorage/OneDrive-Nexus365/2023 – NAP Study/TCET_Task/TCET_Sharif/TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -66,7 +66,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1440, 900], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True)
@@ -129,7 +129,6 @@ PreCondInstCN = visual.TextStim(win=win, name='PreCondInstCN',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-3.0);
-InstrKeyResp = keyboard.Keyboard()
 PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
@@ -593,7 +592,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 PreCondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:4'),
     seed=None, name='PreCondInstText')
 thisExp.addLoop(PreCondInstText)  # add the loop to the experiment
 thisPreCondInstText = PreCondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -616,9 +615,6 @@ for thisPreCondInstText in PreCondInstText:
     PreCondImage.setImage(PreCondInstTextImage)
     PreCondInstEN.setText(PreCondInstTextEN)
     PreCondInstCN.setText(PreCondInstTextCN)
-    InstrKeyResp.keys = []
-    InstrKeyResp.rt = []
-    _InstrKeyResp_allKeys = []
     # setup some python lists for storing info about the PreCondMouse
     PreCondMouse.x = []
     PreCondMouse.y = []
@@ -628,7 +624,7 @@ for thisPreCondInstText in PreCondInstText:
     PreCondMouse.time = []
     gotValidClick = False  # until a click is received
     # keep track of which components have finished
-    PreCondInstComponents = [InstrBkg, PreCondImage, PreCondInstEN, PreCondInstCN, InstrKeyResp, PreCondMouse, PreCondSubmit]
+    PreCondInstComponents = [InstrBkg, PreCondImage, PreCondInstEN, PreCondInstCN, PreCondMouse, PreCondSubmit]
     for thisComponent in PreCondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -693,30 +689,6 @@ for thisPreCondInstText in PreCondInstText:
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'PreCondInstCN.started')
             PreCondInstCN.setAutoDraw(True)
-        
-        # *InstrKeyResp* updates
-        waitOnFlip = False
-        if InstrKeyResp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            InstrKeyResp.frameNStart = frameN  # exact frame index
-            InstrKeyResp.tStart = t  # local t and not account for scr refresh
-            InstrKeyResp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(InstrKeyResp, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'InstrKeyResp.started')
-            InstrKeyResp.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(InstrKeyResp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(InstrKeyResp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if InstrKeyResp.status == STARTED and not waitOnFlip:
-            theseKeys = InstrKeyResp.getKeys(keyList=['space'], waitRelease=False)
-            _InstrKeyResp_allKeys.extend(theseKeys)
-            if len(_InstrKeyResp_allKeys):
-                InstrKeyResp.keys = _InstrKeyResp_allKeys[-1].name  # just the last key pressed
-                InstrKeyResp.rt = _InstrKeyResp_allKeys[-1].rt
-                # a response ends the routine
-                continueRoutine = False
         # *PreCondMouse* updates
         if PreCondMouse.status == NOT_STARTED and t >= 0-frameTolerance:
             # keep track of start time/frame for later
@@ -792,12 +764,6 @@ for thisPreCondInstText in PreCondInstText:
     for thisComponent in PreCondInstComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # check responses
-    if InstrKeyResp.keys in ['', [], None]:  # No response was made
-        InstrKeyResp.keys = None
-    PreCondInstText.addData('InstrKeyResp.keys',InstrKeyResp.keys)
-    if InstrKeyResp.keys != None:  # we had a response
-        PreCondInstText.addData('InstrKeyResp.rt', InstrKeyResp.rt)
     # store data for PreCondInstText (TrialHandler)
     PreCondInstText.addData('PreCondMouse.x', PreCondMouse.x)
     PreCondInstText.addData('PreCondMouse.y', PreCondMouse.y)
@@ -901,7 +867,7 @@ for thisPreCond in PreCond:
                 precondBkg.setAutoDraw(False)
         
         # *imagePreCond* updates
-        if imagePreCond.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        if imagePreCond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             imagePreCond.frameNStart = frameN  # exact frame index
             imagePreCond.tStart = t  # local t and not account for scr refresh
@@ -920,7 +886,7 @@ for thisPreCond in PreCond:
                 thisExp.timestampOnFlip(win, 'imagePreCond.stopped')
                 imagePreCond.setAutoDraw(False)
         # *PreCond_Mouse* updates
-        if PreCond_Mouse.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        if PreCond_Mouse.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             PreCond_Mouse.frameNStart = frameN  # exact frame index
             PreCond_Mouse.tStart = t  # local t and not account for scr refresh
@@ -952,8 +918,6 @@ for thisPreCond in PreCond:
                     PreCond_Mouse.midButton.append(buttons[1])
                     PreCond_Mouse.rightButton.append(buttons[2])
                     PreCond_Mouse.time.append(PreCond_Mouse.mouseClock.getTime())
-                    
-                    continueRoutine = False  # abort routine on response
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1656,8 +1620,6 @@ for thisCond in Cond:
                     Cond_Mouse.midButton.append(buttons[1])
                     Cond_Mouse.rightButton.append(buttons[2])
                     Cond_Mouse.time.append(Cond_Mouse.mouseClock.getTime())
-                    
-                    continueRoutine = False  # abort routine on response
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2437,8 +2399,6 @@ for thisExtinction in Extinction:
                     PreCond_Mouse_2.midButton.append(buttons[1])
                     PreCond_Mouse_2.rightButton.append(buttons[2])
                     PreCond_Mouse_2.time.append(PreCond_Mouse_2.mouseClock.getTime())
-                    
-                    continueRoutine = False  # abort routine on response
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
