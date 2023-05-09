@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Tue May  9 16:02:09 2023
+    on Tue May  9 17:35:52 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -89,7 +89,8 @@ defaultKeyboard = keyboard.Keyboard(backend='ptb')
 import random
 parallelTrigger = False
 
-isChinese = False
+isChinese = False #sets task lang to Chinese
+skipPhases = True #Shows only instructions and ratings
 
 if parallelTrigger == True:
     from psychopy import parallel
@@ -257,7 +258,6 @@ CondInstCN = visual.TextStim(win=win, name='CondInstCN',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-3.0);
-key_resp = keyboard.Keyboard()
 CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
@@ -441,13 +441,6 @@ Ext_image = visual.ImageStim(
 PreCond_Mouse_2 = event.Mouse(win=win)
 x, y = [None, None]
 PreCond_Mouse_2.mouseClock = core.Clock()
-# Run 'Begin Experiment' code from EachTrial_3
-if parallelTrigger == True:
-   ParaleData = 50
-   #ParaleData = int((TrgCol+0.6)*40+20)
-   port.setData(ParaleData)
-   core.wait(0.02)
-   port.setData(0)
 
 # --- Initialize components for Routine "ITI" ---
 BlankBkg = visual.Rect(
@@ -817,6 +810,10 @@ for thisPreCond in PreCond:
     gotValidClick = False  # until a click is received
     PreCond_Mouse.mouseClock.reset()
     # Run 'Begin Routine' code from EachTrial
+    if skipPhases == True:
+        continueRoutine = False #end the routine
+        PreCond.finished = True #break the loop
+    
     if parallelTrigger == True:
        ParaleData = 50  #Faissal
        #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
@@ -1261,7 +1258,7 @@ RatingPreCond.saveAsExcel(filename + '.xlsx', sheetName='RatingPreCond',
 # set up handler to look after randomisation of conditions etc
 CondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:4'),
     seed=None, name='CondInstText')
 thisExp.addLoop(CondInstText)  # add the loop to the experiment
 thisCondInstText = CondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -1284,9 +1281,6 @@ for thisCondInstText in CondInstText:
     CondImage.setImage(CondInstTextImage)
     CondInstEN.setText(CondInstTextEN)
     CondInstCN.setText(CondInstTextCN)
-    key_resp.keys = []
-    key_resp.rt = []
-    _key_resp_allKeys = []
     # setup some python lists for storing info about the CondMouse
     CondMouse.x = []
     CondMouse.y = []
@@ -1296,7 +1290,7 @@ for thisCondInstText in CondInstText:
     CondMouse.time = []
     gotValidClick = False  # until a click is received
     # keep track of which components have finished
-    CondInstComponents = [InstrBkg2, CondImage, CondInstEN, CondInstCN, key_resp, CondMouse, CondSubmit]
+    CondInstComponents = [InstrBkg2, CondImage, CondInstEN, CondInstCN, CondMouse, CondSubmit]
     for thisComponent in CondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1361,30 +1355,6 @@ for thisCondInstText in CondInstText:
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'CondInstCN.started')
             CondInstCN.setAutoDraw(True)
-        
-        # *key_resp* updates
-        waitOnFlip = False
-        if key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            key_resp.frameNStart = frameN  # exact frame index
-            key_resp.tStart = t  # local t and not account for scr refresh
-            key_resp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'key_resp.started')
-            key_resp.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if key_resp.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp.getKeys(keyList=['space'], waitRelease=False)
-            _key_resp_allKeys.extend(theseKeys)
-            if len(_key_resp_allKeys):
-                key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
-                key_resp.rt = _key_resp_allKeys[-1].rt
-                # a response ends the routine
-                continueRoutine = False
         # *CondMouse* updates
         if CondMouse.status == NOT_STARTED and t >= 0-frameTolerance:
             # keep track of start time/frame for later
@@ -1460,12 +1430,6 @@ for thisCondInstText in CondInstText:
     for thisComponent in CondInstComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # check responses
-    if key_resp.keys in ['', [], None]:  # No response was made
-        key_resp.keys = None
-    CondInstText.addData('key_resp.keys',key_resp.keys)
-    if key_resp.keys != None:  # we had a response
-        CondInstText.addData('key_resp.rt', key_resp.rt)
     # store data for CondInstText (TrialHandler)
     CondInstText.addData('CondMouse.x', CondMouse.x)
     CondInstText.addData('CondMouse.y', CondMouse.y)
@@ -1519,6 +1483,10 @@ for thisCond in Cond:
     gotValidClick = False  # until a click is received
     Cond_Mouse.mouseClock.reset()
     # Run 'Begin Routine' code from EachTrial_2
+    if skipPhases == True:
+        continueRoutine = False #end the routine
+        Cond.finished = True #break the loop
+    
     if parallelTrigger == True:
        ParaleData = 50
        #ParaleData = int((TrgCol+0.6)*40+20)
@@ -2272,23 +2240,23 @@ for thisExtInstText in ExtInstText:
 
 
 # set up handler to look after randomisation of conditions etc
-Extinction = data.TrialHandler(nReps=1.0, method='random', 
+Ext = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('3_Extinction.xlsx'),
-    seed=None, name='Extinction')
-thisExp.addLoop(Extinction)  # add the loop to the experiment
-thisExtinction = Extinction.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisExtinction.rgb)
-if thisExtinction != None:
-    for paramName in thisExtinction:
-        exec('{} = thisExtinction[paramName]'.format(paramName))
+    seed=None, name='Ext')
+thisExp.addLoop(Ext)  # add the loop to the experiment
+thisExt = Ext.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisExt.rgb)
+if thisExt != None:
+    for paramName in thisExt:
+        exec('{} = thisExt[paramName]'.format(paramName))
 
-for thisExtinction in Extinction:
-    currentLoop = Extinction
-    # abbreviate parameter names if possible (e.g. rgb = thisExtinction.rgb)
-    if thisExtinction != None:
-        for paramName in thisExtinction:
-            exec('{} = thisExtinction[paramName]'.format(paramName))
+for thisExt in Ext:
+    currentLoop = Ext
+    # abbreviate parameter names if possible (e.g. rgb = thisExt.rgb)
+    if thisExt != None:
+        for paramName in thisExt:
+            exec('{} = thisExt[paramName]'.format(paramName))
     
     # --- Prepare to start Routine "trialExt" ---
     continueRoutine = True
@@ -2304,6 +2272,18 @@ for thisExtinction in Extinction:
     PreCond_Mouse_2.time = []
     gotValidClick = False  # until a click is received
     PreCond_Mouse_2.mouseClock.reset()
+    # Run 'Begin Routine' code from EachTrial_3
+    if skipPhases == True:
+        continueRoutine = False #end the routine
+        Ext.finished = True #break the loop;
+    
+    
+    if parallelTrigger == True:
+       ParaleData = 50
+       #ParaleData = int((TrgCol+0.6)*40+20)
+       port.setData(ParaleData)
+       core.wait(0.02)
+       port.setData(0)
     # keep track of which components have finished
     trialExtComponents = [ExtBkg, Ext_image, PreCond_Mouse_2]
     for thisComponent in trialExtComponents:
@@ -2422,13 +2402,13 @@ for thisExtinction in Extinction:
     for thisComponent in trialExtComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # store data for Extinction (TrialHandler)
-    Extinction.addData('PreCond_Mouse_2.x', PreCond_Mouse_2.x)
-    Extinction.addData('PreCond_Mouse_2.y', PreCond_Mouse_2.y)
-    Extinction.addData('PreCond_Mouse_2.leftButton', PreCond_Mouse_2.leftButton)
-    Extinction.addData('PreCond_Mouse_2.midButton', PreCond_Mouse_2.midButton)
-    Extinction.addData('PreCond_Mouse_2.rightButton', PreCond_Mouse_2.rightButton)
-    Extinction.addData('PreCond_Mouse_2.time', PreCond_Mouse_2.time)
+    # store data for Ext (TrialHandler)
+    Ext.addData('PreCond_Mouse_2.x', PreCond_Mouse_2.x)
+    Ext.addData('PreCond_Mouse_2.y', PreCond_Mouse_2.y)
+    Ext.addData('PreCond_Mouse_2.leftButton', PreCond_Mouse_2.leftButton)
+    Ext.addData('PreCond_Mouse_2.midButton', PreCond_Mouse_2.midButton)
+    Ext.addData('PreCond_Mouse_2.rightButton', PreCond_Mouse_2.rightButton)
+    Ext.addData('PreCond_Mouse_2.time', PreCond_Mouse_2.time)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2508,15 +2488,15 @@ for thisExtinction in Extinction:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1.0 repeats of 'Extinction'
+# completed 1.0 repeats of 'Ext'
 
 # get names of stimulus parameters
-if Extinction.trialList in ([], [None], None):
+if Ext.trialList in ([], [None], None):
     params = []
 else:
-    params = Extinction.trialList[0].keys()
+    params = Ext.trialList[0].keys()
 # save data for this loop
-Extinction.saveAsExcel(filename + '.xlsx', sheetName='Extinction',
+Ext.saveAsExcel(filename + '.xlsx', sheetName='Ext',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
@@ -2742,7 +2722,7 @@ RatingExt.saveAsExcel(filename + '.xlsx', sheetName='RatingExt',
 # set up handler to look after randomisation of conditions etc
 EndText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:1'),
     seed=None, name='EndText')
 thisExp.addLoop(EndText)  # add the loop to the experiment
 thisEndText = EndText.trialList[0]  # so we can initialise stimuli with some values
