@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2022.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2022.2.5">
   <Settings>
     <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
@@ -379,24 +379,6 @@
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <MouseComponent name="PreCond_Mouse">
-        <Param val="" valType="list" updates="constant" name="clickable"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="never" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
-        <Param val="PreCond_Mouse" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="" valType="list" updates="constant" name="saveParamsClickable"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="0" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="6" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
-      </MouseComponent>
       <CodeComponent name="EachTrial">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -414,24 +396,24 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="EachTrial" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <KeyboardComponent name="PreCondKey">
-        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+      <MouseComponent name="mouse_2">
+        <Param val="" valType="list" updates="constant" name="clickable"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="PreCondKey" valType="code" updates="None" name="name"/>
+        <Param val="any click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
+        <Param val="mouse_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
+        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name" valType="list" updates="constant" name="saveParamsClickable"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
         <Param val="$PreCondName==&quot;Stimuli/Trig.BMP&quot;" valType="code" updates="None" name="startVal"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="first key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="6" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
+      </MouseComponent>
     </Routine>
     <Routine name="trialCond">
       <PolygonComponent name="CSBkg">
@@ -488,24 +470,6 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <MouseComponent name="Cond_Mouse">
-        <Param val="" valType="list" updates="constant" name="clickable"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="never" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
-        <Param val="Cond_Mouse" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="" valType="list" updates="constant" name="saveParamsClickable"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="0" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="6" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
-      </MouseComponent>
       <CodeComponent name="EachTrial_2">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -523,6 +487,24 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="EachTrial_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
+      <MouseComponent name="mouse_3">
+        <Param val="" valType="list" updates="constant" name="clickable"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="any click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
+        <Param val="mouse_3" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
+        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name" valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$PreCondName==&quot;Stimuli/Trig.BMP&quot;" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="6" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
+      </MouseComponent>
     </Routine>
     <Routine name="UCS">
       <PolygonComponent name="UCSBkg">
@@ -650,24 +632,6 @@
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
       </ImageComponent>
-      <MouseComponent name="PreCond_Mouse_2">
-        <Param val="" valType="list" updates="constant" name="clickable"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="never" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
-        <Param val="PreCond_Mouse_2" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="" valType="list" updates="constant" name="saveParamsClickable"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="0" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="6" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
-      </MouseComponent>
       <CodeComponent name="EachTrial_3">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -685,6 +649,24 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="EachTrial_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
+      <MouseComponent name="mouse_4">
+        <Param val="" valType="list" updates="constant" name="clickable"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="any click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
+        <Param val="mouse_4" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
+        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name" valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$PreCondName==&quot;Stimuli/Trig.BMP&quot;" valType="code" updates="None" name="startVal"/>
+        <Param val="time (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="6" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="routine" valType="str" updates="constant" name="timeRelativeTo"/>
+      </MouseComponent>
     </Routine>
     <Routine name="ITIradom2">
       <PolygonComponent name="BlankBkg2">

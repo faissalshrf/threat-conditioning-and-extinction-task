@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 10, 2023, at 23:03
+    on 五月 10, 2023, at 22:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -52,7 +52,7 @@ filename = _thisDir + os.sep + 'data/%s/%s-%s' %(expInfo['Participant_ID'], expI
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\github_TECT\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+    originPath='D:\\github_TECT\\threat-conditioning-and-extinction-task\\TCET_Sharif.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -291,9 +291,9 @@ CS_image = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
-mouse_3 = event.Mouse(win=win)
+Cond_Mouse = event.Mouse(win=win)
 x, y = [None, None]
-mouse_3.mouseClock = core.Clock()
+Cond_Mouse.mouseClock = core.Clock()
 
 # --- Initialize components for Routine "UCS" ---
 UCSBkg = visual.Rect(
@@ -438,9 +438,9 @@ Ext_image = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-1.0)
-mouse_4 = event.Mouse(win=win)
+PreCond_Mouse_2 = event.Mouse(win=win)
 x, y = [None, None]
-mouse_4.mouseClock = core.Clock()
+PreCond_Mouse_2.mouseClock = core.Clock()
 
 # --- Initialize components for Routine "ITI" ---
 BlankBkg = visual.Rect(
@@ -1475,6 +1475,15 @@ for thisCond in Cond:
     routineForceEnded = False
     # update component parameters for each repeat
     CS_image.setImage(CSName)
+    # setup some python lists for storing info about the Cond_Mouse
+    Cond_Mouse.x = []
+    Cond_Mouse.y = []
+    Cond_Mouse.leftButton = []
+    Cond_Mouse.midButton = []
+    Cond_Mouse.rightButton = []
+    Cond_Mouse.time = []
+    gotValidClick = False  # until a click is received
+    Cond_Mouse.mouseClock.reset()
     # Run 'Begin Routine' code from EachTrial_2
     if skipPhases == True:
         continueRoutine = False #end the routine
@@ -1486,17 +1495,8 @@ for thisCond in Cond:
        port.setData(ParaleData)
        core.wait(0.02)
        port.setData(0)
-    # setup some python lists for storing info about the mouse_3
-    mouse_3.x = []
-    mouse_3.y = []
-    mouse_3.leftButton = []
-    mouse_3.midButton = []
-    mouse_3.rightButton = []
-    mouse_3.time = []
-    gotValidClick = False  # until a click is received
-    mouse_3.mouseClock.reset()
     # keep track of which components have finished
-    trialCondComponents = [CSBkg, CS_image, mouse_3]
+    trialCondComponents = [CSBkg, CS_image, Cond_Mouse]
     for thisComponent in trialCondComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1557,41 +1557,39 @@ for thisCond in Cond:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'CS_image.stopped')
                 CS_image.setAutoDraw(False)
-        # *mouse_3* updates
-        if mouse_3.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        # *Cond_Mouse* updates
+        if Cond_Mouse.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
-            mouse_3.frameNStart = frameN  # exact frame index
-            mouse_3.tStart = t  # local t and not account for scr refresh
-            mouse_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_3, 'tStartRefresh')  # time at next scr refresh
+            Cond_Mouse.frameNStart = frameN  # exact frame index
+            Cond_Mouse.tStart = t  # local t and not account for scr refresh
+            Cond_Mouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Cond_Mouse, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'mouse_3.started')
-            mouse_3.status = STARTED
-            prevButtonState = mouse_3.getPressed()  # if button is down already this ISN'T a new click
-        if mouse_3.status == STARTED:
+            thisExp.timestampOnFlip(win, 'Cond_Mouse.started')
+            Cond_Mouse.status = STARTED
+            prevButtonState = [0, 0, 0]  # if now button is down we will treat as 'new' click
+        if Cond_Mouse.status == STARTED:
             # is it time to stop? (based on local clock)
             if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
-                mouse_3.tStop = t  # not accounting for scr refresh
-                mouse_3.frameNStop = frameN  # exact frame index
+                Cond_Mouse.tStop = t  # not accounting for scr refresh
+                Cond_Mouse.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mouse_3.stopped')
-                mouse_3.status = FINISHED
-        if mouse_3.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_3.getPressed()
+                thisExp.timestampOnFlip(win, 'Cond_Mouse.stopped')
+                Cond_Mouse.status = FINISHED
+        if Cond_Mouse.status == STARTED:  # only update if started and not finished!
+            buttons = Cond_Mouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
-                    x, y = mouse_3.getPos()
-                    mouse_3.x.append(x)
-                    mouse_3.y.append(y)
-                    buttons = mouse_3.getPressed()
-                    mouse_3.leftButton.append(buttons[0])
-                    mouse_3.midButton.append(buttons[1])
-                    mouse_3.rightButton.append(buttons[2])
-                    mouse_3.time.append(mouse_3.mouseClock.getTime())
-                    
-                    continueRoutine = False  # abort routine on response
+                    x, y = Cond_Mouse.getPos()
+                    Cond_Mouse.x.append(x)
+                    Cond_Mouse.y.append(y)
+                    buttons = Cond_Mouse.getPressed()
+                    Cond_Mouse.leftButton.append(buttons[0])
+                    Cond_Mouse.midButton.append(buttons[1])
+                    Cond_Mouse.rightButton.append(buttons[2])
+                    Cond_Mouse.time.append(Cond_Mouse.mouseClock.getTime())
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1616,12 +1614,12 @@ for thisCond in Cond:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for Cond (TrialHandler)
-    Cond.addData('mouse_3.x', mouse_3.x)
-    Cond.addData('mouse_3.y', mouse_3.y)
-    Cond.addData('mouse_3.leftButton', mouse_3.leftButton)
-    Cond.addData('mouse_3.midButton', mouse_3.midButton)
-    Cond.addData('mouse_3.rightButton', mouse_3.rightButton)
-    Cond.addData('mouse_3.time', mouse_3.time)
+    Cond.addData('Cond_Mouse.x', Cond_Mouse.x)
+    Cond.addData('Cond_Mouse.y', Cond_Mouse.y)
+    Cond.addData('Cond_Mouse.leftButton', Cond_Mouse.leftButton)
+    Cond.addData('Cond_Mouse.midButton', Cond_Mouse.midButton)
+    Cond.addData('Cond_Mouse.rightButton', Cond_Mouse.rightButton)
+    Cond.addData('Cond_Mouse.time', Cond_Mouse.time)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2267,6 +2265,15 @@ for thisExt in Ext:
     routineForceEnded = False
     # update component parameters for each repeat
     Ext_image.setImage(ExtName)
+    # setup some python lists for storing info about the PreCond_Mouse_2
+    PreCond_Mouse_2.x = []
+    PreCond_Mouse_2.y = []
+    PreCond_Mouse_2.leftButton = []
+    PreCond_Mouse_2.midButton = []
+    PreCond_Mouse_2.rightButton = []
+    PreCond_Mouse_2.time = []
+    gotValidClick = False  # until a click is received
+    PreCond_Mouse_2.mouseClock.reset()
     # Run 'Begin Routine' code from EachTrial_3
     if skipPhases == True:
         continueRoutine = False #end the routine
@@ -2279,17 +2286,8 @@ for thisExt in Ext:
        port.setData(ParaleData)
        core.wait(0.02)
        port.setData(0)
-    # setup some python lists for storing info about the mouse_4
-    mouse_4.x = []
-    mouse_4.y = []
-    mouse_4.leftButton = []
-    mouse_4.midButton = []
-    mouse_4.rightButton = []
-    mouse_4.time = []
-    gotValidClick = False  # until a click is received
-    mouse_4.mouseClock.reset()
     # keep track of which components have finished
-    trialExtComponents = [ExtBkg, Ext_image, mouse_4]
+    trialExtComponents = [ExtBkg, Ext_image, PreCond_Mouse_2]
     for thisComponent in trialExtComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2350,41 +2348,39 @@ for thisExt in Ext:
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'Ext_image.stopped')
                 Ext_image.setAutoDraw(False)
-        # *mouse_4* updates
-        if mouse_4.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        # *PreCond_Mouse_2* updates
+        if PreCond_Mouse_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
-            mouse_4.frameNStart = frameN  # exact frame index
-            mouse_4.tStart = t  # local t and not account for scr refresh
-            mouse_4.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_4, 'tStartRefresh')  # time at next scr refresh
+            PreCond_Mouse_2.frameNStart = frameN  # exact frame index
+            PreCond_Mouse_2.tStart = t  # local t and not account for scr refresh
+            PreCond_Mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCond_Mouse_2, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'mouse_4.started')
-            mouse_4.status = STARTED
-            prevButtonState = mouse_4.getPressed()  # if button is down already this ISN'T a new click
-        if mouse_4.status == STARTED:
+            thisExp.timestampOnFlip(win, 'PreCond_Mouse_2.started')
+            PreCond_Mouse_2.status = STARTED
+            prevButtonState = [0, 0, 0]  # if now button is down we will treat as 'new' click
+        if PreCond_Mouse_2.status == STARTED:
             # is it time to stop? (based on local clock)
             if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
-                mouse_4.tStop = t  # not accounting for scr refresh
-                mouse_4.frameNStop = frameN  # exact frame index
+                PreCond_Mouse_2.tStop = t  # not accounting for scr refresh
+                PreCond_Mouse_2.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mouse_4.stopped')
-                mouse_4.status = FINISHED
-        if mouse_4.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_4.getPressed()
+                thisExp.timestampOnFlip(win, 'PreCond_Mouse_2.stopped')
+                PreCond_Mouse_2.status = FINISHED
+        if PreCond_Mouse_2.status == STARTED:  # only update if started and not finished!
+            buttons = PreCond_Mouse_2.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
-                    x, y = mouse_4.getPos()
-                    mouse_4.x.append(x)
-                    mouse_4.y.append(y)
-                    buttons = mouse_4.getPressed()
-                    mouse_4.leftButton.append(buttons[0])
-                    mouse_4.midButton.append(buttons[1])
-                    mouse_4.rightButton.append(buttons[2])
-                    mouse_4.time.append(mouse_4.mouseClock.getTime())
-                    
-                    continueRoutine = False  # abort routine on response
+                    x, y = PreCond_Mouse_2.getPos()
+                    PreCond_Mouse_2.x.append(x)
+                    PreCond_Mouse_2.y.append(y)
+                    buttons = PreCond_Mouse_2.getPressed()
+                    PreCond_Mouse_2.leftButton.append(buttons[0])
+                    PreCond_Mouse_2.midButton.append(buttons[1])
+                    PreCond_Mouse_2.rightButton.append(buttons[2])
+                    PreCond_Mouse_2.time.append(PreCond_Mouse_2.mouseClock.getTime())
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2409,12 +2405,12 @@ for thisExt in Ext:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for Ext (TrialHandler)
-    Ext.addData('mouse_4.x', mouse_4.x)
-    Ext.addData('mouse_4.y', mouse_4.y)
-    Ext.addData('mouse_4.leftButton', mouse_4.leftButton)
-    Ext.addData('mouse_4.midButton', mouse_4.midButton)
-    Ext.addData('mouse_4.rightButton', mouse_4.rightButton)
-    Ext.addData('mouse_4.time', mouse_4.time)
+    Ext.addData('PreCond_Mouse_2.x', PreCond_Mouse_2.x)
+    Ext.addData('PreCond_Mouse_2.y', PreCond_Mouse_2.y)
+    Ext.addData('PreCond_Mouse_2.leftButton', PreCond_Mouse_2.leftButton)
+    Ext.addData('PreCond_Mouse_2.midButton', PreCond_Mouse_2.midButton)
+    Ext.addData('PreCond_Mouse_2.rightButton', PreCond_Mouse_2.rightButton)
+    Ext.addData('PreCond_Mouse_2.time', PreCond_Mouse_2.time)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
