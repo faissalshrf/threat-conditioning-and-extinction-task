@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on 五月 10, 2023, at 23:03
+This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
+    on Wed May 17 01:52:08 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,7 +33,7 @@ from psychopy.hardware import keyboard
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 # Store info about the experiment session
-psychopyVersion = '2022.2.5'
+psychopyVersion = '2022.2.4'
 expName = 'TCET'  # from the Builder filename that created this script
 expInfo = {
     'Participant_ID': 'P00',
@@ -52,7 +52,7 @@ filename = _thisDir + os.sep + 'data/%s/%s-%s' %(expInfo['Participant_ID'], expI
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\github_TECT\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+    originPath='/Users/faissal/Library/CloudStorage/OneDrive-Nexus365/2023 – NAP Study/TCET_Task/TCET_Sharif/TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -90,12 +90,15 @@ import random
 parallelTrigger = False
 
 isChinese = False #sets task lang to Chinese
-skipPhases = False #Shows only instructions and ratings
+skipPhases = False #Shows only instructions and ratings    
 
 if parallelTrigger == True:
     from psychopy import parallel
     port = parallel.ParallelPort(address=0x0378)
     port.setData(0)
+    if lfpTrigger == True:
+        lfpCtrlPort = parallel.ParallelPort(address=0x037A)
+        lfpCtrlPort.setData(0)
 
 random.seed()
 SetNums = [1,2,3]
@@ -809,8 +812,12 @@ for thisPreCond in PreCond:
        ParaleData = 50  #Faissal
        #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
        port.setData(ParaleData) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(1)
        core.wait(0.02)
        port.setData(0) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(0)
     # setup some python lists for storing info about the mouse_2
     mouse_2.x = []
     mouse_2.y = []
@@ -1481,11 +1488,15 @@ for thisCond in Cond:
         Cond.finished = True #break the loop
     
     if parallelTrigger == True:
-       ParaleData = 50
-       #ParaleData = int((TrgCol+0.6)*40+20)
-       port.setData(ParaleData)
+       ParaleData = 50  #Faissal
+       #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
+       port.setData(ParaleData) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(1)
        core.wait(0.02)
-       port.setData(0)
+       port.setData(0) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(0)
     # setup some python lists for storing info about the mouse_3
     mouse_3.x = []
     mouse_3.y = []
@@ -2270,15 +2281,18 @@ for thisExt in Ext:
     # Run 'Begin Routine' code from EachTrial_3
     if skipPhases == True:
         continueRoutine = False #end the routine
-        Ext.finished = True #break the loop;
-    
+        Ext.finished = True #break the loop
     
     if parallelTrigger == True:
-       ParaleData = 50
-       #ParaleData = int((TrgCol+0.6)*40+20)
-       port.setData(ParaleData)
+       ParaleData = 50  #Faissal
+       #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
+       port.setData(ParaleData) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(1)
        core.wait(0.02)
-       port.setData(0)
+       port.setData(0) #Faissal
+       if lfpTrigger == True:
+            lfpCtrlPort.setData(0)
     # setup some python lists for storing info about the mouse_4
     mouse_4.x = []
     mouse_4.y = []
