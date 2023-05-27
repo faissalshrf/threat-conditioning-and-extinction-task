@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 27, 2023, at 02:16
+    on May 27, 2023, at 02:39
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -181,6 +181,12 @@ BlankBkg = visual.Rect(
     ori=0, pos=(0, 0), anchor='center',
     lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
     opacity=1, depth=0.0, interpolate=True)
+polygon_2 = visual.ShapeStim(
+    win=win, name='polygon_2', vertices='cross',
+    size=(0.05, 0.07),
+    ori=0.0, pos=(0, 0), anchor='center',
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-1.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
 Bkg = visual.Rect(
@@ -330,6 +336,12 @@ BlankBkg = visual.Rect(
     ori=0, pos=(0, 0), anchor='center',
     lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
     opacity=1, depth=0.0, interpolate=True)
+polygon_2 = visual.ShapeStim(
+    win=win, name='polygon_2', vertices='cross',
+    size=(0.05, 0.07),
+    ori=0.0, pos=(0, 0), anchor='center',
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-1.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
 Bkg = visual.Rect(
@@ -460,6 +472,12 @@ BlankBkg = visual.Rect(
     ori=0, pos=(0, 0), anchor='center',
     lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
     opacity=1, depth=0.0, interpolate=True)
+polygon_2 = visual.ShapeStim(
+    win=win, name='polygon_2', vertices='cross',
+    size=(0.05, 0.07),
+    ori=0.0, pos=(0, 0), anchor='center',
+    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
+    opacity=None, depth=-1.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
 Bkg = visual.Rect(
@@ -1061,7 +1079,7 @@ for thisPreCond in PreCond:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg]
+    ITIComponents = [BlankBkg, polygon_2]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1116,6 +1134,35 @@ for thisPreCond in PreCond:
                 # update status
                 BlankBkg.status = FINISHED
                 BlankBkg.setAutoDraw(False)
+        
+        # *polygon_2* updates
+        
+        # if polygon_2 is starting this frame...
+        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            polygon_2.frameNStart = frameN  # exact frame index
+            polygon_2.tStart = t  # local t and not account for scr refresh
+            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            polygon_2.status = STARTED
+            polygon_2.setAutoDraw(True)
+        
+        # if polygon_2 is active this frame...
+        if polygon_2.status == STARTED:
+            # update params
+            pass
+        
+        # if polygon_2 is stopping this frame...
+        if polygon_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+                # keep track of stop time/frame for later
+                polygon_2.tStop = t  # not accounting for scr refresh
+                polygon_2.frameNStop = frameN  # exact frame index
+                # update status
+                polygon_2.status = FINISHED
+                polygon_2.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2055,7 +2102,7 @@ for thisCond in Cond:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg]
+    ITIComponents = [BlankBkg, polygon_2]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2110,6 +2157,35 @@ for thisCond in Cond:
                 # update status
                 BlankBkg.status = FINISHED
                 BlankBkg.setAutoDraw(False)
+        
+        # *polygon_2* updates
+        
+        # if polygon_2 is starting this frame...
+        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            polygon_2.frameNStart = frameN  # exact frame index
+            polygon_2.tStart = t  # local t and not account for scr refresh
+            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            polygon_2.status = STARTED
+            polygon_2.setAutoDraw(True)
+        
+        # if polygon_2 is active this frame...
+        if polygon_2.status == STARTED:
+            # update params
+            pass
+        
+        # if polygon_2 is stopping this frame...
+        if polygon_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+                # keep track of stop time/frame for later
+                polygon_2.tStop = t  # not accounting for scr refresh
+                polygon_2.frameNStop = frameN  # exact frame index
+                # update status
+                polygon_2.status = FINISHED
+                polygon_2.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2896,7 +2972,7 @@ for thisExt in Ext:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg]
+    ITIComponents = [BlankBkg, polygon_2]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2951,6 +3027,35 @@ for thisExt in Ext:
                 # update status
                 BlankBkg.status = FINISHED
                 BlankBkg.setAutoDraw(False)
+        
+        # *polygon_2* updates
+        
+        # if polygon_2 is starting this frame...
+        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            polygon_2.frameNStart = frameN  # exact frame index
+            polygon_2.tStart = t  # local t and not account for scr refresh
+            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            polygon_2.status = STARTED
+            polygon_2.setAutoDraw(True)
+        
+        # if polygon_2 is active this frame...
+        if polygon_2.status == STARTED:
+            # update params
+            pass
+        
+        # if polygon_2 is stopping this frame...
+        if polygon_2.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+                # keep track of stop time/frame for later
+                polygon_2.tStop = t  # not accounting for scr refresh
+                polygon_2.frameNStop = frameN  # exact frame index
+                # update status
+                polygon_2.status = FINISHED
+                polygon_2.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
