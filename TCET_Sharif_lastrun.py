@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 27, 2023, at 02:39
+    on May 28, 2023, at 01:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -10,6 +10,10 @@ If you publish work using this script the most relevant publication is:
         https://doi.org/10.3758/s13428-018-01193-y
 
 """
+
+import psychopy
+psychopy.useVersion('2023.1.1')
+
 
 # --- Import packages ---
 from psychopy import locale_setup
@@ -68,10 +72,10 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1440, 900], fullscr=True, screen=0, 
+    size=[1382, 864], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
-    monitor='', color=[0,0,0], colorSpace='rgb',
-    backgroundImage='', backgroundFit='none',
+    monitor='', color='black', colorSpace='rgb',
+    backgroundImage='', backgroundFit='fill',
     blendMode='avg', useFBO=True)
 win.mouseVisible = True
 # store frame rate of monitor if we can measure it
@@ -108,12 +112,6 @@ SetNums = [1,2,3]
 Sess = 0
 
 # --- Initialize components for Routine "PreCondInst" ---
-InstrBkg = visual.Rect(
-    win=win, name='InstrBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0, pos=(0, 0), anchor='center',
-    lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1, depth=0.0, interpolate=True)
 PreCondImage = visual.ImageStim(
     win=win,
     name='PreCondImage', 
@@ -121,26 +119,26 @@ PreCondImage = visual.ImageStim(
     ori=0.0, pos=[0,0.05], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 PreCondInstEN = visual.TextStim(win=win, name='PreCondInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 PreCondInstCN = visual.TextStim(win=win, name='PreCondInstCN',
     text='',
     font='PingFang SC',
     pos=(-0.2,0.7), height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
 PreCondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -151,17 +149,11 @@ PreCondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='PreCondSubmit',
-    depth=-5
+    depth=-4
 )
 PreCondSubmit.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialPreCond" ---
-precondBkg = visual.Rect(
-    win=win, name='precondBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 imagePreCond = visual.ImageStim(
     win=win,
     name='imagePreCond', 
@@ -169,32 +161,21 @@ imagePreCond = visual.ImageStim(
     ori=0, pos=[0, 0], size=[2, 2],
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
-mouse_2 = event.Mouse(win=win)
+    texRes=128, interpolate=True, depth=0.0)
+PreCondTriggMouse = event.Mouse(win=win)
 x, y = [None, None]
-mouse_2.mouseClock = core.Clock()
+PreCondTriggMouse.mouseClock = core.Clock()
+PreCondTriggKey = keyboard.Keyboard()
 
 # --- Initialize components for Routine "ITI" ---
-BlankBkg = visual.Rect(
-    win=win, name='BlankBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0, pos=(0, 0), anchor='center',
-    lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1, depth=0.0, interpolate=True)
-polygon_2 = visual.ShapeStim(
-    win=win, name='polygon_2', vertices='cross',
+FixCross = visual.ShapeStim(
+    win=win, name='FixCross', vertices='cross',
     size=(0.05, 0.07),
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
-    opacity=None, depth=-1.0, interpolate=True)
+    opacity=None, depth=0.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
-Bkg = visual.Rect(
-    win=win, name='Bkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -202,33 +183,33 @@ image = visual.ImageStim(
     ori=0.0, pos=[0,0.1], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
-    flip=False, ori=0.0, depth=-4, readOnly=False)
+    font='Arial', labelHeight=0.07,
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -239,17 +220,11 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-6
+    depth=-5
 )
 Submit.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "CondInst" ---
-InstrBkg2 = visual.Rect(
-    win=win, name='InstrBkg2',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 CondImage = visual.ImageStim(
     win=win,
     name='CondImage', 
@@ -257,26 +232,26 @@ CondImage = visual.ImageStim(
     ori=0.0, pos=[0,0.05], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 CondInstEN = visual.TextStim(win=win, name='CondInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 CondInstCN = visual.TextStim(win=win, name='CondInstCN',
     text='',
     font='PingFang SC',
     pos=[-0.2,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
 CondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -287,17 +262,11 @@ CondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='CondSubmit',
-    depth=-5
+    depth=-4
 )
 CondSubmit.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialCond" ---
-CSBkg = visual.Rect(
-    win=win, name='CSBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 CS_image = visual.ImageStim(
     win=win,
     name='CS_image', 
@@ -305,10 +274,11 @@ CS_image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-mouse_3 = event.Mouse(win=win)
+    texRes=128.0, interpolate=True, depth=0.0)
+CondTriggMouse = event.Mouse(win=win)
 x, y = [None, None]
-mouse_3.mouseClock = core.Clock()
+CondTriggMouse.mouseClock = core.Clock()
+CondTriggKey = keyboard.Keyboard()
 
 # --- Initialize components for Routine "UCS" ---
 UCSBkg = visual.Rect(
@@ -330,26 +300,14 @@ sound_1 = sound.Sound('A', secs=1, stereo=True, hamming=True,
 sound_1.setVolume(0.3)
 
 # --- Initialize components for Routine "ITI" ---
-BlankBkg = visual.Rect(
-    win=win, name='BlankBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0, pos=(0, 0), anchor='center',
-    lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1, depth=0.0, interpolate=True)
-polygon_2 = visual.ShapeStim(
-    win=win, name='polygon_2', vertices='cross',
+FixCross = visual.ShapeStim(
+    win=win, name='FixCross', vertices='cross',
     size=(0.05, 0.07),
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
-    opacity=None, depth=-1.0, interpolate=True)
+    opacity=None, depth=0.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
-Bkg = visual.Rect(
-    win=win, name='Bkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -357,33 +315,33 @@ image = visual.ImageStim(
     ori=0.0, pos=[0,0.1], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
-    flip=False, ori=0.0, depth=-4, readOnly=False)
+    font='Arial', labelHeight=0.07,
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -394,17 +352,11 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-6
+    depth=-5
 )
 Submit.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "ExtInst" ---
-InstrBkg3 = visual.Rect(
-    win=win, name='InstrBkg3',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 ExtImage = visual.ImageStim(
     win=win,
     name='ExtImage', 
@@ -412,26 +364,26 @@ ExtImage = visual.ImageStim(
     ori=0.0, pos=[0,0.05], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 ExtInstEN = visual.TextStim(win=win, name='ExtInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 ExtInstCN = visual.TextStim(win=win, name='ExtInstCN',
     text='',
     font='PingFang SC',
     pos=[-0.2,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 ExtMouse = event.Mouse(win=win)
 x, y = [None, None]
 ExtMouse.mouseClock = core.Clock()
 ExtSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -442,17 +394,11 @@ ExtSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='ExtSubmit',
-    depth=-5
+    depth=-4
 )
 ExtSubmit.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialExt" ---
-ExtBkg = visual.Rect(
-    win=win, name='ExtBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 Ext_image = visual.ImageStim(
     win=win,
     name='Ext_image', 
@@ -460,32 +406,21 @@ Ext_image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
-mouse_4 = event.Mouse(win=win)
+    texRes=128.0, interpolate=True, depth=0.0)
+ExtTriggMouse = event.Mouse(win=win)
 x, y = [None, None]
-mouse_4.mouseClock = core.Clock()
+ExtTriggMouse.mouseClock = core.Clock()
+ExtTriggKey = keyboard.Keyboard()
 
 # --- Initialize components for Routine "ITI" ---
-BlankBkg = visual.Rect(
-    win=win, name='BlankBkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0, pos=(0, 0), anchor='center',
-    lineWidth=1,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1, depth=0.0, interpolate=True)
-polygon_2 = visual.ShapeStim(
-    win=win, name='polygon_2', vertices='cross',
+FixCross = visual.ShapeStim(
+    win=win, name='FixCross', vertices='cross',
     size=(0.05, 0.07),
     ori=0.0, pos=(0, 0), anchor='center',
     lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='white',
-    opacity=None, depth=-1.0, interpolate=True)
+    opacity=None, depth=0.0, interpolate=True)
 
 # --- Initialize components for Routine "Rating" ---
-Bkg = visual.Rect(
-    win=win, name='Bkg',
-    width=(2, 2)[0], height=(2, 2)[1],
-    ori=0.0, pos=(0, 0), anchor='center',
-    lineWidth=1.0,     colorSpace='rgb',  lineColor='black', fillColor='black',
-    opacity=1.0, depth=0.0, interpolate=True)
 image = visual.ImageStim(
     win=win,
     name='image', 
@@ -493,33 +428,33 @@ image = visual.ImageStim(
     ori=0.0, pos=[0,0.1], size=[0.45,0.9],
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-1.0)
+    texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-1.0);
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-3.0);
+    depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
-    flip=False, ori=0.0, depth=-4, readOnly=False)
+    font='Arial', labelHeight=0.07,
+    flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -530,7 +465,7 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-6
+    depth=-5
 )
 Submit.buttonClock = core.Clock()
 
@@ -543,7 +478,7 @@ Bkg_Light = visual.Rect(
     opacity=1.0, depth=0.0, interpolate=True)
 EndTxtEN = visual.TextStim(win=win, name='EndTxtEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0, 0], height=0.2, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -650,7 +585,7 @@ for thisPreCondInstText in PreCondInstText:
     # reset PreCondSubmit to account for continued clicks & clear times on/off
     PreCondSubmit.reset()
     # keep track of which components have finished
-    PreCondInstComponents = [InstrBkg, PreCondImage, PreCondInstEN, PreCondInstCN, PreCondMouse, PreCondSubmit]
+    PreCondInstComponents = [PreCondImage, PreCondInstEN, PreCondInstCN, PreCondMouse, PreCondSubmit]
     for thisComponent in PreCondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -672,26 +607,6 @@ for thisPreCondInstText in PreCondInstText:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *InstrBkg* updates
-        
-        # if InstrBkg is starting this frame...
-        if InstrBkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            InstrBkg.frameNStart = frameN  # exact frame index
-            InstrBkg.tStart = t  # local t and not account for scr refresh
-            InstrBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(InstrBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'InstrBkg.started')
-            # update status
-            InstrBkg.status = STARTED
-            InstrBkg.setAutoDraw(True)
-        
-        # if InstrBkg is active this frame...
-        if InstrBkg.status == STARTED:
-            # update params
-            pass
         
         # *PreCondImage* updates
         
@@ -898,17 +813,20 @@ for thisPreCond in PreCond:
        port.setData(0) #Faissal
        if lfpTrigger == True:
             lfpCtrlPort.setData(0)
-    # setup some python lists for storing info about the mouse_2
-    mouse_2.x = []
-    mouse_2.y = []
-    mouse_2.leftButton = []
-    mouse_2.midButton = []
-    mouse_2.rightButton = []
-    mouse_2.time = []
+    # setup some python lists for storing info about the PreCondTriggMouse
+    PreCondTriggMouse.x = []
+    PreCondTriggMouse.y = []
+    PreCondTriggMouse.leftButton = []
+    PreCondTriggMouse.midButton = []
+    PreCondTriggMouse.rightButton = []
+    PreCondTriggMouse.time = []
     gotValidClick = False  # until a click is received
-    mouse_2.mouseClock.reset()
+    PreCondTriggMouse.mouseClock.reset()
+    PreCondTriggKey.keys = []
+    PreCondTriggKey.rt = []
+    _PreCondTriggKey_allKeys = []
     # keep track of which components have finished
-    trialPreCondComponents = [precondBkg, imagePreCond, mouse_2]
+    trialPreCondComponents = [imagePreCond, PreCondTriggMouse, PreCondTriggKey]
     for thisComponent in trialPreCondComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -930,39 +848,6 @@ for thisPreCond in PreCond:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *precondBkg* updates
-        
-        # if precondBkg is starting this frame...
-        if precondBkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            precondBkg.frameNStart = frameN  # exact frame index
-            precondBkg.tStart = t  # local t and not account for scr refresh
-            precondBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(precondBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'precondBkg.started')
-            # update status
-            precondBkg.status = STARTED
-            precondBkg.setAutoDraw(True)
-        
-        # if precondBkg is active this frame...
-        if precondBkg.status == STARTED:
-            # update params
-            pass
-        
-        # if precondBkg is stopping this frame...
-        if precondBkg.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > precondBkg.tStartRefresh + 6-frameTolerance:
-                # keep track of stop time/frame for later
-                precondBkg.tStop = t  # not accounting for scr refresh
-                precondBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'precondBkg.stopped')
-                # update status
-                precondBkg.status = FINISHED
-                precondBkg.setAutoDraw(False)
         
         # *imagePreCond* updates
         
@@ -996,47 +881,87 @@ for thisPreCond in PreCond:
                 # update status
                 imagePreCond.status = FINISHED
                 imagePreCond.setAutoDraw(False)
-        # *mouse_2* updates
+        # *PreCondTriggMouse* updates
         
-        # if mouse_2 is starting this frame...
-        if mouse_2.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        # if PreCondTriggMouse is starting this frame...
+        if PreCondTriggMouse.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
-            mouse_2.frameNStart = frameN  # exact frame index
-            mouse_2.tStart = t  # local t and not account for scr refresh
-            mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
+            PreCondTriggMouse.frameNStart = frameN  # exact frame index
+            PreCondTriggMouse.tStart = t  # local t and not account for scr refresh
+            PreCondTriggMouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondTriggMouse, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'mouse_2.started')
+            thisExp.timestampOnFlip(win, 'PreCondTriggMouse.started')
             # update status
-            mouse_2.status = STARTED
-            prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
+            PreCondTriggMouse.status = STARTED
+            prevButtonState = PreCondTriggMouse.getPressed()  # if button is down already this ISN'T a new click
         
-        # if mouse_2 is stopping this frame...
-        if mouse_2.status == STARTED:
+        # if PreCondTriggMouse is stopping this frame...
+        if PreCondTriggMouse.status == STARTED:
             # is it time to stop? (based on local clock)
             if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
-                mouse_2.tStop = t  # not accounting for scr refresh
-                mouse_2.frameNStop = frameN  # exact frame index
+                PreCondTriggMouse.tStop = t  # not accounting for scr refresh
+                PreCondTriggMouse.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mouse_2.stopped')
+                thisExp.timestampOnFlip(win, 'PreCondTriggMouse.stopped')
                 # update status
-                mouse_2.status = FINISHED
-        if mouse_2.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_2.getPressed()
+                PreCondTriggMouse.status = FINISHED
+        if PreCondTriggMouse.status == STARTED:  # only update if started and not finished!
+            buttons = PreCondTriggMouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
-                    x, y = mouse_2.getPos()
-                    mouse_2.x.append(x)
-                    mouse_2.y.append(y)
-                    buttons = mouse_2.getPressed()
-                    mouse_2.leftButton.append(buttons[0])
-                    mouse_2.midButton.append(buttons[1])
-                    mouse_2.rightButton.append(buttons[2])
-                    mouse_2.time.append(mouse_2.mouseClock.getTime())
+                    x, y = PreCondTriggMouse.getPos()
+                    PreCondTriggMouse.x.append(x)
+                    PreCondTriggMouse.y.append(y)
+                    buttons = PreCondTriggMouse.getPressed()
+                    PreCondTriggMouse.leftButton.append(buttons[0])
+                    PreCondTriggMouse.midButton.append(buttons[1])
+                    PreCondTriggMouse.rightButton.append(buttons[2])
+                    PreCondTriggMouse.time.append(PreCondTriggMouse.mouseClock.getTime())
                     
                     continueRoutine = False  # end routine on response
+        
+        # *PreCondTriggKey* updates
+        waitOnFlip = False
+        
+        # if PreCondTriggKey is starting this frame...
+        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+            # keep track of start time/frame for later
+            PreCondTriggKey.frameNStart = frameN  # exact frame index
+            PreCondTriggKey.tStart = t  # local t and not account for scr refresh
+            PreCondTriggKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondTriggKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'PreCondTriggKey.started')
+            # update status
+            PreCondTriggKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(PreCondTriggKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(PreCondTriggKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        
+        # if PreCondTriggKey is stopping this frame...
+        if PreCondTriggKey.status == STARTED:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
+                # keep track of stop time/frame for later
+                PreCondTriggKey.tStop = t  # not accounting for scr refresh
+                PreCondTriggKey.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'PreCondTriggKey.stopped')
+                # update status
+                PreCondTriggKey.status = FINISHED
+                PreCondTriggKey.status = FINISHED
+        if PreCondTriggKey.status == STARTED and not waitOnFlip:
+            theseKeys = PreCondTriggKey.getKeys(keyList=['space'], waitRelease=False)
+            _PreCondTriggKey_allKeys.extend(theseKeys)
+            if len(_PreCondTriggKey_allKeys):
+                PreCondTriggKey.keys = _PreCondTriggKey_allKeys[-1].name  # just the last key pressed
+                PreCondTriggKey.rt = _PreCondTriggKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1063,12 +988,18 @@ for thisPreCond in PreCond:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for PreCond (TrialHandler)
-    PreCond.addData('mouse_2.x', mouse_2.x)
-    PreCond.addData('mouse_2.y', mouse_2.y)
-    PreCond.addData('mouse_2.leftButton', mouse_2.leftButton)
-    PreCond.addData('mouse_2.midButton', mouse_2.midButton)
-    PreCond.addData('mouse_2.rightButton', mouse_2.rightButton)
-    PreCond.addData('mouse_2.time', mouse_2.time)
+    PreCond.addData('PreCondTriggMouse.x', PreCondTriggMouse.x)
+    PreCond.addData('PreCondTriggMouse.y', PreCondTriggMouse.y)
+    PreCond.addData('PreCondTriggMouse.leftButton', PreCondTriggMouse.leftButton)
+    PreCond.addData('PreCondTriggMouse.midButton', PreCondTriggMouse.midButton)
+    PreCond.addData('PreCondTriggMouse.rightButton', PreCondTriggMouse.rightButton)
+    PreCond.addData('PreCondTriggMouse.time', PreCondTriggMouse.time)
+    # check responses
+    if PreCondTriggKey.keys in ['', [], None]:  # No response was made
+        PreCondTriggKey.keys = None
+    PreCond.addData('PreCondTriggKey.keys',PreCondTriggKey.keys)
+    if PreCondTriggKey.keys != None:  # we had a response
+        PreCond.addData('PreCondTriggKey.rt', PreCondTriggKey.rt)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -1079,7 +1010,7 @@ for thisPreCond in PreCond:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg, polygon_2]
+    ITIComponents = [FixCross]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1102,67 +1033,34 @@ for thisPreCond in PreCond:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *BlankBkg* updates
+        # *FixCross* updates
         
-        # if BlankBkg is starting this frame...
-        if BlankBkg.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if FixCross is starting this frame...
+        if FixCross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            BlankBkg.frameNStart = frameN  # exact frame index
-            BlankBkg.tStart = t  # local t and not account for scr refresh
-            BlankBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(BlankBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'BlankBkg.started')
+            FixCross.frameNStart = frameN  # exact frame index
+            FixCross.tStart = t  # local t and not account for scr refresh
+            FixCross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(FixCross, 'tStartRefresh')  # time at next scr refresh
             # update status
-            BlankBkg.status = STARTED
-            BlankBkg.setAutoDraw(True)
+            FixCross.status = STARTED
+            FixCross.setAutoDraw(True)
         
-        # if BlankBkg is active this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is active this frame...
+        if FixCross.status == STARTED:
             # update params
             pass
         
-        # if BlankBkg is stopping this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is stopping this frame...
+        if FixCross.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+            if tThisFlipGlobal > FixCross.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
-                BlankBkg.tStop = t  # not accounting for scr refresh
-                BlankBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'BlankBkg.stopped')
+                FixCross.tStop = t  # not accounting for scr refresh
+                FixCross.frameNStop = frameN  # exact frame index
                 # update status
-                BlankBkg.status = FINISHED
-                BlankBkg.setAutoDraw(False)
-        
-        # *polygon_2* updates
-        
-        # if polygon_2 is starting this frame...
-        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            polygon_2.frameNStart = frameN  # exact frame index
-            polygon_2.tStart = t  # local t and not account for scr refresh
-            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            polygon_2.status = STARTED
-            polygon_2.setAutoDraw(True)
-        
-        # if polygon_2 is active this frame...
-        if polygon_2.status == STARTED:
-            # update params
-            pass
-        
-        # if polygon_2 is stopping this frame...
-        if polygon_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
-                # keep track of stop time/frame for later
-                polygon_2.tStop = t  # not accounting for scr refresh
-                polygon_2.frameNStop = frameN  # exact frame index
-                # update status
-                polygon_2.status = FINISHED
-                polygon_2.setAutoDraw(False)
+                FixCross.status = FINISHED
+                FixCross.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1241,7 +1139,7 @@ for thisRatingPreCond in RatingPreCond:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [Bkg, image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1263,26 +1161,6 @@ for thisRatingPreCond in RatingPreCond:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *Bkg* updates
-        
-        # if Bkg is starting this frame...
-        if Bkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Bkg.frameNStart = frameN  # exact frame index
-            Bkg.tStart = t  # local t and not account for scr refresh
-            Bkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Bkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Bkg.started')
-            # update status
-            Bkg.status = STARTED
-            Bkg.setAutoDraw(True)
-        
-        # if Bkg is active this frame...
-        if Bkg.status == STARTED:
-            # update params
-            pass
         
         # *image* updates
         
@@ -1520,7 +1398,7 @@ for thisCondInstText in CondInstText:
     # reset CondSubmit to account for continued clicks & clear times on/off
     CondSubmit.reset()
     # keep track of which components have finished
-    CondInstComponents = [InstrBkg2, CondImage, CondInstEN, CondInstCN, CondMouse, CondSubmit]
+    CondInstComponents = [CondImage, CondInstEN, CondInstCN, CondMouse, CondSubmit]
     for thisComponent in CondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1542,26 +1420,6 @@ for thisCondInstText in CondInstText:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *InstrBkg2* updates
-        
-        # if InstrBkg2 is starting this frame...
-        if InstrBkg2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            InstrBkg2.frameNStart = frameN  # exact frame index
-            InstrBkg2.tStart = t  # local t and not account for scr refresh
-            InstrBkg2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(InstrBkg2, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'InstrBkg2.started')
-            # update status
-            InstrBkg2.status = STARTED
-            InstrBkg2.setAutoDraw(True)
-        
-        # if InstrBkg2 is active this frame...
-        if InstrBkg2.status == STARTED:
-            # update params
-            pass
         
         # *CondImage* updates
         
@@ -1768,17 +1626,20 @@ for thisCond in Cond:
        port.setData(0) #Faissal
        if lfpTrigger == True:
             lfpCtrlPort.setData(0)
-    # setup some python lists for storing info about the mouse_3
-    mouse_3.x = []
-    mouse_3.y = []
-    mouse_3.leftButton = []
-    mouse_3.midButton = []
-    mouse_3.rightButton = []
-    mouse_3.time = []
+    # setup some python lists for storing info about the CondTriggMouse
+    CondTriggMouse.x = []
+    CondTriggMouse.y = []
+    CondTriggMouse.leftButton = []
+    CondTriggMouse.midButton = []
+    CondTriggMouse.rightButton = []
+    CondTriggMouse.time = []
     gotValidClick = False  # until a click is received
-    mouse_3.mouseClock.reset()
+    CondTriggMouse.mouseClock.reset()
+    CondTriggKey.keys = []
+    CondTriggKey.rt = []
+    _CondTriggKey_allKeys = []
     # keep track of which components have finished
-    trialCondComponents = [CSBkg, CS_image, mouse_3]
+    trialCondComponents = [CS_image, CondTriggMouse, CondTriggKey]
     for thisComponent in trialCondComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1800,39 +1661,6 @@ for thisCond in Cond:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *CSBkg* updates
-        
-        # if CSBkg is starting this frame...
-        if CSBkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            CSBkg.frameNStart = frameN  # exact frame index
-            CSBkg.tStart = t  # local t and not account for scr refresh
-            CSBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(CSBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'CSBkg.started')
-            # update status
-            CSBkg.status = STARTED
-            CSBkg.setAutoDraw(True)
-        
-        # if CSBkg is active this frame...
-        if CSBkg.status == STARTED:
-            # update params
-            pass
-        
-        # if CSBkg is stopping this frame...
-        if CSBkg.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > CSBkg.tStartRefresh + 6-frameTolerance:
-                # keep track of stop time/frame for later
-                CSBkg.tStop = t  # not accounting for scr refresh
-                CSBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'CSBkg.stopped')
-                # update status
-                CSBkg.status = FINISHED
-                CSBkg.setAutoDraw(False)
         
         # *CS_image* updates
         
@@ -1866,47 +1694,87 @@ for thisCond in Cond:
                 # update status
                 CS_image.status = FINISHED
                 CS_image.setAutoDraw(False)
-        # *mouse_3* updates
+        # *CondTriggMouse* updates
         
-        # if mouse_3 is starting this frame...
-        if mouse_3.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        # if CondTriggMouse is starting this frame...
+        if CondTriggMouse.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
-            mouse_3.frameNStart = frameN  # exact frame index
-            mouse_3.tStart = t  # local t and not account for scr refresh
-            mouse_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_3, 'tStartRefresh')  # time at next scr refresh
+            CondTriggMouse.frameNStart = frameN  # exact frame index
+            CondTriggMouse.tStart = t  # local t and not account for scr refresh
+            CondTriggMouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondTriggMouse, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'mouse_3.started')
+            thisExp.timestampOnFlip(win, 'CondTriggMouse.started')
             # update status
-            mouse_3.status = STARTED
-            prevButtonState = mouse_3.getPressed()  # if button is down already this ISN'T a new click
+            CondTriggMouse.status = STARTED
+            prevButtonState = CondTriggMouse.getPressed()  # if button is down already this ISN'T a new click
         
-        # if mouse_3 is stopping this frame...
-        if mouse_3.status == STARTED:
+        # if CondTriggMouse is stopping this frame...
+        if CondTriggMouse.status == STARTED:
             # is it time to stop? (based on local clock)
             if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
-                mouse_3.tStop = t  # not accounting for scr refresh
-                mouse_3.frameNStop = frameN  # exact frame index
+                CondTriggMouse.tStop = t  # not accounting for scr refresh
+                CondTriggMouse.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mouse_3.stopped')
+                thisExp.timestampOnFlip(win, 'CondTriggMouse.stopped')
                 # update status
-                mouse_3.status = FINISHED
-        if mouse_3.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_3.getPressed()
+                CondTriggMouse.status = FINISHED
+        if CondTriggMouse.status == STARTED:  # only update if started and not finished!
+            buttons = CondTriggMouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
-                    x, y = mouse_3.getPos()
-                    mouse_3.x.append(x)
-                    mouse_3.y.append(y)
-                    buttons = mouse_3.getPressed()
-                    mouse_3.leftButton.append(buttons[0])
-                    mouse_3.midButton.append(buttons[1])
-                    mouse_3.rightButton.append(buttons[2])
-                    mouse_3.time.append(mouse_3.mouseClock.getTime())
+                    x, y = CondTriggMouse.getPos()
+                    CondTriggMouse.x.append(x)
+                    CondTriggMouse.y.append(y)
+                    buttons = CondTriggMouse.getPressed()
+                    CondTriggMouse.leftButton.append(buttons[0])
+                    CondTriggMouse.midButton.append(buttons[1])
+                    CondTriggMouse.rightButton.append(buttons[2])
+                    CondTriggMouse.time.append(CondTriggMouse.mouseClock.getTime())
                     
                     continueRoutine = False  # end routine on response
+        
+        # *CondTriggKey* updates
+        waitOnFlip = False
+        
+        # if CondTriggKey is starting this frame...
+        if CondTriggKey.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
+            # keep track of start time/frame for later
+            CondTriggKey.frameNStart = frameN  # exact frame index
+            CondTriggKey.tStart = t  # local t and not account for scr refresh
+            CondTriggKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondTriggKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'CondTriggKey.started')
+            # update status
+            CondTriggKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(CondTriggKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(CondTriggKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        
+        # if CondTriggKey is stopping this frame...
+        if CondTriggKey.status == STARTED:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
+                # keep track of stop time/frame for later
+                CondTriggKey.tStop = t  # not accounting for scr refresh
+                CondTriggKey.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'CondTriggKey.stopped')
+                # update status
+                CondTriggKey.status = FINISHED
+                CondTriggKey.status = FINISHED
+        if CondTriggKey.status == STARTED and not waitOnFlip:
+            theseKeys = CondTriggKey.getKeys(keyList=['space'], waitRelease=False)
+            _CondTriggKey_allKeys.extend(theseKeys)
+            if len(_CondTriggKey_allKeys):
+                CondTriggKey.keys = _CondTriggKey_allKeys[-1].name  # just the last key pressed
+                CondTriggKey.rt = _CondTriggKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1933,12 +1801,18 @@ for thisCond in Cond:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for Cond (TrialHandler)
-    Cond.addData('mouse_3.x', mouse_3.x)
-    Cond.addData('mouse_3.y', mouse_3.y)
-    Cond.addData('mouse_3.leftButton', mouse_3.leftButton)
-    Cond.addData('mouse_3.midButton', mouse_3.midButton)
-    Cond.addData('mouse_3.rightButton', mouse_3.rightButton)
-    Cond.addData('mouse_3.time', mouse_3.time)
+    Cond.addData('CondTriggMouse.x', CondTriggMouse.x)
+    Cond.addData('CondTriggMouse.y', CondTriggMouse.y)
+    Cond.addData('CondTriggMouse.leftButton', CondTriggMouse.leftButton)
+    Cond.addData('CondTriggMouse.midButton', CondTriggMouse.midButton)
+    Cond.addData('CondTriggMouse.rightButton', CondTriggMouse.rightButton)
+    Cond.addData('CondTriggMouse.time', CondTriggMouse.time)
+    # check responses
+    if CondTriggKey.keys in ['', [], None]:  # No response was made
+        CondTriggKey.keys = None
+    Cond.addData('CondTriggKey.keys',CondTriggKey.keys)
+    if CondTriggKey.keys != None:  # we had a response
+        Cond.addData('CondTriggKey.rt', CondTriggKey.rt)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2102,7 +1976,7 @@ for thisCond in Cond:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg, polygon_2]
+    ITIComponents = [FixCross]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2125,67 +1999,34 @@ for thisCond in Cond:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *BlankBkg* updates
+        # *FixCross* updates
         
-        # if BlankBkg is starting this frame...
-        if BlankBkg.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if FixCross is starting this frame...
+        if FixCross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            BlankBkg.frameNStart = frameN  # exact frame index
-            BlankBkg.tStart = t  # local t and not account for scr refresh
-            BlankBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(BlankBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'BlankBkg.started')
+            FixCross.frameNStart = frameN  # exact frame index
+            FixCross.tStart = t  # local t and not account for scr refresh
+            FixCross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(FixCross, 'tStartRefresh')  # time at next scr refresh
             # update status
-            BlankBkg.status = STARTED
-            BlankBkg.setAutoDraw(True)
+            FixCross.status = STARTED
+            FixCross.setAutoDraw(True)
         
-        # if BlankBkg is active this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is active this frame...
+        if FixCross.status == STARTED:
             # update params
             pass
         
-        # if BlankBkg is stopping this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is stopping this frame...
+        if FixCross.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+            if tThisFlipGlobal > FixCross.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
-                BlankBkg.tStop = t  # not accounting for scr refresh
-                BlankBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'BlankBkg.stopped')
+                FixCross.tStop = t  # not accounting for scr refresh
+                FixCross.frameNStop = frameN  # exact frame index
                 # update status
-                BlankBkg.status = FINISHED
-                BlankBkg.setAutoDraw(False)
-        
-        # *polygon_2* updates
-        
-        # if polygon_2 is starting this frame...
-        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            polygon_2.frameNStart = frameN  # exact frame index
-            polygon_2.tStart = t  # local t and not account for scr refresh
-            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            polygon_2.status = STARTED
-            polygon_2.setAutoDraw(True)
-        
-        # if polygon_2 is active this frame...
-        if polygon_2.status == STARTED:
-            # update params
-            pass
-        
-        # if polygon_2 is stopping this frame...
-        if polygon_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
-                # keep track of stop time/frame for later
-                polygon_2.tStop = t  # not accounting for scr refresh
-                polygon_2.frameNStop = frameN  # exact frame index
-                # update status
-                polygon_2.status = FINISHED
-                polygon_2.setAutoDraw(False)
+                FixCross.status = FINISHED
+                FixCross.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2264,7 +2105,7 @@ for thisRatingCond in RatingCond:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [Bkg, image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2286,26 +2127,6 @@ for thisRatingCond in RatingCond:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *Bkg* updates
-        
-        # if Bkg is starting this frame...
-        if Bkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Bkg.frameNStart = frameN  # exact frame index
-            Bkg.tStart = t  # local t and not account for scr refresh
-            Bkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Bkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Bkg.started')
-            # update status
-            Bkg.status = STARTED
-            Bkg.setAutoDraw(True)
-        
-        # if Bkg is active this frame...
-        if Bkg.status == STARTED:
-            # update params
-            pass
         
         # *image* updates
         
@@ -2543,7 +2364,7 @@ for thisExtInstText in ExtInstText:
     # reset ExtSubmit to account for continued clicks & clear times on/off
     ExtSubmit.reset()
     # keep track of which components have finished
-    ExtInstComponents = [InstrBkg3, ExtImage, ExtInstEN, ExtInstCN, ExtMouse, ExtSubmit]
+    ExtInstComponents = [ExtImage, ExtInstEN, ExtInstCN, ExtMouse, ExtSubmit]
     for thisComponent in ExtInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2565,26 +2386,6 @@ for thisExtInstText in ExtInstText:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *InstrBkg3* updates
-        
-        # if InstrBkg3 is starting this frame...
-        if InstrBkg3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            InstrBkg3.frameNStart = frameN  # exact frame index
-            InstrBkg3.tStart = t  # local t and not account for scr refresh
-            InstrBkg3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(InstrBkg3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'InstrBkg3.started')
-            # update status
-            InstrBkg3.status = STARTED
-            InstrBkg3.setAutoDraw(True)
-        
-        # if InstrBkg3 is active this frame...
-        if InstrBkg3.status == STARTED:
-            # update params
-            pass
         
         # *ExtImage* updates
         
@@ -2791,17 +2592,20 @@ for thisExt in Ext:
        port.setData(0) #Faissal
        if lfpTrigger == True:
             lfpCtrlPort.setData(0)
-    # setup some python lists for storing info about the mouse_4
-    mouse_4.x = []
-    mouse_4.y = []
-    mouse_4.leftButton = []
-    mouse_4.midButton = []
-    mouse_4.rightButton = []
-    mouse_4.time = []
+    # setup some python lists for storing info about the ExtTriggMouse
+    ExtTriggMouse.x = []
+    ExtTriggMouse.y = []
+    ExtTriggMouse.leftButton = []
+    ExtTriggMouse.midButton = []
+    ExtTriggMouse.rightButton = []
+    ExtTriggMouse.time = []
     gotValidClick = False  # until a click is received
-    mouse_4.mouseClock.reset()
+    ExtTriggMouse.mouseClock.reset()
+    ExtTriggKey.keys = []
+    ExtTriggKey.rt = []
+    _ExtTriggKey_allKeys = []
     # keep track of which components have finished
-    trialExtComponents = [ExtBkg, Ext_image, mouse_4]
+    trialExtComponents = [Ext_image, ExtTriggMouse, ExtTriggKey]
     for thisComponent in trialExtComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2823,39 +2627,6 @@ for thisExt in Ext:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *ExtBkg* updates
-        
-        # if ExtBkg is starting this frame...
-        if ExtBkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            ExtBkg.frameNStart = frameN  # exact frame index
-            ExtBkg.tStart = t  # local t and not account for scr refresh
-            ExtBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ExtBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ExtBkg.started')
-            # update status
-            ExtBkg.status = STARTED
-            ExtBkg.setAutoDraw(True)
-        
-        # if ExtBkg is active this frame...
-        if ExtBkg.status == STARTED:
-            # update params
-            pass
-        
-        # if ExtBkg is stopping this frame...
-        if ExtBkg.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ExtBkg.tStartRefresh + 6-frameTolerance:
-                # keep track of stop time/frame for later
-                ExtBkg.tStop = t  # not accounting for scr refresh
-                ExtBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'ExtBkg.stopped')
-                # update status
-                ExtBkg.status = FINISHED
-                ExtBkg.setAutoDraw(False)
         
         # *Ext_image* updates
         
@@ -2889,47 +2660,87 @@ for thisExt in Ext:
                 # update status
                 Ext_image.status = FINISHED
                 Ext_image.setAutoDraw(False)
-        # *mouse_4* updates
+        # *ExtTriggMouse* updates
         
-        # if mouse_4 is starting this frame...
-        if mouse_4.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        # if ExtTriggMouse is starting this frame...
+        if ExtTriggMouse.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
-            mouse_4.frameNStart = frameN  # exact frame index
-            mouse_4.tStart = t  # local t and not account for scr refresh
-            mouse_4.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(mouse_4, 'tStartRefresh')  # time at next scr refresh
+            ExtTriggMouse.frameNStart = frameN  # exact frame index
+            ExtTriggMouse.tStart = t  # local t and not account for scr refresh
+            ExtTriggMouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtTriggMouse, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'mouse_4.started')
+            thisExp.timestampOnFlip(win, 'ExtTriggMouse.started')
             # update status
-            mouse_4.status = STARTED
-            prevButtonState = mouse_4.getPressed()  # if button is down already this ISN'T a new click
+            ExtTriggMouse.status = STARTED
+            prevButtonState = ExtTriggMouse.getPressed()  # if button is down already this ISN'T a new click
         
-        # if mouse_4 is stopping this frame...
-        if mouse_4.status == STARTED:
+        # if ExtTriggMouse is stopping this frame...
+        if ExtTriggMouse.status == STARTED:
             # is it time to stop? (based on local clock)
             if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
-                mouse_4.tStop = t  # not accounting for scr refresh
-                mouse_4.frameNStop = frameN  # exact frame index
+                ExtTriggMouse.tStop = t  # not accounting for scr refresh
+                ExtTriggMouse.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mouse_4.stopped')
+                thisExp.timestampOnFlip(win, 'ExtTriggMouse.stopped')
                 # update status
-                mouse_4.status = FINISHED
-        if mouse_4.status == STARTED:  # only update if started and not finished!
-            buttons = mouse_4.getPressed()
+                ExtTriggMouse.status = FINISHED
+        if ExtTriggMouse.status == STARTED:  # only update if started and not finished!
+            buttons = ExtTriggMouse.getPressed()
             if buttons != prevButtonState:  # button state changed?
                 prevButtonState = buttons
                 if sum(buttons) > 0:  # state changed to a new click
-                    x, y = mouse_4.getPos()
-                    mouse_4.x.append(x)
-                    mouse_4.y.append(y)
-                    buttons = mouse_4.getPressed()
-                    mouse_4.leftButton.append(buttons[0])
-                    mouse_4.midButton.append(buttons[1])
-                    mouse_4.rightButton.append(buttons[2])
-                    mouse_4.time.append(mouse_4.mouseClock.getTime())
+                    x, y = ExtTriggMouse.getPos()
+                    ExtTriggMouse.x.append(x)
+                    ExtTriggMouse.y.append(y)
+                    buttons = ExtTriggMouse.getPressed()
+                    ExtTriggMouse.leftButton.append(buttons[0])
+                    ExtTriggMouse.midButton.append(buttons[1])
+                    ExtTriggMouse.rightButton.append(buttons[2])
+                    ExtTriggMouse.time.append(ExtTriggMouse.mouseClock.getTime())
                     
                     continueRoutine = False  # end routine on response
+        
+        # *ExtTriggKey* updates
+        waitOnFlip = False
+        
+        # if ExtTriggKey is starting this frame...
+        if ExtTriggKey.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
+            # keep track of start time/frame for later
+            ExtTriggKey.frameNStart = frameN  # exact frame index
+            ExtTriggKey.tStart = t  # local t and not account for scr refresh
+            ExtTriggKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtTriggKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ExtTriggKey.started')
+            # update status
+            ExtTriggKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(ExtTriggKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(ExtTriggKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        
+        # if ExtTriggKey is stopping this frame...
+        if ExtTriggKey.status == STARTED:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
+                # keep track of stop time/frame for later
+                ExtTriggKey.tStop = t  # not accounting for scr refresh
+                ExtTriggKey.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'ExtTriggKey.stopped')
+                # update status
+                ExtTriggKey.status = FINISHED
+                ExtTriggKey.status = FINISHED
+        if ExtTriggKey.status == STARTED and not waitOnFlip:
+            theseKeys = ExtTriggKey.getKeys(keyList=['space'], waitRelease=False)
+            _ExtTriggKey_allKeys.extend(theseKeys)
+            if len(_ExtTriggKey_allKeys):
+                ExtTriggKey.keys = _ExtTriggKey_allKeys[-1].name  # just the last key pressed
+                ExtTriggKey.rt = _ExtTriggKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2956,12 +2767,18 @@ for thisExt in Ext:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # store data for Ext (TrialHandler)
-    Ext.addData('mouse_4.x', mouse_4.x)
-    Ext.addData('mouse_4.y', mouse_4.y)
-    Ext.addData('mouse_4.leftButton', mouse_4.leftButton)
-    Ext.addData('mouse_4.midButton', mouse_4.midButton)
-    Ext.addData('mouse_4.rightButton', mouse_4.rightButton)
-    Ext.addData('mouse_4.time', mouse_4.time)
+    Ext.addData('ExtTriggMouse.x', ExtTriggMouse.x)
+    Ext.addData('ExtTriggMouse.y', ExtTriggMouse.y)
+    Ext.addData('ExtTriggMouse.leftButton', ExtTriggMouse.leftButton)
+    Ext.addData('ExtTriggMouse.midButton', ExtTriggMouse.midButton)
+    Ext.addData('ExtTriggMouse.rightButton', ExtTriggMouse.rightButton)
+    Ext.addData('ExtTriggMouse.time', ExtTriggMouse.time)
+    # check responses
+    if ExtTriggKey.keys in ['', [], None]:  # No response was made
+        ExtTriggKey.keys = None
+    Ext.addData('ExtTriggKey.keys',ExtTriggKey.keys)
+    if ExtTriggKey.keys != None:  # we had a response
+        Ext.addData('ExtTriggKey.rt', ExtTriggKey.rt)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -2972,7 +2789,7 @@ for thisExt in Ext:
     continueRoutine = True
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITIComponents = [BlankBkg, polygon_2]
+    ITIComponents = [FixCross]
     for thisComponent in ITIComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2995,67 +2812,34 @@ for thisExt in Ext:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *BlankBkg* updates
+        # *FixCross* updates
         
-        # if BlankBkg is starting this frame...
-        if BlankBkg.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if FixCross is starting this frame...
+        if FixCross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            BlankBkg.frameNStart = frameN  # exact frame index
-            BlankBkg.tStart = t  # local t and not account for scr refresh
-            BlankBkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(BlankBkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'BlankBkg.started')
+            FixCross.frameNStart = frameN  # exact frame index
+            FixCross.tStart = t  # local t and not account for scr refresh
+            FixCross.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(FixCross, 'tStartRefresh')  # time at next scr refresh
             # update status
-            BlankBkg.status = STARTED
-            BlankBkg.setAutoDraw(True)
+            FixCross.status = STARTED
+            FixCross.setAutoDraw(True)
         
-        # if BlankBkg is active this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is active this frame...
+        if FixCross.status == STARTED:
             # update params
             pass
         
-        # if BlankBkg is stopping this frame...
-        if BlankBkg.status == STARTED:
+        # if FixCross is stopping this frame...
+        if FixCross.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > BlankBkg.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
+            if tThisFlipGlobal > FixCross.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
                 # keep track of stop time/frame for later
-                BlankBkg.tStop = t  # not accounting for scr refresh
-                BlankBkg.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'BlankBkg.stopped')
+                FixCross.tStop = t  # not accounting for scr refresh
+                FixCross.frameNStop = frameN  # exact frame index
                 # update status
-                BlankBkg.status = FINISHED
-                BlankBkg.setAutoDraw(False)
-        
-        # *polygon_2* updates
-        
-        # if polygon_2 is starting this frame...
-        if polygon_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            polygon_2.frameNStart = frameN  # exact frame index
-            polygon_2.tStart = t  # local t and not account for scr refresh
-            polygon_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(polygon_2, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            polygon_2.status = STARTED
-            polygon_2.setAutoDraw(True)
-        
-        # if polygon_2 is active this frame...
-        if polygon_2.status == STARTED:
-            # update params
-            pass
-        
-        # if polygon_2 is stopping this frame...
-        if polygon_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > polygon_2.tStartRefresh + random.uniform(0, 2)+6-frameTolerance:
-                # keep track of stop time/frame for later
-                polygon_2.tStop = t  # not accounting for scr refresh
-                polygon_2.frameNStop = frameN  # exact frame index
-                # update status
-                polygon_2.status = FINISHED
-                polygon_2.setAutoDraw(False)
+                FixCross.status = FINISHED
+                FixCross.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3134,7 +2918,7 @@ for thisRatingExt in RatingExt:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [Bkg, image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3156,26 +2940,6 @@ for thisRatingExt in RatingExt:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *Bkg* updates
-        
-        # if Bkg is starting this frame...
-        if Bkg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            Bkg.frameNStart = frameN  # exact frame index
-            Bkg.tStart = t  # local t and not account for scr refresh
-            Bkg.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Bkg, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Bkg.started')
-            # update status
-            Bkg.status = STARTED
-            Bkg.setAutoDraw(True)
-        
-        # if Bkg is active this frame...
-        if Bkg.status == STARTED:
-            # update params
-            pass
         
         # *image* updates
         
