@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 15:08
+    on May 28, 2023, at 15:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -105,10 +105,7 @@ if expInfo['Version'] == 'Short':
         schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    
 print("Schedule files used:",schedule_files)
    
-
-isChinese = False #sets task lang to Chinese
 skipPhases = False #Shows only instructions and ratings    
-
 
 parallelTrigger = False
         
@@ -696,7 +693,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondInstEN* updates
         
         # if PreCondInstEN is starting this frame...
-        if PreCondInstEN.status == NOT_STARTED and isChinese==False:
+        if PreCondInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             PreCondInstEN.frameNStart = frameN  # exact frame index
             PreCondInstEN.tStart = t  # local t and not account for scr refresh
@@ -716,7 +713,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondInstCN* updates
         
         # if PreCondInstCN is starting this frame...
-        if PreCondInstCN.status == NOT_STARTED and isChinese==True:
+        if PreCondInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             PreCondInstCN.frameNStart = frameN  # exact frame index
             PreCondInstCN.tStart = t  # local t and not account for scr refresh
@@ -1286,7 +1283,7 @@ for thisRatingPreCond in RatingPreCond:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -1306,7 +1303,7 @@ for thisRatingPreCond in RatingPreCond:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -1602,7 +1599,7 @@ for thisCondInstText in CondInstText:
         # *CondInstEN* updates
         
         # if CondInstEN is starting this frame...
-        if CondInstEN.status == NOT_STARTED and isChinese==False:
+        if CondInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             CondInstEN.frameNStart = frameN  # exact frame index
             CondInstEN.tStart = t  # local t and not account for scr refresh
@@ -1622,7 +1619,7 @@ for thisCondInstText in CondInstText:
         # *CondInstCN* updates
         
         # if CondInstCN is starting this frame...
-        if CondInstCN.status == NOT_STARTED and isChinese==True:
+        if CondInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             CondInstCN.frameNStart = frameN  # exact frame index
             CondInstCN.tStart = t  # local t and not account for scr refresh
@@ -2345,7 +2342,7 @@ for thisRatingCond in RatingCond:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -2365,7 +2362,7 @@ for thisRatingCond in RatingCond:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -2661,7 +2658,7 @@ for thisExtInstText in ExtInstText:
         # *ExtInstEN* updates
         
         # if ExtInstEN is starting this frame...
-        if ExtInstEN.status == NOT_STARTED and isChinese==False:
+        if ExtInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             ExtInstEN.frameNStart = frameN  # exact frame index
             ExtInstEN.tStart = t  # local t and not account for scr refresh
@@ -2681,7 +2678,7 @@ for thisExtInstText in ExtInstText:
         # *ExtInstCN* updates
         
         # if ExtInstCN is starting this frame...
-        if ExtInstCN.status == NOT_STARTED and isChinese==True:
+        if ExtInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             ExtInstCN.frameNStart = frameN  # exact frame index
             ExtInstCN.tStart = t  # local t and not account for scr refresh
@@ -3251,7 +3248,7 @@ for thisRatingExt in RatingExt:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -3271,7 +3268,7 @@ for thisRatingExt in RatingExt:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -3545,7 +3542,7 @@ for thisEndText in EndText:
         # *EndTxtEN* updates
         
         # if EndTxtEN is starting this frame...
-        if EndTxtEN.status == NOT_STARTED and isChinese==False:
+        if EndTxtEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             EndTxtEN.frameNStart = frameN  # exact frame index
             EndTxtEN.tStart = t  # local t and not account for scr refresh
@@ -3578,7 +3575,7 @@ for thisEndText in EndText:
         # *EndTxtCN* updates
         
         # if EndTxtCN is starting this frame...
-        if EndTxtCN.status == NOT_STARTED and isChinese==True:
+        if EndTxtCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             EndTxtCN.frameNStart = frameN  # exact frame index
             EndTxtCN.tStart = t  # local t and not account for scr refresh

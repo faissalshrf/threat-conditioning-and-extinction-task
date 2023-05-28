@@ -191,7 +191,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==False" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'EN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -216,7 +216,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==True" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'CN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -848,7 +848,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==False" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'EN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -873,7 +873,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==True" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'CN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1028,7 +1028,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==False" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'EN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1053,7 +1053,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==True" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'CN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1248,7 +1248,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==False" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'EN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1273,7 +1273,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==True" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'CN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1464,7 +1464,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==False" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'EN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1489,7 +1489,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="0" valType="code" updates="None" name="startEstim"/>
         <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="$isChinese==True" valType="code" updates="None" name="startVal"/>
+        <Param val="$expInfo['Language'] == 'CN'" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -1576,7 +1576,7 @@
       <CodeComponent name="Settings" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random&amp;#10;random.seed()&amp;#10;&amp;#10;schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']&amp;#10;&amp;#10;if expInfo['Version'] == 'Short':&amp;#10;    for i, filename in enumerate(schedule_files):&amp;#10;        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    &amp;#10;print(&quot;Schedule files used:&quot;,schedule_files)&amp;#10;   &amp;#10;&amp;#10;isChinese = False #sets task lang to Chinese&amp;#10;skipPhases = False #Shows only instructions and ratings    &amp;#10;&amp;#10;&amp;#10;parallelTrigger = False&amp;#10;        &amp;#10;if parallelTrigger == True:&amp;#10;    from psychopy import parallel&amp;#10;    port = parallel.ParallelPort(address=0x0378)&amp;#10;    port.setData(0)&amp;#10;    if lfpTrigger == True:&amp;#10;        lfpCtrlPort = parallel.ParallelPort(address=0x037A)&amp;#10;        lfpCtrlPort.setData(0)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import random&amp;#10;random.seed()&amp;#10;&amp;#10;schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']&amp;#10;&amp;#10;if expInfo['Version'] == 'Short':&amp;#10;    for i, filename in enumerate(schedule_files):&amp;#10;        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    &amp;#10;print(&quot;Schedule files used:&quot;,schedule_files)&amp;#10;   &amp;#10;skipPhases = False #Shows only instructions and ratings    &amp;#10;&amp;#10;parallelTrigger = False&amp;#10;        &amp;#10;if parallelTrigger == True:&amp;#10;    from psychopy import parallel&amp;#10;    port = parallel.ParallelPort(address=0x0378)&amp;#10;    port.setData(0)&amp;#10;    if lfpTrigger == True:&amp;#10;        lfpCtrlPort = parallel.ParallelPort(address=0x037A)&amp;#10;        lfpCtrlPort.setData(0)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="import * as random from 'random';&amp;#10;parallelTrigger = false;&amp;#10;isChinese = false;&amp;#10;skipPhases = false;&amp;#10;if ((parallelTrigger === true)) {&amp;#10;    import {parallel} from 'psychopy';&amp;#10;    port = new parallel.ParallelPort({&quot;address&quot;: 888});&amp;#10;    port.setData(0);&amp;#10;    if ((lfpTrigger === true)) {&amp;#10;        lfpCtrlPort = new parallel.ParallelPort({&quot;address&quot;: 890});&amp;#10;        lfpCtrlPort.setData(0);&amp;#10;    }&amp;#10;}&amp;#10;Math.random.seed();&amp;#10;SetNums = [1, 2, 3];&amp;#10;Sess = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
