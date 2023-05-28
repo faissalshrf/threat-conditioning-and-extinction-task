@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 12:39
+    on May 28, 2023, at 15:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,9 @@ os.chdir(_thisDir)
 psychopyVersion = '2023.1.1'
 expName = 'TCET'  # from the Builder filename that created this script
 expInfo = {
-    'Participant_ID': 'P00',
+    'Participant_ID': 'S00',
+    'Version': ['Standard','Short'],
+    'Language': ['EN','CN'],
 }
 # --- Show participant info dialog --
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -91,14 +93,25 @@ ioSession = ioServer = eyetracker = None
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard(backend='ptb')
 
-# --- Initialize components for Routine "Init" ---
-# Run 'Begin Experiment' code from Properties
+# --- Initialize components for Routine "Settings" ---
+# Run 'Begin Experiment' code from Settings_2
 import random
+random.seed()
+
+schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']
+
+if expInfo['Version'] == 'Short':
+    for i, filename in enumerate(schedule_files):
+        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    
+print("Schedule files used:",schedule_files)
+   
+
+isChinese = False #sets task lang to Chinese
+skipPhases = False #Shows only instructions and ratings    
+
+
 parallelTrigger = False
-
-isChinese = True #sets task lang to Chinese
-skipPhases = True #Shows only instructions and ratings    
-
+        
 if parallelTrigger == True:
     from psychopy import parallel
     port = parallel.ParallelPort(address=0x0378)
@@ -107,9 +120,7 @@ if parallelTrigger == True:
         lfpCtrlPort = parallel.ParallelPort(address=0x037A)
         lfpCtrlPort.setData(0)
 
-random.seed()
-SetNums = [1,2,3]
-Sess = 0
+
 
 # --- Initialize components for Routine "PreCondInst" ---
 PreCondImage = visual.ImageStim(
@@ -525,12 +536,12 @@ EndTxtCN = visual.TextStim(win=win, name='EndTxtCN',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.Clock()  # to track time remaining of each (possibly non-slip) routine 
 
-# --- Prepare to start Routine "Init" ---
+# --- Prepare to start Routine "Settings" ---
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-InitComponents = []
-for thisComponent in InitComponents:
+SettingsComponents = []
+for thisComponent in SettingsComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -542,7 +553,7 @@ t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
-# --- Run Routine "Init" ---
+# --- Run Routine "Settings" ---
 routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
@@ -563,7 +574,7 @@ while continueRoutine:
         routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in InitComponents:
+    for thisComponent in SettingsComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -572,11 +583,11 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# --- Ending Routine "Init" ---
-for thisComponent in InitComponents:
+# --- Ending Routine "Settings" ---
+for thisComponent in SettingsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "Init" was not non-slip safe, so reset the non-slip timer
+# the Routine "Settings" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
@@ -865,7 +876,7 @@ for thisPreCondInstText in PreCondInstText:
 # set up handler to look after randomisation of conditions etc
 PreCond = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('1_PreCondition.xlsx'),
+    trialList=data.importConditions(schedule_files[0]),
     seed=None, name='PreCond')
 thisExp.addLoop(PreCond)  # add the loop to the experiment
 thisPreCond = PreCond.trialList[0]  # so we can initialise stimuli with some values
@@ -1771,7 +1782,7 @@ for thisCondInstText in CondInstText:
 # set up handler to look after randomisation of conditions etc
 Cond = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('2_Condition.xlsx'),
+    trialList=data.importConditions(schedule_files[1]),
     seed=None, name='Cond')
 thisExp.addLoop(Cond)  # add the loop to the experiment
 thisCond = Cond.trialList[0]  # so we can initialise stimuli with some values
@@ -2830,7 +2841,7 @@ for thisExtInstText in ExtInstText:
 # set up handler to look after randomisation of conditions etc
 Ext = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('3_Extinction.xlsx'),
+    trialList=data.importConditions(schedule_files[2]),
     seed=None, name='Ext')
 thisExp.addLoop(Ext)  # add the loop to the experiment
 thisExt = Ext.trialList[0]  # so we can initialise stimuli with some values
