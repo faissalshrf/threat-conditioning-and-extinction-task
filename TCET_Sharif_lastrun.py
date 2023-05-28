@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 27, 2023, at 23:40
+    on May 28, 2023, at 01:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -97,7 +97,7 @@ import random
 parallelTrigger = False
 
 isChinese = False #sets task lang to Chinese
-skipPhases = True #Shows only instructions and ratings    
+skipPhases = False #Shows only instructions and ratings    
 
 if parallelTrigger == True:
     from psychopy import parallel
@@ -122,7 +122,7 @@ PreCondImage = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 PreCondInstEN = visual.TextStim(win=win, name='PreCondInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -138,7 +138,7 @@ PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
 PreCondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -165,6 +165,7 @@ imagePreCond = visual.ImageStim(
 PreCondTriggMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondTriggMouse.mouseClock = core.Clock()
+PreCondTriggKey = keyboard.Keyboard()
 
 # --- Initialize components for Routine "ITI" ---
 FixCross = visual.ShapeStim(
@@ -185,7 +186,7 @@ image = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -202,13 +203,13 @@ Scale = visual.Slider(win=win, name='Scale',
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
+    font='Arial', labelHeight=0.07,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -234,7 +235,7 @@ CondImage = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 CondInstEN = visual.TextStim(win=win, name='CondInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -250,7 +251,7 @@ CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
 CondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -317,7 +318,7 @@ image = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -334,13 +335,13 @@ Scale = visual.Slider(win=win, name='Scale',
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
+    font='Arial', labelHeight=0.07,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -366,7 +367,7 @@ ExtImage = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 ExtInstEN = visual.TextStim(win=win, name='ExtInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -382,7 +383,7 @@ ExtMouse = event.Mouse(win=win)
 x, y = [None, None]
 ExtMouse.mouseClock = core.Clock()
 ExtSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Helvetica',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -430,7 +431,7 @@ image = visual.ImageStim(
     texRes=128.0, interpolate=True, depth=0.0)
 RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
@@ -447,13 +448,13 @@ Scale = visual.Slider(win=win, name='Scale',
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Helvetiva', labelHeight=0.07,
+    font='Arial', labelHeight=0.07,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Helvetica',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -477,7 +478,7 @@ Bkg_Light = visual.Rect(
     opacity=1.0, depth=0.0, interpolate=True)
 EndTxtEN = visual.TextStim(win=win, name='EndTxtEN',
     text='',
-    font='Helvetica',
+    font='Arial',
     pos=[0, 0], height=0.2, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
@@ -821,8 +822,11 @@ for thisPreCond in PreCond:
     PreCondTriggMouse.time = []
     gotValidClick = False  # until a click is received
     PreCondTriggMouse.mouseClock.reset()
+    PreCondTriggKey.keys = []
+    PreCondTriggKey.rt = []
+    _PreCondTriggKey_allKeys = []
     # keep track of which components have finished
-    trialPreCondComponents = [imagePreCond, PreCondTriggMouse]
+    trialPreCondComponents = [imagePreCond, PreCondTriggMouse, PreCondTriggKey]
     for thisComponent in trialPreCondComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -919,6 +923,46 @@ for thisPreCond in PreCond:
                     
                     continueRoutine = False  # end routine on response
         
+        # *PreCondTriggKey* updates
+        waitOnFlip = False
+        
+        # if PreCondTriggKey is starting this frame...
+        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+            # keep track of start time/frame for later
+            PreCondTriggKey.frameNStart = frameN  # exact frame index
+            PreCondTriggKey.tStart = t  # local t and not account for scr refresh
+            PreCondTriggKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondTriggKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'PreCondTriggKey.started')
+            # update status
+            PreCondTriggKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(PreCondTriggKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(PreCondTriggKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        
+        # if PreCondTriggKey is stopping this frame...
+        if PreCondTriggKey.status == STARTED:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
+                # keep track of stop time/frame for later
+                PreCondTriggKey.tStop = t  # not accounting for scr refresh
+                PreCondTriggKey.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'PreCondTriggKey.stopped')
+                # update status
+                PreCondTriggKey.status = FINISHED
+                PreCondTriggKey.status = FINISHED
+        if PreCondTriggKey.status == STARTED and not waitOnFlip:
+            theseKeys = PreCondTriggKey.getKeys(keyList=['space'], waitRelease=False)
+            _PreCondTriggKey_allKeys.extend(theseKeys)
+            if len(_PreCondTriggKey_allKeys):
+                PreCondTriggKey.keys = _PreCondTriggKey_allKeys[-1].name  # just the last key pressed
+                PreCondTriggKey.rt = _PreCondTriggKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
+        
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
@@ -950,6 +994,12 @@ for thisPreCond in PreCond:
     PreCond.addData('PreCondTriggMouse.midButton', PreCondTriggMouse.midButton)
     PreCond.addData('PreCondTriggMouse.rightButton', PreCondTriggMouse.rightButton)
     PreCond.addData('PreCondTriggMouse.time', PreCondTriggMouse.time)
+    # check responses
+    if PreCondTriggKey.keys in ['', [], None]:  # No response was made
+        PreCondTriggKey.keys = None
+    PreCond.addData('PreCondTriggKey.keys',PreCondTriggKey.keys)
+    if PreCondTriggKey.keys != None:  # we had a response
+        PreCond.addData('PreCondTriggKey.rt', PreCondTriggKey.rt)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -1604,7 +1654,7 @@ for thisCond in Cond:
     
     # --- Run Routine "trialCond" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 6.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1647,7 +1697,7 @@ for thisCond in Cond:
         # *CondTriggMouse* updates
         
         # if CondTriggMouse is starting this frame...
-        if CondTriggMouse.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if CondTriggMouse.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggMouse.frameNStart = frameN  # exact frame index
             CondTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -1690,7 +1740,7 @@ for thisCond in Cond:
         waitOnFlip = False
         
         # if CondTriggKey is starting this frame...
-        if CondTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if CondTriggKey.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggKey.frameNStart = frameN  # exact frame index
             CondTriggKey.tStart = t  # local t and not account for scr refresh
@@ -1707,8 +1757,8 @@ for thisCond in Cond:
         
         # if CondTriggKey is stopping this frame...
         if CondTriggKey.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > CondTriggKey.tStartRefresh + 6-frameTolerance:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
                 CondTriggKey.tStop = t  # not accounting for scr refresh
                 CondTriggKey.frameNStop = frameN  # exact frame index
@@ -1763,8 +1813,11 @@ for thisCond in Cond:
     Cond.addData('CondTriggKey.keys',CondTriggKey.keys)
     if CondTriggKey.keys != None:  # we had a response
         Cond.addData('CondTriggKey.rt', CondTriggKey.rt)
-    # the Routine "trialCond" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-6.000000)
     
     # --- Prepare to start Routine "UCS" ---
     continueRoutine = True
@@ -2567,7 +2620,7 @@ for thisExt in Ext:
     
     # --- Run Routine "trialExt" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 6.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2610,7 +2663,7 @@ for thisExt in Ext:
         # *ExtTriggMouse* updates
         
         # if ExtTriggMouse is starting this frame...
-        if ExtTriggMouse.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if ExtTriggMouse.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggMouse.frameNStart = frameN  # exact frame index
             ExtTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -2653,7 +2706,7 @@ for thisExt in Ext:
         waitOnFlip = False
         
         # if ExtTriggKey is starting this frame...
-        if ExtTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if ExtTriggKey.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggKey.frameNStart = frameN  # exact frame index
             ExtTriggKey.tStart = t  # local t and not account for scr refresh
@@ -2670,8 +2723,8 @@ for thisExt in Ext:
         
         # if ExtTriggKey is stopping this frame...
         if ExtTriggKey.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > ExtTriggKey.tStartRefresh + 6-frameTolerance:
+            # is it time to stop? (based on local clock)
+            if tThisFlip > 6-frameTolerance:
                 # keep track of stop time/frame for later
                 ExtTriggKey.tStop = t  # not accounting for scr refresh
                 ExtTriggKey.frameNStop = frameN  # exact frame index
@@ -2726,8 +2779,11 @@ for thisExt in Ext:
     Ext.addData('ExtTriggKey.keys',ExtTriggKey.keys)
     if ExtTriggKey.keys != None:  # we had a response
         Ext.addData('ExtTriggKey.rt', ExtTriggKey.rt)
-    # the Routine "trialExt" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-6.000000)
     
     # --- Prepare to start Routine "ITI" ---
     continueRoutine = True
