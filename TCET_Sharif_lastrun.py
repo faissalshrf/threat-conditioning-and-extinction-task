@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 15:22
+    on May 28, 2023, at 15:35
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1777,7 +1777,7 @@ for thisCondInstText in CondInstText:
 
 
 # set up handler to look after randomisation of conditions etc
-Cond = data.TrialHandler(nReps=1.0, method='random', 
+Cond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(schedule_files[1]),
     seed=None, name='Cond')
