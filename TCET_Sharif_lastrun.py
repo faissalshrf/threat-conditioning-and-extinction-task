@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 01:33
+    on May 28, 2023, at 02:36
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -97,7 +97,7 @@ import random
 parallelTrigger = False
 
 isChinese = False #sets task lang to Chinese
-skipPhases = False #Shows only instructions and ratings    
+skipPhases = True #Shows only instructions and ratings    
 
 if parallelTrigger == True:
     from psychopy import parallel
@@ -134,11 +134,12 @@ PreCondInstCN = visual.TextStim(win=win, name='PreCondInstCN',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
+PreCondRespKey = keyboard.Keyboard()
 PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
 PreCondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -149,7 +150,7 @@ PreCondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='PreCondSubmit',
-    depth=-4
+    depth=-5
 )
 PreCondSubmit.buttonClock = core.Clock()
 
@@ -199,17 +200,18 @@ RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
-    startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
+    startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.07,
+    font='Arial', labelHeight=0.06,
     flip=False, ori=0.0, depth=-3, readOnly=False)
+RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -220,7 +222,7 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-5
+    depth=-6
 )
 Submit.buttonClock = core.Clock()
 
@@ -247,11 +249,12 @@ CondInstCN = visual.TextStim(win=win, name='CondInstCN',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
+CondRespKey = keyboard.Keyboard()
 CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
 CondSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -262,7 +265,7 @@ CondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='CondSubmit',
-    depth=-4
+    depth=-5
 )
 CondSubmit.buttonClock = core.Clock()
 
@@ -331,17 +334,18 @@ RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
-    startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
+    startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.07,
+    font='Arial', labelHeight=0.06,
     flip=False, ori=0.0, depth=-3, readOnly=False)
+RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -352,7 +356,7 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-5
+    depth=-6
 )
 Submit.buttonClock = core.Clock()
 
@@ -379,11 +383,12 @@ ExtInstCN = visual.TextStim(win=win, name='ExtInstCN',
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
+ExtRespKey = keyboard.Keyboard()
 ExtMouse = event.Mouse(win=win)
 x, y = [None, None]
 ExtMouse.mouseClock = core.Clock()
 ExtSubmit = visual.ButtonStim(win, 
-    text='CONTINUE', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -394,7 +399,7 @@ ExtSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='ExtSubmit',
-    depth=-4
+    depth=-5
 )
 ExtSubmit.buttonClock = core.Clock()
 
@@ -444,17 +449,18 @@ RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
-    startValue=None, size=(1.2, 0.05), pos=(0, -0.5), units=win.units,
+    startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
     labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.07,
+    font='Arial', labelHeight=0.06,
     flip=False, ori=0.0, depth=-3, readOnly=False)
+RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='SUBMIT', font='Arial',
+    text='>>>', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -465,7 +471,7 @@ Submit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='Submit',
-    depth=-5
+    depth=-6
 )
 Submit.buttonClock = core.Clock()
 
@@ -574,6 +580,9 @@ for thisPreCondInstText in PreCondInstText:
     PreCondImage.setImage(PreCondInstTextImage)
     PreCondInstEN.setText(PreCondInstTextEN)
     PreCondInstCN.setText(PreCondInstTextCN)
+    PreCondRespKey.keys = []
+    PreCondRespKey.rt = []
+    _PreCondRespKey_allKeys = []
     # setup some python lists for storing info about the PreCondMouse
     PreCondMouse.x = []
     PreCondMouse.y = []
@@ -585,7 +594,7 @@ for thisPreCondInstText in PreCondInstText:
     # reset PreCondSubmit to account for continued clicks & clear times on/off
     PreCondSubmit.reset()
     # keep track of which components have finished
-    PreCondInstComponents = [PreCondImage, PreCondInstEN, PreCondInstCN, PreCondMouse, PreCondSubmit]
+    PreCondInstComponents = [PreCondImage, PreCondInstEN, PreCondInstCN, PreCondRespKey, PreCondMouse, PreCondSubmit]
     for thisComponent in PreCondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -667,6 +676,33 @@ for thisPreCondInstText in PreCondInstText:
         if PreCondInstCN.status == STARTED:
             # update params
             pass
+        
+        # *PreCondRespKey* updates
+        waitOnFlip = False
+        
+        # if PreCondRespKey is starting this frame...
+        if PreCondRespKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            PreCondRespKey.frameNStart = frameN  # exact frame index
+            PreCondRespKey.tStart = t  # local t and not account for scr refresh
+            PreCondRespKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondRespKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'PreCondRespKey.started')
+            # update status
+            PreCondRespKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(PreCondRespKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(PreCondRespKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if PreCondRespKey.status == STARTED and not waitOnFlip:
+            theseKeys = PreCondRespKey.getKeys(keyList=['space'], waitRelease=False)
+            _PreCondRespKey_allKeys.extend(theseKeys)
+            if len(_PreCondRespKey_allKeys):
+                PreCondRespKey.keys = _PreCondRespKey_allKeys[-1].name  # just the last key pressed
+                PreCondRespKey.rt = _PreCondRespKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *PreCondMouse* updates
         
         # if PreCondMouse is starting this frame...
@@ -756,6 +792,12 @@ for thisPreCondInstText in PreCondInstText:
     for thisComponent in PreCondInstComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    # check responses
+    if PreCondRespKey.keys in ['', [], None]:  # No response was made
+        PreCondRespKey.keys = None
+    PreCondInstText.addData('PreCondRespKey.keys',PreCondRespKey.keys)
+    if PreCondRespKey.keys != None:  # we had a response
+        PreCondInstText.addData('PreCondRespKey.rt', PreCondRespKey.rt)
     # store data for PreCondInstText (TrialHandler)
     PreCondInstText.addData('PreCondMouse.x', PreCondMouse.x)
     PreCondInstText.addData('PreCondMouse.y', PreCondMouse.y)
@@ -1128,6 +1170,9 @@ for thisRatingPreCond in RatingPreCond:
     RatingInstEN.setText(FearRatingInstTextEN)
     RatingInstCN.setText(FearRatingInstTextCN)
     Scale.reset()
+    RatingKey.keys = []
+    RatingKey.rt = []
+    _RatingKey_allKeys = []
     # setup some python lists for storing info about the mouse
     mouse.x = []
     mouse.y = []
@@ -1139,7 +1184,7 @@ for thisRatingPreCond in RatingPreCond:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1241,6 +1286,33 @@ for thisRatingPreCond in RatingPreCond:
         if Scale.status == STARTED:
             # update params
             pass
+        
+        # *RatingKey* updates
+        waitOnFlip = False
+        
+        # if RatingKey is starting this frame...
+        if RatingKey.status == NOT_STARTED and Scale.rating:
+            # keep track of start time/frame for later
+            RatingKey.frameNStart = frameN  # exact frame index
+            RatingKey.tStart = t  # local t and not account for scr refresh
+            RatingKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(RatingKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'RatingKey.started')
+            # update status
+            RatingKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(RatingKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(RatingKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if RatingKey.status == STARTED and not waitOnFlip:
+            theseKeys = RatingKey.getKeys(keyList=['space'], waitRelease=False)
+            _RatingKey_allKeys.extend(theseKeys)
+            if len(_RatingKey_allKeys):
+                RatingKey.keys = _RatingKey_allKeys[-1].name  # just the last key pressed
+                RatingKey.rt = _RatingKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *mouse* updates
         
         # if mouse is starting this frame...
@@ -1332,6 +1404,12 @@ for thisRatingPreCond in RatingPreCond:
             thisComponent.setAutoDraw(False)
     RatingPreCond.addData('Scale.response', Scale.getRating())
     RatingPreCond.addData('Scale.rt', Scale.getRT())
+    # check responses
+    if RatingKey.keys in ['', [], None]:  # No response was made
+        RatingKey.keys = None
+    RatingPreCond.addData('RatingKey.keys',RatingKey.keys)
+    if RatingKey.keys != None:  # we had a response
+        RatingPreCond.addData('RatingKey.rt', RatingKey.rt)
     # store data for RatingPreCond (TrialHandler)
     RatingPreCond.addData('mouse.x', mouse.x)
     RatingPreCond.addData('mouse.y', mouse.y)
@@ -1387,6 +1465,9 @@ for thisCondInstText in CondInstText:
     CondImage.setImage(CondInstTextImage)
     CondInstEN.setText(CondInstTextEN)
     CondInstCN.setText(CondInstTextCN)
+    CondRespKey.keys = []
+    CondRespKey.rt = []
+    _CondRespKey_allKeys = []
     # setup some python lists for storing info about the CondMouse
     CondMouse.x = []
     CondMouse.y = []
@@ -1398,7 +1479,7 @@ for thisCondInstText in CondInstText:
     # reset CondSubmit to account for continued clicks & clear times on/off
     CondSubmit.reset()
     # keep track of which components have finished
-    CondInstComponents = [CondImage, CondInstEN, CondInstCN, CondMouse, CondSubmit]
+    CondInstComponents = [CondImage, CondInstEN, CondInstCN, CondRespKey, CondMouse, CondSubmit]
     for thisComponent in CondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1480,6 +1561,33 @@ for thisCondInstText in CondInstText:
         if CondInstCN.status == STARTED:
             # update params
             pass
+        
+        # *CondRespKey* updates
+        waitOnFlip = False
+        
+        # if CondRespKey is starting this frame...
+        if CondRespKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            CondRespKey.frameNStart = frameN  # exact frame index
+            CondRespKey.tStart = t  # local t and not account for scr refresh
+            CondRespKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondRespKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'CondRespKey.started')
+            # update status
+            CondRespKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(CondRespKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(CondRespKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if CondRespKey.status == STARTED and not waitOnFlip:
+            theseKeys = CondRespKey.getKeys(keyList=['space'], waitRelease=False)
+            _CondRespKey_allKeys.extend(theseKeys)
+            if len(_CondRespKey_allKeys):
+                CondRespKey.keys = _CondRespKey_allKeys[-1].name  # just the last key pressed
+                CondRespKey.rt = _CondRespKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *CondMouse* updates
         
         # if CondMouse is starting this frame...
@@ -1569,6 +1677,12 @@ for thisCondInstText in CondInstText:
     for thisComponent in CondInstComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    # check responses
+    if CondRespKey.keys in ['', [], None]:  # No response was made
+        CondRespKey.keys = None
+    CondInstText.addData('CondRespKey.keys',CondRespKey.keys)
+    if CondRespKey.keys != None:  # we had a response
+        CondInstText.addData('CondRespKey.rt', CondRespKey.rt)
     # store data for CondInstText (TrialHandler)
     CondInstText.addData('CondMouse.x', CondMouse.x)
     CondInstText.addData('CondMouse.y', CondMouse.y)
@@ -2094,6 +2208,9 @@ for thisRatingCond in RatingCond:
     RatingInstEN.setText(FearRatingInstTextEN)
     RatingInstCN.setText(FearRatingInstTextCN)
     Scale.reset()
+    RatingKey.keys = []
+    RatingKey.rt = []
+    _RatingKey_allKeys = []
     # setup some python lists for storing info about the mouse
     mouse.x = []
     mouse.y = []
@@ -2105,7 +2222,7 @@ for thisRatingCond in RatingCond:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2207,6 +2324,33 @@ for thisRatingCond in RatingCond:
         if Scale.status == STARTED:
             # update params
             pass
+        
+        # *RatingKey* updates
+        waitOnFlip = False
+        
+        # if RatingKey is starting this frame...
+        if RatingKey.status == NOT_STARTED and Scale.rating:
+            # keep track of start time/frame for later
+            RatingKey.frameNStart = frameN  # exact frame index
+            RatingKey.tStart = t  # local t and not account for scr refresh
+            RatingKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(RatingKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'RatingKey.started')
+            # update status
+            RatingKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(RatingKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(RatingKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if RatingKey.status == STARTED and not waitOnFlip:
+            theseKeys = RatingKey.getKeys(keyList=['space'], waitRelease=False)
+            _RatingKey_allKeys.extend(theseKeys)
+            if len(_RatingKey_allKeys):
+                RatingKey.keys = _RatingKey_allKeys[-1].name  # just the last key pressed
+                RatingKey.rt = _RatingKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *mouse* updates
         
         # if mouse is starting this frame...
@@ -2298,6 +2442,12 @@ for thisRatingCond in RatingCond:
             thisComponent.setAutoDraw(False)
     RatingCond.addData('Scale.response', Scale.getRating())
     RatingCond.addData('Scale.rt', Scale.getRT())
+    # check responses
+    if RatingKey.keys in ['', [], None]:  # No response was made
+        RatingKey.keys = None
+    RatingCond.addData('RatingKey.keys',RatingKey.keys)
+    if RatingKey.keys != None:  # we had a response
+        RatingCond.addData('RatingKey.rt', RatingKey.rt)
     # store data for RatingCond (TrialHandler)
     RatingCond.addData('mouse.x', mouse.x)
     RatingCond.addData('mouse.y', mouse.y)
@@ -2353,6 +2503,9 @@ for thisExtInstText in ExtInstText:
     ExtImage.setImage(ExtInstTextImage)
     ExtInstEN.setText(ExtInstTextEN)
     ExtInstCN.setText(ExtInstTextCN)
+    ExtRespKey.keys = []
+    ExtRespKey.rt = []
+    _ExtRespKey_allKeys = []
     # setup some python lists for storing info about the ExtMouse
     ExtMouse.x = []
     ExtMouse.y = []
@@ -2364,7 +2517,7 @@ for thisExtInstText in ExtInstText:
     # reset ExtSubmit to account for continued clicks & clear times on/off
     ExtSubmit.reset()
     # keep track of which components have finished
-    ExtInstComponents = [ExtImage, ExtInstEN, ExtInstCN, ExtMouse, ExtSubmit]
+    ExtInstComponents = [ExtImage, ExtInstEN, ExtInstCN, ExtRespKey, ExtMouse, ExtSubmit]
     for thisComponent in ExtInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2446,6 +2599,33 @@ for thisExtInstText in ExtInstText:
         if ExtInstCN.status == STARTED:
             # update params
             pass
+        
+        # *ExtRespKey* updates
+        waitOnFlip = False
+        
+        # if ExtRespKey is starting this frame...
+        if ExtRespKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            ExtRespKey.frameNStart = frameN  # exact frame index
+            ExtRespKey.tStart = t  # local t and not account for scr refresh
+            ExtRespKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtRespKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ExtRespKey.started')
+            # update status
+            ExtRespKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(ExtRespKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(ExtRespKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if ExtRespKey.status == STARTED and not waitOnFlip:
+            theseKeys = ExtRespKey.getKeys(keyList=['space'], waitRelease=False)
+            _ExtRespKey_allKeys.extend(theseKeys)
+            if len(_ExtRespKey_allKeys):
+                ExtRespKey.keys = _ExtRespKey_allKeys[-1].name  # just the last key pressed
+                ExtRespKey.rt = _ExtRespKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *ExtMouse* updates
         
         # if ExtMouse is starting this frame...
@@ -2535,6 +2715,12 @@ for thisExtInstText in ExtInstText:
     for thisComponent in ExtInstComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    # check responses
+    if ExtRespKey.keys in ['', [], None]:  # No response was made
+        ExtRespKey.keys = None
+    ExtInstText.addData('ExtRespKey.keys',ExtRespKey.keys)
+    if ExtRespKey.keys != None:  # we had a response
+        ExtInstText.addData('ExtRespKey.rt', ExtRespKey.rt)
     # store data for ExtInstText (TrialHandler)
     ExtInstText.addData('ExtMouse.x', ExtMouse.x)
     ExtInstText.addData('ExtMouse.y', ExtMouse.y)
@@ -2907,6 +3093,9 @@ for thisRatingExt in RatingExt:
     RatingInstEN.setText(FearRatingInstTextEN)
     RatingInstCN.setText(FearRatingInstTextCN)
     Scale.reset()
+    RatingKey.keys = []
+    RatingKey.rt = []
+    _RatingKey_allKeys = []
     # setup some python lists for storing info about the mouse
     mouse.x = []
     mouse.y = []
@@ -2918,7 +3107,7 @@ for thisRatingExt in RatingExt:
     # reset Submit to account for continued clicks & clear times on/off
     Submit.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3020,6 +3209,33 @@ for thisRatingExt in RatingExt:
         if Scale.status == STARTED:
             # update params
             pass
+        
+        # *RatingKey* updates
+        waitOnFlip = False
+        
+        # if RatingKey is starting this frame...
+        if RatingKey.status == NOT_STARTED and Scale.rating:
+            # keep track of start time/frame for later
+            RatingKey.frameNStart = frameN  # exact frame index
+            RatingKey.tStart = t  # local t and not account for scr refresh
+            RatingKey.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(RatingKey, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'RatingKey.started')
+            # update status
+            RatingKey.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(RatingKey.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(RatingKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if RatingKey.status == STARTED and not waitOnFlip:
+            theseKeys = RatingKey.getKeys(keyList=['space'], waitRelease=False)
+            _RatingKey_allKeys.extend(theseKeys)
+            if len(_RatingKey_allKeys):
+                RatingKey.keys = _RatingKey_allKeys[-1].name  # just the last key pressed
+                RatingKey.rt = _RatingKey_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
         # *mouse* updates
         
         # if mouse is starting this frame...
@@ -3111,6 +3327,12 @@ for thisRatingExt in RatingExt:
             thisComponent.setAutoDraw(False)
     RatingExt.addData('Scale.response', Scale.getRating())
     RatingExt.addData('Scale.rt', Scale.getRT())
+    # check responses
+    if RatingKey.keys in ['', [], None]:  # No response was made
+        RatingKey.keys = None
+    RatingExt.addData('RatingKey.keys',RatingKey.keys)
+    if RatingKey.keys != None:  # we had a response
+        RatingExt.addData('RatingKey.rt', RatingKey.rt)
     # store data for RatingExt (TrialHandler)
     RatingExt.addData('mouse.x', mouse.x)
     RatingExt.addData('mouse.y', mouse.y)
