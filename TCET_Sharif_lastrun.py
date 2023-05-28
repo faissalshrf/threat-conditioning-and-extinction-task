@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 12:39
+    on May 28, 2023, at 15:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,9 @@ os.chdir(_thisDir)
 psychopyVersion = '2023.1.1'
 expName = 'TCET'  # from the Builder filename that created this script
 expInfo = {
-    'Participant_ID': 'P00',
+    'Participant_ID': 'S00',
+    'Version': ['Standard','Short'],
+    'Language': ['EN','CN'],
 }
 # --- Show participant info dialog --
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -91,14 +93,22 @@ ioSession = ioServer = eyetracker = None
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard(backend='ptb')
 
-# --- Initialize components for Routine "Init" ---
-# Run 'Begin Experiment' code from Properties
+# --- Initialize components for Routine "Settings" ---
+# Run 'Begin Experiment' code from Settings_2
 import random
+random.seed()
+
+schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']
+
+if expInfo['Version'] == 'Short':
+    for i, filename in enumerate(schedule_files):
+        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    
+print("Schedule files used:",schedule_files)
+   
+skipPhases = False #Shows only instructions and ratings    
+
 parallelTrigger = False
-
-isChinese = True #sets task lang to Chinese
-skipPhases = True #Shows only instructions and ratings    
-
+        
 if parallelTrigger == True:
     from psychopy import parallel
     port = parallel.ParallelPort(address=0x0378)
@@ -107,9 +117,7 @@ if parallelTrigger == True:
         lfpCtrlPort = parallel.ParallelPort(address=0x037A)
         lfpCtrlPort.setData(0)
 
-random.seed()
-SetNums = [1,2,3]
-Sess = 0
+
 
 # --- Initialize components for Routine "PreCondInst" ---
 PreCondImage = visual.ImageStim(
@@ -525,12 +533,12 @@ EndTxtCN = visual.TextStim(win=win, name='EndTxtCN',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.Clock()  # to track time remaining of each (possibly non-slip) routine 
 
-# --- Prepare to start Routine "Init" ---
+# --- Prepare to start Routine "Settings" ---
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-InitComponents = []
-for thisComponent in InitComponents:
+SettingsComponents = []
+for thisComponent in SettingsComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -542,7 +550,7 @@ t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
-# --- Run Routine "Init" ---
+# --- Run Routine "Settings" ---
 routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
@@ -563,7 +571,7 @@ while continueRoutine:
         routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in InitComponents:
+    for thisComponent in SettingsComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -572,11 +580,11 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# --- Ending Routine "Init" ---
-for thisComponent in InitComponents:
+# --- Ending Routine "Settings" ---
+for thisComponent in SettingsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "Init" was not non-slip safe, so reset the non-slip timer
+# the Routine "Settings" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
@@ -685,7 +693,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondInstEN* updates
         
         # if PreCondInstEN is starting this frame...
-        if PreCondInstEN.status == NOT_STARTED and isChinese==False:
+        if PreCondInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             PreCondInstEN.frameNStart = frameN  # exact frame index
             PreCondInstEN.tStart = t  # local t and not account for scr refresh
@@ -705,7 +713,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondInstCN* updates
         
         # if PreCondInstCN is starting this frame...
-        if PreCondInstCN.status == NOT_STARTED and isChinese==True:
+        if PreCondInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             PreCondInstCN.frameNStart = frameN  # exact frame index
             PreCondInstCN.tStart = t  # local t and not account for scr refresh
@@ -865,7 +873,7 @@ for thisPreCondInstText in PreCondInstText:
 # set up handler to look after randomisation of conditions etc
 PreCond = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('1_PreCondition.xlsx'),
+    trialList=data.importConditions(schedule_files[0]),
     seed=None, name='PreCond')
 thisExp.addLoop(PreCond)  # add the loop to the experiment
 thisPreCond = PreCond.trialList[0]  # so we can initialise stimuli with some values
@@ -1275,7 +1283,7 @@ for thisRatingPreCond in RatingPreCond:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -1295,7 +1303,7 @@ for thisRatingPreCond in RatingPreCond:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -1591,7 +1599,7 @@ for thisCondInstText in CondInstText:
         # *CondInstEN* updates
         
         # if CondInstEN is starting this frame...
-        if CondInstEN.status == NOT_STARTED and isChinese==False:
+        if CondInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             CondInstEN.frameNStart = frameN  # exact frame index
             CondInstEN.tStart = t  # local t and not account for scr refresh
@@ -1611,7 +1619,7 @@ for thisCondInstText in CondInstText:
         # *CondInstCN* updates
         
         # if CondInstCN is starting this frame...
-        if CondInstCN.status == NOT_STARTED and isChinese==True:
+        if CondInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             CondInstCN.frameNStart = frameN  # exact frame index
             CondInstCN.tStart = t  # local t and not account for scr refresh
@@ -1771,7 +1779,7 @@ for thisCondInstText in CondInstText:
 # set up handler to look after randomisation of conditions etc
 Cond = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('2_Condition.xlsx'),
+    trialList=data.importConditions(schedule_files[1]),
     seed=None, name='Cond')
 thisExp.addLoop(Cond)  # add the loop to the experiment
 thisCond = Cond.trialList[0]  # so we can initialise stimuli with some values
@@ -2334,7 +2342,7 @@ for thisRatingCond in RatingCond:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -2354,7 +2362,7 @@ for thisRatingCond in RatingCond:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -2650,7 +2658,7 @@ for thisExtInstText in ExtInstText:
         # *ExtInstEN* updates
         
         # if ExtInstEN is starting this frame...
-        if ExtInstEN.status == NOT_STARTED and isChinese==False:
+        if ExtInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             ExtInstEN.frameNStart = frameN  # exact frame index
             ExtInstEN.tStart = t  # local t and not account for scr refresh
@@ -2670,7 +2678,7 @@ for thisExtInstText in ExtInstText:
         # *ExtInstCN* updates
         
         # if ExtInstCN is starting this frame...
-        if ExtInstCN.status == NOT_STARTED and isChinese==True:
+        if ExtInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             ExtInstCN.frameNStart = frameN  # exact frame index
             ExtInstCN.tStart = t  # local t and not account for scr refresh
@@ -2830,7 +2838,7 @@ for thisExtInstText in ExtInstText:
 # set up handler to look after randomisation of conditions etc
 Ext = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('3_Extinction.xlsx'),
+    trialList=data.importConditions(schedule_files[2]),
     seed=None, name='Ext')
 thisExp.addLoop(Ext)  # add the loop to the experiment
 thisExt = Ext.trialList[0]  # so we can initialise stimuli with some values
@@ -3240,7 +3248,7 @@ for thisRatingExt in RatingExt:
         # *RatingInstEN* updates
         
         # if RatingInstEN is starting this frame...
-        if RatingInstEN.status == NOT_STARTED and isChinese==False:
+        if RatingInstEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             RatingInstEN.frameNStart = frameN  # exact frame index
             RatingInstEN.tStart = t  # local t and not account for scr refresh
@@ -3260,7 +3268,7 @@ for thisRatingExt in RatingExt:
         # *RatingInstCN* updates
         
         # if RatingInstCN is starting this frame...
-        if RatingInstCN.status == NOT_STARTED and isChinese==True:
+        if RatingInstCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             RatingInstCN.frameNStart = frameN  # exact frame index
             RatingInstCN.tStart = t  # local t and not account for scr refresh
@@ -3534,7 +3542,7 @@ for thisEndText in EndText:
         # *EndTxtEN* updates
         
         # if EndTxtEN is starting this frame...
-        if EndTxtEN.status == NOT_STARTED and isChinese==False:
+        if EndTxtEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
             EndTxtEN.frameNStart = frameN  # exact frame index
             EndTxtEN.tStart = t  # local t and not account for scr refresh
@@ -3567,7 +3575,7 @@ for thisEndText in EndText:
         # *EndTxtCN* updates
         
         # if EndTxtCN is starting this frame...
-        if EndTxtCN.status == NOT_STARTED and isChinese==True:
+        if EndTxtCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
             # keep track of start time/frame for later
             EndTxtCN.frameNStart = frameN  # exact frame index
             EndTxtCN.tStart = t  # local t and not account for scr refresh
