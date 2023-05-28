@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 02:36
+    on May 28, 2023, at 12:39
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -96,7 +96,7 @@ defaultKeyboard = keyboard.Keyboard(backend='ptb')
 import random
 parallelTrigger = False
 
-isChinese = False #sets task lang to Chinese
+isChinese = True #sets task lang to Chinese
 skipPhases = True #Shows only instructions and ratings    
 
 if parallelTrigger == True:
@@ -120,26 +120,34 @@ PreCondImage = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
+PreCondImageOverview = visual.ImageStim(
+    win=win,
+    name='PreCondImageOverview', 
+    image='default.png', mask=None, anchor='center',
+    ori=0.0, pos=[0,0.05], size=[1.5,0.9],
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-1.0)
 PreCondInstEN = visual.TextStim(win=win, name='PreCondInstEN',
     text='',
     font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 PreCondInstCN = visual.TextStim(win=win, name='PreCondInstCN',
     text='',
     font='PingFang SC',
-    pos=(-0.2,0.7), height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[-0.3,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-3.0);
 PreCondRespKey = keyboard.Keyboard()
 PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
 PreCondSubmit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -150,7 +158,7 @@ PreCondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='PreCondSubmit',
-    depth=-5
+    depth=-6
 )
 PreCondSubmit.buttonClock = core.Clock()
 
@@ -195,23 +203,23 @@ RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
-    pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[0,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
-    labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
+    labels=['– Negative', 'Positive +'], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.06,
+    font='Arial', labelHeight=0.04,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -235,26 +243,34 @@ CondImage = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
+CondImageOverview = visual.ImageStim(
+    win=win,
+    name='CondImageOverview', 
+    image='default.png', mask=None, anchor='center',
+    ori=0.0, pos=[0,0.05], size=[1.5,0.9],
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-1.0)
 CondInstEN = visual.TextStim(win=win, name='CondInstEN',
     text='',
     font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 CondInstCN = visual.TextStim(win=win, name='CondInstCN',
     text='',
     font='PingFang SC',
-    pos=[-0.2,0.7], height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[-0.3,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-3.0);
 CondRespKey = keyboard.Keyboard()
 CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
 CondSubmit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -265,7 +281,7 @@ CondSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='CondSubmit',
-    depth=-5
+    depth=-6
 )
 CondSubmit.buttonClock = core.Clock()
 
@@ -329,23 +345,23 @@ RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
-    pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[0,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
-    labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
+    labels=['– Negative', 'Positive +'], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.06,
+    font='Arial', labelHeight=0.04,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -369,26 +385,34 @@ ExtImage = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
+ExtImageOverview = visual.ImageStim(
+    win=win,
+    name='ExtImageOverview', 
+    image='default.png', mask=None, anchor='center',
+    ori=0.0, pos=[0,0.05], size=[1.5,0.9],
+    color=[1,1,1], colorSpace='rgb', opacity=None,
+    flipHoriz=False, flipVert=False,
+    texRes=128.0, interpolate=True, depth=-1.0)
 ExtInstEN = visual.TextStim(win=win, name='ExtInstEN',
     text='',
     font='Arial',
     pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 ExtInstCN = visual.TextStim(win=win, name='ExtInstCN',
     text='',
     font='PingFang SC',
-    pos=[-0.2,0.7], height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[-0.3,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-2.0);
+    depth=-3.0);
 ExtRespKey = keyboard.Keyboard()
 ExtMouse = event.Mouse(win=win)
 x, y = [None, None]
 ExtMouse.mouseClock = core.Clock()
 ExtSubmit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -399,7 +423,7 @@ ExtSubmit = visual.ButtonStim(win,
     padding=None,
     anchor='center',
     name='ExtSubmit',
-    depth=-5
+    depth=-6
 )
 ExtSubmit.buttonClock = core.Clock()
 
@@ -444,23 +468,23 @@ RatingInstEN = visual.TextStim(win=win, name='RatingInstEN',
 RatingInstCN = visual.TextStim(win=win, name='RatingInstCN',
     text='',
     font='PingFang SC',
-    pos=[0,0.7], height=0.1, wrapWidth=None, ori=0.0, 
+    pos=[0,0.7], height=0.08, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
 Scale = visual.Slider(win=win, name='Scale',
     startValue=None, size=(1.3, 0.05), pos=(0, -0.5), units=win.units,
-    labels=['– Negative', 'Positive +',], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
+    labels=['– Negative', 'Positive +'], ticks=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), granularity=1.0,
     style='rating', styleTweaks=(), opacity=None,
     labelColor='LightGray', markerColor='beige', lineColor='White', colorSpace='rgb',
-    font='Arial', labelHeight=0.06,
+    font='Arial', labelHeight=0.04,
     flip=False, ori=0.0, depth=-3, readOnly=False)
 RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
 Submit = visual.ButtonStim(win, 
-    text='>>>', font='Arial',
+    text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
     size=[0.3, 0.1], borderWidth=0.0,
@@ -492,7 +516,7 @@ EndTxtEN = visual.TextStim(win=win, name='EndTxtEN',
 EndTxtCN = visual.TextStim(win=win, name='EndTxtCN',
     text='',
     font='PingFang SC',
-    pos=[-0.1, 0], height=0.2, wrapWidth=None, ori=0, 
+    pos=[-0.3, 0], height=0.2, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -558,7 +582,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 PreCondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:4'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
     seed=None, name='PreCondInstText')
 thisExp.addLoop(PreCondInstText)  # add the loop to the experiment
 thisPreCondInstText = PreCondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -578,6 +602,7 @@ for thisPreCondInstText in PreCondInstText:
     continueRoutine = True
     # update component parameters for each repeat
     PreCondImage.setImage(PreCondInstTextImage)
+    PreCondImageOverview.setImage(PreCondInstTextImage)
     PreCondInstEN.setText(PreCondInstTextEN)
     PreCondInstCN.setText(PreCondInstTextCN)
     PreCondRespKey.keys = []
@@ -594,7 +619,7 @@ for thisPreCondInstText in PreCondInstText:
     # reset PreCondSubmit to account for continued clicks & clear times on/off
     PreCondSubmit.reset()
     # keep track of which components have finished
-    PreCondInstComponents = [PreCondImage, PreCondInstEN, PreCondInstCN, PreCondRespKey, PreCondMouse, PreCondSubmit]
+    PreCondInstComponents = [PreCondImage, PreCondImageOverview, PreCondInstEN, PreCondInstCN, PreCondRespKey, PreCondMouse, PreCondSubmit]
     for thisComponent in PreCondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -620,7 +645,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondImage* updates
         
         # if PreCondImage is starting this frame...
-        if PreCondImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if PreCondImage.status == NOT_STARTED and PreCondInstTextImage=="Stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             PreCondImage.frameNStart = frameN  # exact frame index
             PreCondImage.tStart = t  # local t and not account for scr refresh
@@ -634,6 +659,26 @@ for thisPreCondInstText in PreCondInstText:
         
         # if PreCondImage is active this frame...
         if PreCondImage.status == STARTED:
+            # update params
+            pass
+        
+        # *PreCondImageOverview* updates
+        
+        # if PreCondImageOverview is starting this frame...
+        if PreCondImageOverview.status == NOT_STARTED and PreCondInstTextImage=="Stimuli/Raw_3Faces.BMP":
+            # keep track of start time/frame for later
+            PreCondImageOverview.frameNStart = frameN  # exact frame index
+            PreCondImageOverview.tStart = t  # local t and not account for scr refresh
+            PreCondImageOverview.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondImageOverview, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'PreCondImageOverview.started')
+            # update status
+            PreCondImageOverview.status = STARTED
+            PreCondImageOverview.setAutoDraw(True)
+        
+        # if PreCondImageOverview is active this frame...
+        if PreCondImageOverview.status == STARTED:
             # update params
             pass
         
@@ -1443,7 +1488,7 @@ RatingPreCond.saveAsExcel(filename + '.xlsx', sheetName='RatingPreCond',
 # set up handler to look after randomisation of conditions etc
 CondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:4'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
     seed=None, name='CondInstText')
 thisExp.addLoop(CondInstText)  # add the loop to the experiment
 thisCondInstText = CondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -1463,6 +1508,7 @@ for thisCondInstText in CondInstText:
     continueRoutine = True
     # update component parameters for each repeat
     CondImage.setImage(CondInstTextImage)
+    CondImageOverview.setImage(CondInstTextImage)
     CondInstEN.setText(CondInstTextEN)
     CondInstCN.setText(CondInstTextCN)
     CondRespKey.keys = []
@@ -1479,7 +1525,7 @@ for thisCondInstText in CondInstText:
     # reset CondSubmit to account for continued clicks & clear times on/off
     CondSubmit.reset()
     # keep track of which components have finished
-    CondInstComponents = [CondImage, CondInstEN, CondInstCN, CondRespKey, CondMouse, CondSubmit]
+    CondInstComponents = [CondImage, CondImageOverview, CondInstEN, CondInstCN, CondRespKey, CondMouse, CondSubmit]
     for thisComponent in CondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1505,7 +1551,7 @@ for thisCondInstText in CondInstText:
         # *CondImage* updates
         
         # if CondImage is starting this frame...
-        if CondImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if CondImage.status == NOT_STARTED and CondInstTextImage=="Stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             CondImage.frameNStart = frameN  # exact frame index
             CondImage.tStart = t  # local t and not account for scr refresh
@@ -1519,6 +1565,26 @@ for thisCondInstText in CondInstText:
         
         # if CondImage is active this frame...
         if CondImage.status == STARTED:
+            # update params
+            pass
+        
+        # *CondImageOverview* updates
+        
+        # if CondImageOverview is starting this frame...
+        if CondImageOverview.status == NOT_STARTED and CondInstTextImage=="Stimuli/Raw_3Faces.BMP":
+            # keep track of start time/frame for later
+            CondImageOverview.frameNStart = frameN  # exact frame index
+            CondImageOverview.tStart = t  # local t and not account for scr refresh
+            CondImageOverview.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondImageOverview, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'CondImageOverview.started')
+            # update status
+            CondImageOverview.status = STARTED
+            CondImageOverview.setAutoDraw(True)
+        
+        # if CondImageOverview is active this frame...
+        if CondImageOverview.status == STARTED:
             # update params
             pass
         
@@ -2481,7 +2547,7 @@ RatingCond.saveAsExcel(filename + '.xlsx', sheetName='RatingCond',
 # set up handler to look after randomisation of conditions etc
 ExtInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:6'),
     seed=None, name='ExtInstText')
 thisExp.addLoop(ExtInstText)  # add the loop to the experiment
 thisExtInstText = ExtInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -2501,6 +2567,7 @@ for thisExtInstText in ExtInstText:
     continueRoutine = True
     # update component parameters for each repeat
     ExtImage.setImage(ExtInstTextImage)
+    ExtImageOverview.setImage(ExtInstTextImage)
     ExtInstEN.setText(ExtInstTextEN)
     ExtInstCN.setText(ExtInstTextCN)
     ExtRespKey.keys = []
@@ -2517,7 +2584,7 @@ for thisExtInstText in ExtInstText:
     # reset ExtSubmit to account for continued clicks & clear times on/off
     ExtSubmit.reset()
     # keep track of which components have finished
-    ExtInstComponents = [ExtImage, ExtInstEN, ExtInstCN, ExtRespKey, ExtMouse, ExtSubmit]
+    ExtInstComponents = [ExtImage, ExtImageOverview, ExtInstEN, ExtInstCN, ExtRespKey, ExtMouse, ExtSubmit]
     for thisComponent in ExtInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2543,7 +2610,7 @@ for thisExtInstText in ExtInstText:
         # *ExtImage* updates
         
         # if ExtImage is starting this frame...
-        if ExtImage.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if ExtImage.status == NOT_STARTED and ExtInstTextImage=="Stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             ExtImage.frameNStart = frameN  # exact frame index
             ExtImage.tStart = t  # local t and not account for scr refresh
@@ -2557,6 +2624,26 @@ for thisExtInstText in ExtInstText:
         
         # if ExtImage is active this frame...
         if ExtImage.status == STARTED:
+            # update params
+            pass
+        
+        # *ExtImageOverview* updates
+        
+        # if ExtImageOverview is starting this frame...
+        if ExtImageOverview.status == NOT_STARTED and ExtInstTextImage=="Stimuli/Raw_3Faces.BMP":
+            # keep track of start time/frame for later
+            ExtImageOverview.frameNStart = frameN  # exact frame index
+            ExtImageOverview.tStart = t  # local t and not account for scr refresh
+            ExtImageOverview.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtImageOverview, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ExtImageOverview.started')
+            # update status
+            ExtImageOverview.status = STARTED
+            ExtImageOverview.setAutoDraw(True)
+        
+        # if ExtImageOverview is active this frame...
+        if ExtImageOverview.status == STARTED:
             # update params
             pass
         
