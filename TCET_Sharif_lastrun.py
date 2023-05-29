@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 29, 2023, at 11:29
+    on May 29, 2023, at 11:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -55,7 +55,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + 'data/%s/%s-%s' %(expInfo['Participant_ID'], expInfo['Participant_ID'], expInfo['date']) 
+filename = _thisDir + os.sep + 'data/%s/%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) 
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -74,7 +74,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1382, 864], fullscr=True, screen=0, 
+    size=[1920, 1080], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='', color='black', colorSpace='rgb',
     backgroundImage='', backgroundFit='fill',
