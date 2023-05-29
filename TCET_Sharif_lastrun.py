@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 28, 2023, at 15:35
+    on May 29, 2023, at 11:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -60,7 +60,7 @@ filename = _thisDir + os.sep + 'data/%s/%s-%s' %(expInfo['Participant_ID'], expI
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Faiss\\OneDrive - Nexus365\\2023 – NAP Study\\TCET_Task\\TCET_Sharif\\TCET_Sharif_lastrun.py',
+    originPath='C:\\Users\\fsharif\\Desktop\\NAP Study (local)\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -94,28 +94,34 @@ ioSession = ioServer = eyetracker = None
 defaultKeyboard = keyboard.Keyboard(backend='ptb')
 
 # --- Initialize components for Routine "Settings" ---
-# Run 'Begin Experiment' code from Settings_2
+# Run 'Begin Experiment' code from Settings_
 import random
-random.seed()
+random.seed()  # Seeds the random number generator
 
+# List of schedule files
 schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']
 
+# If experiment version is 'Short', modify the filenames in the list
 if expInfo['Version'] == 'Short':
     for i, filename in enumerate(schedule_files):
-        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')    
-print("Schedule files used:",schedule_files)
-   
-skipPhases = False #Shows only instructions and ratings    
+        schedule_files[i] = filename.replace('.xlsx', '_Short.xlsx')
 
-parallelTrigger = False
-        
-if parallelTrigger == True:
+# Print the schedule files being used
+print("Schedule files used:", schedule_files)
+
+skipPhases = False  # Flag to determine if phases should be skipped (only show instructions and ratings)
+
+parallelTrigger = False  # Flag to determine if parallel triggering is enabled
+
+# If parallel triggering is enabled
+if parallelTrigger:
     from psychopy import parallel
-    port = parallel.ParallelPort(address=0x0378)
-    port.setData(0)
-    if lfpTrigger == True:
-        lfpCtrlPort = parallel.ParallelPort(address=0x037A)
-        lfpCtrlPort.setData(0)
+    port = parallel.ParallelPort(address=0x0378)  # Initialize parallel port
+    port.setData(0)  # Set parallel port data to 0
+
+    if lfpTrigger:  # If LFP triggering is also enabled
+        lfpCtrlPort = parallel.ParallelPort(address=0x037A)  # Initialize LFP control parallel port
+        lfpCtrlPort.setData(0)  # Set LFP control parallel port data to 0
 
 
 
@@ -894,20 +900,21 @@ for thisPreCond in PreCond:
     # update component parameters for each repeat
     imagePreCond.setImage(PreCondName)
     # Run 'Begin Routine' code from EachTrial
-    if skipPhases == True:
-        continueRoutine = False #end the routine
-        PreCond.finished = True #break the loop
+    # If skipPhases is True, end the current routine and break the loop
+    if skipPhases:
+        continueRoutine = False  # Set continueRoutine to False to end the routine
+        PreCond.finished = True  # Set PreCond.finished to True to break the loop
     
-    if parallelTrigger == True:
-       ParaleData = 50  #Faissal
-       #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
-       port.setData(ParaleData) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(1)
-       core.wait(0.02)
-       port.setData(0) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(0)
+    # If parallelTrigger is True, perform parallel triggering
+    if parallelTrigger:
+        ParaleData = 50  # Value to be set on the parallel port
+        port.setData(ParaleData)  # Set the parallel port data to ParaleData
+        if lfpTrigger:  # If lfpTrigger is also True
+            lfpCtrlPort.setData(1)  # Set the LFP control parallel port data to 1
+        core.wait(0.02)  # Wait for 0.02 seconds
+        port.setData(0)  # Set the parallel port data back to 0
+        if lfpTrigger:  # If lfpTrigger is True
+            lfpCtrlPort.setData(0)  # Set the LFP control parallel port data back to 0
     # setup some python lists for storing info about the PreCondTriggMouse
     PreCondTriggMouse.x = []
     PreCondTriggMouse.y = []
@@ -1777,7 +1784,7 @@ for thisCondInstText in CondInstText:
 
 
 # set up handler to look after randomisation of conditions etc
-Cond = data.TrialHandler(nReps=1.0, method='sequential', 
+Cond = data.TrialHandler(nReps=1.0, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(schedule_files[1]),
     seed=None, name='Cond')
@@ -1800,20 +1807,21 @@ for thisCond in Cond:
     # update component parameters for each repeat
     CS_image.setImage(CSName)
     # Run 'Begin Routine' code from EachTrial_2
-    if skipPhases == True:
-        continueRoutine = False #end the routine
-        Cond.finished = True #break the loop
+    # If skipPhases is True, end the current routine and break the loop
+    if skipPhases:
+        continueRoutine = False  # Set continueRoutine to False to end the routine
+        PreCond.finished = True  # Set PreCond.finished to True to break the loop
     
-    if parallelTrigger == True:
-       ParaleData = 50  #Faissal
-       #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
-       port.setData(ParaleData) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(1)
-       core.wait(0.02)
-       port.setData(0) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(0)
+    # If parallelTrigger is True, perform parallel triggering
+    if parallelTrigger:
+        ParaleData = 50  # Value to be set on the parallel port
+        port.setData(ParaleData)  # Set the parallel port data to ParaleData
+        if lfpTrigger:  # If lfpTrigger is also True
+            lfpCtrlPort.setData(1)  # Set the LFP control parallel port data to 1
+        core.wait(0.02)  # Wait for 0.02 seconds
+        port.setData(0)  # Set the parallel port data back to 0
+        if lfpTrigger:  # If lfpTrigger is True
+            lfpCtrlPort.setData(0)  # Set the LFP control parallel port data back to 0
     # setup some python lists for storing info about the CondTriggMouse
     CondTriggMouse.x = []
     CondTriggMouse.y = []
@@ -2859,20 +2867,21 @@ for thisExt in Ext:
     # update component parameters for each repeat
     Ext_image.setImage(ExtName)
     # Run 'Begin Routine' code from EachTrial_3
-    if skipPhases == True:
-        continueRoutine = False #end the routine
-        Ext.finished = True #break the loop
+    # If skipPhases is True, end the current routine and break the loop
+    if skipPhases:
+        continueRoutine = False  # Set continueRoutine to False to end the routine
+        PreCond.finished = True  # Set PreCond.finished to True to break the loop
     
-    if parallelTrigger == True:
-       ParaleData = 50  #Faissal
-       #ParaleData = int((TrgCol+0.6)*40+20) #Faissal
-       port.setData(ParaleData) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(1)
-       core.wait(0.02)
-       port.setData(0) #Faissal
-       if lfpTrigger == True:
-            lfpCtrlPort.setData(0)
+    # If parallelTrigger is True, perform parallel triggering
+    if parallelTrigger:
+        ParaleData = 50  # Value to be set on the parallel port
+        port.setData(ParaleData)  # Set the parallel port data to ParaleData
+        if lfpTrigger:  # If lfpTrigger is also True
+            lfpCtrlPort.setData(1)  # Set the LFP control parallel port data to 1
+        core.wait(0.02)  # Wait for 0.02 seconds
+        port.setData(0)  # Set the parallel port data back to 0
+        if lfpTrigger:  # If lfpTrigger is True
+            lfpCtrlPort.setData(0)  # Set the LFP control parallel port data back to 0
     # setup some python lists for storing info about the ExtTriggMouse
     ExtTriggMouse.x = []
     ExtTriggMouse.y = []
