@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on June 11, 2023, at 02:16
+    on June 11, 2023, at 02:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,6 +33,9 @@ import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
 
+# Run 'Before Experiment' code from Settings_
+from datetime import datetime
+current_date = datetime.now().strftime("%Y_%m_%d") #Sets current date for foldername
 
 
 # Ensure that relative paths start from the same directory as this script
@@ -55,7 +58,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + 'data/%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) 
+filename = _thisDir + os.sep + 'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], current_date, expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) 
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -109,7 +112,7 @@ if expInfo['Version'] == 'Short':
 # Print the schedule files being used
 print("Schedule files used:", schedule_files)
 
-skipPhases = True  # Flag to determine if phases should be skipped (only show instructions and ratings)
+skipPhases = False  # Flag to determine if phases should be skipped (only show instructions and ratings)
 
 parallelTrigger = False  # Flag to determine if parallel triggering is enabled
 lfpTrigger = False  # Flag to determine if LFP parallel triggering (for Jingyu device) is enabled
@@ -2834,7 +2837,7 @@ RatingCond.saveAsExcel(filename + '.xlsx', sheetName='RatingCond',
 # set up handler to look after randomisation of conditions etc
 ExtInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:6'),
+    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
     seed=None, name='ExtInstText')
 thisExp.addLoop(ExtInstText)  # add the loop to the experiment
 thisExtInstText = ExtInstText.trialList[0]  # so we can initialise stimuli with some values
