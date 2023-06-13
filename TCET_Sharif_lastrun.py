@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on June 11, 2023, at 02:28
+    on June 13, 2023, at 15:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -63,7 +63,7 @@ filename = _thisDir + os.sep + 'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Faiss\\Documents\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+    originPath='C:\\Users\\tanlab1\\Desktop\\NAP Study (local)\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -77,7 +77,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1382, 864], fullscr=True, screen=0, 
+    size=[1920, 1080], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='', color='black', colorSpace='rgb',
     backgroundImage='', backgroundFit='fill',
