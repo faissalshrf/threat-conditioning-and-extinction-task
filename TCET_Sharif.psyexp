@@ -5,7 +5,7 @@
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="'data/%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) " valType="code" updates="None" name="Data filename"/>
+    <Param val="'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], expInfo['date'], expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) " valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
     <Param val="{'Participant_ID': 'S00', 'Version': &quot;['Standard','Short']&quot;, 'Language': &quot;['EN','CN']&quot;}" valType="code" updates="None" name="Experiment info"/>
