@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on June 13, 2023, at 15:50
+    on June 15, 2023, at 18:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -11,15 +11,12 @@ If you publish work using this script the most relevant publication is:
 
 """
 
-import psychopy
-psychopy.useVersion('2023.1.1')
-
-
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
+prefs.hardware['audioLib'] = 'ptb'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
@@ -63,7 +60,7 @@ filename = _thisDir + os.sep + 'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\tanlab1\\Desktop\\NAP Study (local)\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+    originPath='C:\\Users\\Faiss\\Documents\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -77,7 +74,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1382, 864], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='', color='black', colorSpace='rgb',
     backgroundImage='', backgroundFit='fill',
@@ -102,7 +99,7 @@ import random
 random.seed()  # Seeds the random number generator
 
 # List of schedule files
-schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']
+schedule_files = ['schedules/1_PreCondition.xlsx', 'schedules/2_Condition.xlsx', 'schedules/3_Extinction.xlsx']
 
 # If experiment version is 'Short', modify the filenames in the list
 if expInfo['Version'] == 'Short':
@@ -690,7 +687,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 PreCondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='PreCondInstText')
 thisExp.addLoop(PreCondInstText)  # add the loop to the experiment
 thisPreCondInstText = PreCondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -1125,7 +1122,7 @@ for thisPreCond in PreCond:
         # *PreCondTriggMouse* updates
         
         # if PreCondTriggMouse is starting this frame...
-        if PreCondTriggMouse.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if PreCondTriggMouse.status == NOT_STARTED and PreCondName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             PreCondTriggMouse.frameNStart = frameN  # exact frame index
             PreCondTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -1168,7 +1165,7 @@ for thisPreCond in PreCond:
         waitOnFlip = False
         
         # if PreCondTriggKey is starting this frame...
-        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             PreCondTriggKey.frameNStart = frameN  # exact frame index
             PreCondTriggKey.tStart = t  # local t and not account for scr refresh
@@ -1346,7 +1343,7 @@ PreCond.saveAsExcel(filename + '.xlsx', sheetName='PreCond',
 # set up handler to look after randomisation of conditions etc
 RatingPreCond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingPreCond')
 thisExp.addLoop(RatingPreCond)  # add the loop to the experiment
 thisRatingPreCond = RatingPreCond.trialList[0]  # so we can initialise stimuli with some values
@@ -1687,7 +1684,7 @@ RatingPreCond.saveAsExcel(filename + '.xlsx', sheetName='RatingPreCond',
 # set up handler to look after randomisation of conditions etc
 CondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='CondInstText')
 thisExp.addLoop(CondInstText)  # add the loop to the experiment
 thisCondInstText = CondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -2122,7 +2119,7 @@ for thisCond in Cond:
         # *CondTriggMouse* updates
         
         # if CondTriggMouse is starting this frame...
-        if CondTriggMouse.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
+        if CondTriggMouse.status == NOT_STARTED and CSName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggMouse.frameNStart = frameN  # exact frame index
             CondTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -2165,7 +2162,7 @@ for thisCond in Cond:
         waitOnFlip = False
         
         # if CondTriggKey is starting this frame...
-        if CondTriggKey.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
+        if CondTriggKey.status == NOT_STARTED and CSName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggKey.frameNStart = frameN  # exact frame index
             CondTriggKey.tStart = t  # local t and not account for scr refresh
@@ -2496,7 +2493,7 @@ Cond.saveAsExcel(filename + '.xlsx', sheetName='Cond',
 # set up handler to look after randomisation of conditions etc
 RatingCond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingCond')
 thisExp.addLoop(RatingCond)  # add the loop to the experiment
 thisRatingCond = RatingCond.trialList[0]  # so we can initialise stimuli with some values
@@ -2837,7 +2834,7 @@ RatingCond.saveAsExcel(filename + '.xlsx', sheetName='RatingCond',
 # set up handler to look after randomisation of conditions etc
 ExtInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='ExtInstText')
 thisExp.addLoop(ExtInstText)  # add the loop to the experiment
 thisExtInstText = ExtInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -3272,7 +3269,7 @@ for thisExt in Ext:
         # *ExtTriggMouse* updates
         
         # if ExtTriggMouse is starting this frame...
-        if ExtTriggMouse.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
+        if ExtTriggMouse.status == NOT_STARTED and ExtName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggMouse.frameNStart = frameN  # exact frame index
             ExtTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -3315,7 +3312,7 @@ for thisExt in Ext:
         waitOnFlip = False
         
         # if ExtTriggKey is starting this frame...
-        if ExtTriggKey.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
+        if ExtTriggKey.status == NOT_STARTED and ExtName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggKey.frameNStart = frameN  # exact frame index
             ExtTriggKey.tStart = t  # local t and not account for scr refresh
@@ -3493,7 +3490,7 @@ Ext.saveAsExcel(filename + '.xlsx', sheetName='Ext',
 # set up handler to look after randomisation of conditions etc
 RatingExt = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingExt')
 thisExp.addLoop(RatingExt)  # add the loop to the experiment
 thisRatingExt = RatingExt.trialList[0]  # so we can initialise stimuli with some values
@@ -3834,7 +3831,7 @@ RatingExt.saveAsExcel(filename + '.xlsx', sheetName='RatingExt',
 # set up handler to look after randomisation of conditions etc
 EndText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:1'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:1'),
     seed=None, name='EndText')
 thisExp.addLoop(EndText)  # add the loop to the experiment
 thisEndText = EndText.trialList[0]  # so we can initialise stimuli with some values
