@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
+<<<<<<< HEAD
+    on June 19, 2023, at 09:37
+=======
     on June 15, 2023, at 18:54
+>>>>>>> 18f68be4c399f99cc46edce7165af8bb52910693
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -60,7 +64,11 @@ filename = _thisDir + os.sep + 'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
+<<<<<<< HEAD
+    originPath='C:\\workspace\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+=======
     originPath='C:\\Users\\Faiss\\Documents\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+>>>>>>> 18f68be4c399f99cc46edce7165af8bb52910693
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
