@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on May 29, 2023, at 12:43
+    on June 19, 2023, at 09:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -60,7 +60,7 @@ filename = _thisDir + os.sep + 'data/%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Partic
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\fsharif\\Desktop\\NAP Study (local)\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+    originPath='C:\\workspace\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -112,6 +112,7 @@ print("Schedule files used:", schedule_files)
 skipPhases = False  # Flag to determine if phases should be skipped (only show instructions and ratings)
 
 parallelTrigger = False  # Flag to determine if parallel triggering is enabled
+lfpTrigger = False  # Flag to determine if LFP parallel triggering (for Jingyu device) is enabled
 
 # If parallel triggering is enabled
 if parallelTrigger:
@@ -1784,7 +1785,7 @@ for thisCondInstText in CondInstText:
 
 
 # set up handler to look after randomisation of conditions etc
-Cond = data.TrialHandler(nReps=1.0, method='random', 
+Cond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions(schedule_files[1]),
     seed=None, name='Cond')
