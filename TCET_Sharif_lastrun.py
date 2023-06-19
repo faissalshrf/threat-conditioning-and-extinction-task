@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
+<<<<<<< HEAD
     on June 19, 2023, at 09:37
+=======
+    on June 15, 2023, at 18:54
+>>>>>>> 18f68be4c399f99cc46edce7165af8bb52910693
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -11,15 +15,12 @@ If you publish work using this script the most relevant publication is:
 
 """
 
-import psychopy
-psychopy.useVersion('2023.1.1')
-
-
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
 from psychopy import plugins
 plugins.activatePlugins()
+prefs.hardware['audioLib'] = 'ptb'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
@@ -33,6 +34,9 @@ import sys  # to get file system encoding
 
 from psychopy.hardware import keyboard
 
+# Run 'Before Experiment' code from Settings_
+from datetime import datetime
+current_date = datetime.now().strftime("%Y_%m_%d") #Sets current date for foldername
 
 
 # Ensure that relative paths start from the same directory as this script
@@ -55,12 +59,16 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + 'data/%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) 
+filename = _thisDir + os.sep + 'data/TCET_%s_%s/TCET_%s_%s_%s_Tasklog' %(expInfo['Participant_ID'], current_date, expInfo['Participant_ID'], expInfo['date'], expInfo['Version']) 
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
+<<<<<<< HEAD
     originPath='C:\\workspace\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+=======
+    originPath='C:\\Users\\Faiss\\Documents\\threat-conditioning-and-extinction-task\\TCET_Sharif_lastrun.py',
+>>>>>>> 18f68be4c399f99cc46edce7165af8bb52910693
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -74,7 +82,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1382, 864], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='', color='black', colorSpace='rgb',
     backgroundImage='', backgroundFit='fill',
@@ -99,7 +107,7 @@ import random
 random.seed()  # Seeds the random number generator
 
 # List of schedule files
-schedule_files = ['1_PreCondition.xlsx', '2_Condition.xlsx', '3_Extinction.xlsx']
+schedule_files = ['schedules/1_PreCondition.xlsx', 'schedules/2_Condition.xlsx', 'schedules/3_Extinction.xlsx']
 
 # If experiment version is 'Short', modify the filenames in the list
 if expInfo['Version'] == 'Short':
@@ -161,7 +169,7 @@ PreCondRespKey = keyboard.Keyboard()
 PreCondMouse = event.Mouse(win=win)
 x, y = [None, None]
 PreCondMouse.mouseClock = core.Clock()
-PreCondSubmit = visual.ButtonStim(win, 
+PreCondSubmitEN = visual.ButtonStim(win, 
     text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -172,10 +180,25 @@ PreCondSubmit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='PreCondSubmit',
+    name='PreCondSubmitEN',
     depth=-6
 )
-PreCondSubmit.buttonClock = core.Clock()
+PreCondSubmitEN.buttonClock = core.Clock()
+PreCondSubmitCN = visual.ButtonStim(win, 
+    text='继续', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='PreCondSubmitCN',
+    depth=-7
+)
+PreCondSubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialPreCond" ---
 imagePreCond = visual.ImageStim(
@@ -233,7 +256,7 @@ RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
-Submit = visual.ButtonStim(win, 
+SubmitEN = visual.ButtonStim(win, 
     text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -244,10 +267,25 @@ Submit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='Submit',
+    name='SubmitEN',
     depth=-6
 )
-Submit.buttonClock = core.Clock()
+SubmitEN.buttonClock = core.Clock()
+SubmitCN = visual.ButtonStim(win, 
+    text='提交', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='SubmitCN',
+    depth=-7
+)
+SubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "CondInst" ---
 CondImage = visual.ImageStim(
@@ -284,7 +322,7 @@ CondRespKey = keyboard.Keyboard()
 CondMouse = event.Mouse(win=win)
 x, y = [None, None]
 CondMouse.mouseClock = core.Clock()
-CondSubmit = visual.ButtonStim(win, 
+CondSubmitEN = visual.ButtonStim(win, 
     text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -295,10 +333,25 @@ CondSubmit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='CondSubmit',
+    name='CondSubmitEN',
     depth=-6
 )
-CondSubmit.buttonClock = core.Clock()
+CondSubmitEN.buttonClock = core.Clock()
+CondSubmitCN = visual.ButtonStim(win, 
+    text='继续', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='CondSubmitCN',
+    depth=-7
+)
+CondSubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialCond" ---
 CS_image = visual.ImageStim(
@@ -375,7 +428,7 @@ RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
-Submit = visual.ButtonStim(win, 
+SubmitEN = visual.ButtonStim(win, 
     text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -386,10 +439,25 @@ Submit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='Submit',
+    name='SubmitEN',
     depth=-6
 )
-Submit.buttonClock = core.Clock()
+SubmitEN.buttonClock = core.Clock()
+SubmitCN = visual.ButtonStim(win, 
+    text='提交', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='SubmitCN',
+    depth=-7
+)
+SubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "ExtInst" ---
 ExtImage = visual.ImageStim(
@@ -426,7 +494,7 @@ ExtRespKey = keyboard.Keyboard()
 ExtMouse = event.Mouse(win=win)
 x, y = [None, None]
 ExtMouse.mouseClock = core.Clock()
-ExtSubmit = visual.ButtonStim(win, 
+ExtSubmitEN = visual.ButtonStim(win, 
     text='CONTINUE', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -437,10 +505,25 @@ ExtSubmit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='ExtSubmit',
+    name='ExtSubmitEN',
     depth=-6
 )
-ExtSubmit.buttonClock = core.Clock()
+ExtSubmitEN.buttonClock = core.Clock()
+ExtSubmitCN = visual.ButtonStim(win, 
+    text='继续', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='ExtSubmitCN',
+    depth=-7
+)
+ExtSubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "trialExt" ---
 Ext_image = visual.ImageStim(
@@ -498,7 +581,7 @@ RatingKey = keyboard.Keyboard()
 mouse = event.Mouse(win=win)
 x, y = [None, None]
 mouse.mouseClock = core.Clock()
-Submit = visual.ButtonStim(win, 
+SubmitEN = visual.ButtonStim(win, 
     text='SUBMIT', font='Arial',
     pos=[0.7, -0.8],
     letterHeight=0.06,
@@ -509,10 +592,25 @@ Submit = visual.ButtonStim(win,
     bold=True, italic=False,
     padding=None,
     anchor='center',
-    name='Submit',
+    name='SubmitEN',
     depth=-6
 )
-Submit.buttonClock = core.Clock()
+SubmitEN.buttonClock = core.Clock()
+SubmitCN = visual.ButtonStim(win, 
+    text='提交', font='PingFang SC',
+    pos=[0.7, -0.8],
+    letterHeight=0.06,
+    size=[0.3, 0.1], borderWidth=0.0,
+    fillColor=[0.8824, 0.6392, 0.4432], borderColor=None,
+    color='black', colorSpace='rgb',
+    opacity=1.0,
+    bold=False, italic=False,
+    padding=None,
+    anchor='center',
+    name='SubmitCN',
+    depth=-7
+)
+SubmitCN.buttonClock = core.Clock()
 
 # --- Initialize components for Routine "EndBlock" ---
 Bkg_Light = visual.Rect(
@@ -597,7 +695,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 PreCondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='PreCondInstText')
 thisExp.addLoop(PreCondInstText)  # add the loop to the experiment
 thisPreCondInstText = PreCondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -631,10 +729,12 @@ for thisPreCondInstText in PreCondInstText:
     PreCondMouse.rightButton = []
     PreCondMouse.time = []
     gotValidClick = False  # until a click is received
-    # reset PreCondSubmit to account for continued clicks & clear times on/off
-    PreCondSubmit.reset()
+    # reset PreCondSubmitEN to account for continued clicks & clear times on/off
+    PreCondSubmitEN.reset()
+    # reset PreCondSubmitCN to account for continued clicks & clear times on/off
+    PreCondSubmitCN.reset()
     # keep track of which components have finished
-    PreCondInstComponents = [PreCondImage, PreCondImageOverview, PreCondInstEN, PreCondInstCN, PreCondRespKey, PreCondMouse, PreCondSubmit]
+    PreCondInstComponents = [PreCondImage, PreCondImageOverview, PreCondInstEN, PreCondInstCN, PreCondRespKey, PreCondMouse, PreCondSubmitEN, PreCondSubmitCN]
     for thisComponent in PreCondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -791,42 +891,78 @@ for thisPreCondInstText in PreCondInstText:
                     PreCondMouse.midButton.append(buttons[1])
                     PreCondMouse.rightButton.append(buttons[2])
                     PreCondMouse.time.append(PreCondMouse.mouseClock.getTime())
-        # *PreCondSubmit* updates
+        # *PreCondSubmitEN* updates
         
-        # if PreCondSubmit is starting this frame...
-        if PreCondSubmit.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if PreCondSubmitEN is starting this frame...
+        if PreCondSubmitEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            PreCondSubmit.frameNStart = frameN  # exact frame index
-            PreCondSubmit.tStart = t  # local t and not account for scr refresh
-            PreCondSubmit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(PreCondSubmit, 'tStartRefresh')  # time at next scr refresh
+            PreCondSubmitEN.frameNStart = frameN  # exact frame index
+            PreCondSubmitEN.tStart = t  # local t and not account for scr refresh
+            PreCondSubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondSubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'PreCondSubmit.started')
+            thisExp.timestampOnFlip(win, 'PreCondSubmitEN.started')
             # update status
-            PreCondSubmit.status = STARTED
-            PreCondSubmit.setAutoDraw(True)
+            PreCondSubmitEN.status = STARTED
+            PreCondSubmitEN.setAutoDraw(True)
         
-        # if PreCondSubmit is active this frame...
-        if PreCondSubmit.status == STARTED:
+        # if PreCondSubmitEN is active this frame...
+        if PreCondSubmitEN.status == STARTED:
             # update params
             pass
-            # check whether PreCondSubmit has been pressed
-            if PreCondSubmit.isClicked:
-                if not PreCondSubmit.wasClicked:
+            # check whether PreCondSubmitEN has been pressed
+            if PreCondSubmitEN.isClicked:
+                if not PreCondSubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    PreCondSubmit.timesOn.append(PreCondSubmit.buttonClock.getTime())
-                    PreCondSubmit.timesOff.append(PreCondSubmit.buttonClock.getTime())
-                elif len(PreCondSubmit.timesOff):
+                    PreCondSubmitEN.timesOn.append(PreCondSubmitEN.buttonClock.getTime())
+                    PreCondSubmitEN.timesOff.append(PreCondSubmitEN.buttonClock.getTime())
+                elif len(PreCondSubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    PreCondSubmit.timesOff[-1] = PreCondSubmit.buttonClock.getTime()
-                if not PreCondSubmit.wasClicked:
-                    # end routine when PreCondSubmit is clicked
+                    PreCondSubmitEN.timesOff[-1] = PreCondSubmitEN.buttonClock.getTime()
+                if not PreCondSubmitEN.wasClicked:
+                    # end routine when PreCondSubmitEN is clicked
                     continueRoutine = False
-                if not PreCondSubmit.wasClicked:
-                    # run callback code when PreCondSubmit is clicked
+                if not PreCondSubmitEN.wasClicked:
+                    # run callback code when PreCondSubmitEN is clicked
                     pass
-        # take note of whether PreCondSubmit was clicked, so that next frame we know if clicks are new
-        PreCondSubmit.wasClicked = PreCondSubmit.isClicked and PreCondSubmit.status == STARTED
+        # take note of whether PreCondSubmitEN was clicked, so that next frame we know if clicks are new
+        PreCondSubmitEN.wasClicked = PreCondSubmitEN.isClicked and PreCondSubmitEN.status == STARTED
+        # *PreCondSubmitCN* updates
+        
+        # if PreCondSubmitCN is starting this frame...
+        if PreCondSubmitCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            PreCondSubmitCN.frameNStart = frameN  # exact frame index
+            PreCondSubmitCN.tStart = t  # local t and not account for scr refresh
+            PreCondSubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(PreCondSubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'PreCondSubmitCN.started')
+            # update status
+            PreCondSubmitCN.status = STARTED
+            PreCondSubmitCN.setAutoDraw(True)
+        
+        # if PreCondSubmitCN is active this frame...
+        if PreCondSubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether PreCondSubmitCN has been pressed
+            if PreCondSubmitCN.isClicked:
+                if not PreCondSubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    PreCondSubmitCN.timesOn.append(PreCondSubmitCN.buttonClock.getTime())
+                    PreCondSubmitCN.timesOff.append(PreCondSubmitCN.buttonClock.getTime())
+                elif len(PreCondSubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    PreCondSubmitCN.timesOff[-1] = PreCondSubmitCN.buttonClock.getTime()
+                if not PreCondSubmitCN.wasClicked:
+                    # end routine when PreCondSubmitCN is clicked
+                    continueRoutine = False
+                if not PreCondSubmitCN.wasClicked:
+                    # run callback code when PreCondSubmitCN is clicked
+                    pass
+        # take note of whether PreCondSubmitCN was clicked, so that next frame we know if clicks are new
+        PreCondSubmitCN.wasClicked = PreCondSubmitCN.isClicked and PreCondSubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -865,13 +1001,20 @@ for thisPreCondInstText in PreCondInstText:
     PreCondInstText.addData('PreCondMouse.midButton', PreCondMouse.midButton)
     PreCondInstText.addData('PreCondMouse.rightButton', PreCondMouse.rightButton)
     PreCondInstText.addData('PreCondMouse.time', PreCondMouse.time)
-    PreCondInstText.addData('PreCondSubmit.numClicks', PreCondSubmit.numClicks)
-    if PreCondSubmit.numClicks:
-       PreCondInstText.addData('PreCondSubmit.timesOn', PreCondSubmit.timesOn)
-       PreCondInstText.addData('PreCondSubmit.timesOff', PreCondSubmit.timesOff)
+    PreCondInstText.addData('PreCondSubmitEN.numClicks', PreCondSubmitEN.numClicks)
+    if PreCondSubmitEN.numClicks:
+       PreCondInstText.addData('PreCondSubmitEN.timesOn', PreCondSubmitEN.timesOn)
+       PreCondInstText.addData('PreCondSubmitEN.timesOff', PreCondSubmitEN.timesOff)
     else:
-       PreCondInstText.addData('PreCondSubmit.timesOn', "")
-       PreCondInstText.addData('PreCondSubmit.timesOff', "")
+       PreCondInstText.addData('PreCondSubmitEN.timesOn', "")
+       PreCondInstText.addData('PreCondSubmitEN.timesOff', "")
+    PreCondInstText.addData('PreCondSubmitCN.numClicks', PreCondSubmitCN.numClicks)
+    if PreCondSubmitCN.numClicks:
+       PreCondInstText.addData('PreCondSubmitCN.timesOn', PreCondSubmitCN.timesOn)
+       PreCondInstText.addData('PreCondSubmitCN.timesOff', PreCondSubmitCN.timesOff)
+    else:
+       PreCondInstText.addData('PreCondSubmitCN.timesOn', "")
+       PreCondInstText.addData('PreCondSubmitCN.timesOff', "")
     # the Routine "PreCondInst" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1.0 repeats of 'PreCondInstText'
@@ -987,7 +1130,7 @@ for thisPreCond in PreCond:
         # *PreCondTriggMouse* updates
         
         # if PreCondTriggMouse is starting this frame...
-        if PreCondTriggMouse.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if PreCondTriggMouse.status == NOT_STARTED and PreCondName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             PreCondTriggMouse.frameNStart = frameN  # exact frame index
             PreCondTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -1030,7 +1173,7 @@ for thisPreCond in PreCond:
         waitOnFlip = False
         
         # if PreCondTriggKey is starting this frame...
-        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="Stimuli/Trig.BMP":
+        if PreCondTriggKey.status == NOT_STARTED and PreCondName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             PreCondTriggKey.frameNStart = frameN  # exact frame index
             PreCondTriggKey.tStart = t  # local t and not account for scr refresh
@@ -1208,7 +1351,7 @@ PreCond.saveAsExcel(filename + '.xlsx', sheetName='PreCond',
 # set up handler to look after randomisation of conditions etc
 RatingPreCond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingPreCond')
 thisExp.addLoop(RatingPreCond)  # add the loop to the experiment
 thisRatingPreCond = RatingPreCond.trialList[0]  # so we can initialise stimuli with some values
@@ -1242,10 +1385,12 @@ for thisRatingPreCond in RatingPreCond:
     mouse.rightButton = []
     mouse.time = []
     gotValidClick = False  # until a click is received
-    # reset Submit to account for continued clicks & clear times on/off
-    Submit.reset()
+    # reset SubmitEN to account for continued clicks & clear times on/off
+    SubmitEN.reset()
+    # reset SubmitCN to account for continued clicks & clear times on/off
+    SubmitCN.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, SubmitEN, SubmitCN]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1402,42 +1547,78 @@ for thisRatingPreCond in RatingPreCond:
                     mouse.midButton.append(buttons[1])
                     mouse.rightButton.append(buttons[2])
                     mouse.time.append(mouse.mouseClock.getTime())
-        # *Submit* updates
+        # *SubmitEN* updates
         
-        # if Submit is starting this frame...
-        if Submit.status == NOT_STARTED and Scale.rating:
+        # if SubmitEN is starting this frame...
+        if SubmitEN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            Submit.frameNStart = frameN  # exact frame index
-            Submit.tStart = t  # local t and not account for scr refresh
-            Submit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Submit, 'tStartRefresh')  # time at next scr refresh
+            SubmitEN.frameNStart = frameN  # exact frame index
+            SubmitEN.tStart = t  # local t and not account for scr refresh
+            SubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Submit.started')
+            thisExp.timestampOnFlip(win, 'SubmitEN.started')
             # update status
-            Submit.status = STARTED
-            Submit.setAutoDraw(True)
+            SubmitEN.status = STARTED
+            SubmitEN.setAutoDraw(True)
         
-        # if Submit is active this frame...
-        if Submit.status == STARTED:
+        # if SubmitEN is active this frame...
+        if SubmitEN.status == STARTED:
             # update params
             pass
-            # check whether Submit has been pressed
-            if Submit.isClicked:
-                if not Submit.wasClicked:
+            # check whether SubmitEN has been pressed
+            if SubmitEN.isClicked:
+                if not SubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    Submit.timesOn.append(Submit.buttonClock.getTime())
-                    Submit.timesOff.append(Submit.buttonClock.getTime())
-                elif len(Submit.timesOff):
+                    SubmitEN.timesOn.append(SubmitEN.buttonClock.getTime())
+                    SubmitEN.timesOff.append(SubmitEN.buttonClock.getTime())
+                elif len(SubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    Submit.timesOff[-1] = Submit.buttonClock.getTime()
-                if not Submit.wasClicked:
-                    # end routine when Submit is clicked
+                    SubmitEN.timesOff[-1] = SubmitEN.buttonClock.getTime()
+                if not SubmitEN.wasClicked:
+                    # end routine when SubmitEN is clicked
                     continueRoutine = False
-                if not Submit.wasClicked:
-                    # run callback code when Submit is clicked
+                if not SubmitEN.wasClicked:
+                    # run callback code when SubmitEN is clicked
                     pass
-        # take note of whether Submit was clicked, so that next frame we know if clicks are new
-        Submit.wasClicked = Submit.isClicked and Submit.status == STARTED
+        # take note of whether SubmitEN was clicked, so that next frame we know if clicks are new
+        SubmitEN.wasClicked = SubmitEN.isClicked and SubmitEN.status == STARTED
+        # *SubmitCN* updates
+        
+        # if SubmitCN is starting this frame...
+        if SubmitCN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            SubmitCN.frameNStart = frameN  # exact frame index
+            SubmitCN.tStart = t  # local t and not account for scr refresh
+            SubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'SubmitCN.started')
+            # update status
+            SubmitCN.status = STARTED
+            SubmitCN.setAutoDraw(True)
+        
+        # if SubmitCN is active this frame...
+        if SubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether SubmitCN has been pressed
+            if SubmitCN.isClicked:
+                if not SubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    SubmitCN.timesOn.append(SubmitCN.buttonClock.getTime())
+                    SubmitCN.timesOff.append(SubmitCN.buttonClock.getTime())
+                elif len(SubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    SubmitCN.timesOff[-1] = SubmitCN.buttonClock.getTime()
+                if not SubmitCN.wasClicked:
+                    # end routine when SubmitCN is clicked
+                    continueRoutine = False
+                if not SubmitCN.wasClicked:
+                    # run callback code when SubmitCN is clicked
+                    pass
+        # take note of whether SubmitCN was clicked, so that next frame we know if clicks are new
+        SubmitCN.wasClicked = SubmitCN.isClicked and SubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1478,13 +1659,20 @@ for thisRatingPreCond in RatingPreCond:
     RatingPreCond.addData('mouse.midButton', mouse.midButton)
     RatingPreCond.addData('mouse.rightButton', mouse.rightButton)
     RatingPreCond.addData('mouse.time', mouse.time)
-    RatingPreCond.addData('Submit.numClicks', Submit.numClicks)
-    if Submit.numClicks:
-       RatingPreCond.addData('Submit.timesOn', Submit.timesOn)
-       RatingPreCond.addData('Submit.timesOff', Submit.timesOff)
+    RatingPreCond.addData('SubmitEN.numClicks', SubmitEN.numClicks)
+    if SubmitEN.numClicks:
+       RatingPreCond.addData('SubmitEN.timesOn', SubmitEN.timesOn)
+       RatingPreCond.addData('SubmitEN.timesOff', SubmitEN.timesOff)
     else:
-       RatingPreCond.addData('Submit.timesOn', "")
-       RatingPreCond.addData('Submit.timesOff', "")
+       RatingPreCond.addData('SubmitEN.timesOn', "")
+       RatingPreCond.addData('SubmitEN.timesOff', "")
+    RatingPreCond.addData('SubmitCN.numClicks', SubmitCN.numClicks)
+    if SubmitCN.numClicks:
+       RatingPreCond.addData('SubmitCN.timesOn', SubmitCN.timesOn)
+       RatingPreCond.addData('SubmitCN.timesOff', SubmitCN.timesOff)
+    else:
+       RatingPreCond.addData('SubmitCN.timesOn', "")
+       RatingPreCond.addData('SubmitCN.timesOff', "")
     # the Routine "Rating" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -1504,7 +1692,7 @@ RatingPreCond.saveAsExcel(filename + '.xlsx', sheetName='RatingPreCond',
 # set up handler to look after randomisation of conditions etc
 CondInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:5'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='CondInstText')
 thisExp.addLoop(CondInstText)  # add the loop to the experiment
 thisCondInstText = CondInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -1538,10 +1726,12 @@ for thisCondInstText in CondInstText:
     CondMouse.rightButton = []
     CondMouse.time = []
     gotValidClick = False  # until a click is received
-    # reset CondSubmit to account for continued clicks & clear times on/off
-    CondSubmit.reset()
+    # reset CondSubmitEN to account for continued clicks & clear times on/off
+    CondSubmitEN.reset()
+    # reset CondSubmitCN to account for continued clicks & clear times on/off
+    CondSubmitCN.reset()
     # keep track of which components have finished
-    CondInstComponents = [CondImage, CondImageOverview, CondInstEN, CondInstCN, CondRespKey, CondMouse, CondSubmit]
+    CondInstComponents = [CondImage, CondImageOverview, CondInstEN, CondInstCN, CondRespKey, CondMouse, CondSubmitEN, CondSubmitCN]
     for thisComponent in CondInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1698,42 +1888,78 @@ for thisCondInstText in CondInstText:
                     CondMouse.midButton.append(buttons[1])
                     CondMouse.rightButton.append(buttons[2])
                     CondMouse.time.append(CondMouse.mouseClock.getTime())
-        # *CondSubmit* updates
+        # *CondSubmitEN* updates
         
-        # if CondSubmit is starting this frame...
-        if CondSubmit.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if CondSubmitEN is starting this frame...
+        if CondSubmitEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            CondSubmit.frameNStart = frameN  # exact frame index
-            CondSubmit.tStart = t  # local t and not account for scr refresh
-            CondSubmit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(CondSubmit, 'tStartRefresh')  # time at next scr refresh
+            CondSubmitEN.frameNStart = frameN  # exact frame index
+            CondSubmitEN.tStart = t  # local t and not account for scr refresh
+            CondSubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondSubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'CondSubmit.started')
+            thisExp.timestampOnFlip(win, 'CondSubmitEN.started')
             # update status
-            CondSubmit.status = STARTED
-            CondSubmit.setAutoDraw(True)
+            CondSubmitEN.status = STARTED
+            CondSubmitEN.setAutoDraw(True)
         
-        # if CondSubmit is active this frame...
-        if CondSubmit.status == STARTED:
+        # if CondSubmitEN is active this frame...
+        if CondSubmitEN.status == STARTED:
             # update params
             pass
-            # check whether CondSubmit has been pressed
-            if CondSubmit.isClicked:
-                if not CondSubmit.wasClicked:
+            # check whether CondSubmitEN has been pressed
+            if CondSubmitEN.isClicked:
+                if not CondSubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    CondSubmit.timesOn.append(CondSubmit.buttonClock.getTime())
-                    CondSubmit.timesOff.append(CondSubmit.buttonClock.getTime())
-                elif len(CondSubmit.timesOff):
+                    CondSubmitEN.timesOn.append(CondSubmitEN.buttonClock.getTime())
+                    CondSubmitEN.timesOff.append(CondSubmitEN.buttonClock.getTime())
+                elif len(CondSubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    CondSubmit.timesOff[-1] = CondSubmit.buttonClock.getTime()
-                if not CondSubmit.wasClicked:
-                    # end routine when CondSubmit is clicked
+                    CondSubmitEN.timesOff[-1] = CondSubmitEN.buttonClock.getTime()
+                if not CondSubmitEN.wasClicked:
+                    # end routine when CondSubmitEN is clicked
                     continueRoutine = False
-                if not CondSubmit.wasClicked:
-                    # run callback code when CondSubmit is clicked
+                if not CondSubmitEN.wasClicked:
+                    # run callback code when CondSubmitEN is clicked
                     pass
-        # take note of whether CondSubmit was clicked, so that next frame we know if clicks are new
-        CondSubmit.wasClicked = CondSubmit.isClicked and CondSubmit.status == STARTED
+        # take note of whether CondSubmitEN was clicked, so that next frame we know if clicks are new
+        CondSubmitEN.wasClicked = CondSubmitEN.isClicked and CondSubmitEN.status == STARTED
+        # *CondSubmitCN* updates
+        
+        # if CondSubmitCN is starting this frame...
+        if CondSubmitCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            CondSubmitCN.frameNStart = frameN  # exact frame index
+            CondSubmitCN.tStart = t  # local t and not account for scr refresh
+            CondSubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(CondSubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'CondSubmitCN.started')
+            # update status
+            CondSubmitCN.status = STARTED
+            CondSubmitCN.setAutoDraw(True)
+        
+        # if CondSubmitCN is active this frame...
+        if CondSubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether CondSubmitCN has been pressed
+            if CondSubmitCN.isClicked:
+                if not CondSubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    CondSubmitCN.timesOn.append(CondSubmitCN.buttonClock.getTime())
+                    CondSubmitCN.timesOff.append(CondSubmitCN.buttonClock.getTime())
+                elif len(CondSubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    CondSubmitCN.timesOff[-1] = CondSubmitCN.buttonClock.getTime()
+                if not CondSubmitCN.wasClicked:
+                    # end routine when CondSubmitCN is clicked
+                    continueRoutine = False
+                if not CondSubmitCN.wasClicked:
+                    # run callback code when CondSubmitCN is clicked
+                    pass
+        # take note of whether CondSubmitCN was clicked, so that next frame we know if clicks are new
+        CondSubmitCN.wasClicked = CondSubmitCN.isClicked and CondSubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1772,13 +1998,20 @@ for thisCondInstText in CondInstText:
     CondInstText.addData('CondMouse.midButton', CondMouse.midButton)
     CondInstText.addData('CondMouse.rightButton', CondMouse.rightButton)
     CondInstText.addData('CondMouse.time', CondMouse.time)
-    CondInstText.addData('CondSubmit.numClicks', CondSubmit.numClicks)
-    if CondSubmit.numClicks:
-       CondInstText.addData('CondSubmit.timesOn', CondSubmit.timesOn)
-       CondInstText.addData('CondSubmit.timesOff', CondSubmit.timesOff)
+    CondInstText.addData('CondSubmitEN.numClicks', CondSubmitEN.numClicks)
+    if CondSubmitEN.numClicks:
+       CondInstText.addData('CondSubmitEN.timesOn', CondSubmitEN.timesOn)
+       CondInstText.addData('CondSubmitEN.timesOff', CondSubmitEN.timesOff)
     else:
-       CondInstText.addData('CondSubmit.timesOn', "")
-       CondInstText.addData('CondSubmit.timesOff', "")
+       CondInstText.addData('CondSubmitEN.timesOn', "")
+       CondInstText.addData('CondSubmitEN.timesOff', "")
+    CondInstText.addData('CondSubmitCN.numClicks', CondSubmitCN.numClicks)
+    if CondSubmitCN.numClicks:
+       CondInstText.addData('CondSubmitCN.timesOn', CondSubmitCN.timesOn)
+       CondInstText.addData('CondSubmitCN.timesOff', CondSubmitCN.timesOff)
+    else:
+       CondInstText.addData('CondSubmitCN.timesOn', "")
+       CondInstText.addData('CondSubmitCN.timesOff', "")
     # the Routine "CondInst" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1.0 repeats of 'CondInstText'
@@ -1811,7 +2044,7 @@ for thisCond in Cond:
     # If skipPhases is True, end the current routine and break the loop
     if skipPhases:
         continueRoutine = False  # Set continueRoutine to False to end the routine
-        PreCond.finished = True  # Set PreCond.finished to True to break the loop
+        Cond.finished = True  # Set Cond.finished to True to break the loop
     
     # If parallelTrigger is True, perform parallel triggering
     if parallelTrigger:
@@ -1894,7 +2127,7 @@ for thisCond in Cond:
         # *CondTriggMouse* updates
         
         # if CondTriggMouse is starting this frame...
-        if CondTriggMouse.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
+        if CondTriggMouse.status == NOT_STARTED and CSName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggMouse.frameNStart = frameN  # exact frame index
             CondTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -1937,7 +2170,7 @@ for thisCond in Cond:
         waitOnFlip = False
         
         # if CondTriggKey is starting this frame...
-        if CondTriggKey.status == NOT_STARTED and CSName=="Stimuli/Trig.BMP":
+        if CondTriggKey.status == NOT_STARTED and CSName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             CondTriggKey.frameNStart = frameN  # exact frame index
             CondTriggKey.tStart = t  # local t and not account for scr refresh
@@ -2268,7 +2501,7 @@ Cond.saveAsExcel(filename + '.xlsx', sheetName='Cond',
 # set up handler to look after randomisation of conditions etc
 RatingCond = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingCond')
 thisExp.addLoop(RatingCond)  # add the loop to the experiment
 thisRatingCond = RatingCond.trialList[0]  # so we can initialise stimuli with some values
@@ -2302,10 +2535,12 @@ for thisRatingCond in RatingCond:
     mouse.rightButton = []
     mouse.time = []
     gotValidClick = False  # until a click is received
-    # reset Submit to account for continued clicks & clear times on/off
-    Submit.reset()
+    # reset SubmitEN to account for continued clicks & clear times on/off
+    SubmitEN.reset()
+    # reset SubmitCN to account for continued clicks & clear times on/off
+    SubmitCN.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, SubmitEN, SubmitCN]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2462,42 +2697,78 @@ for thisRatingCond in RatingCond:
                     mouse.midButton.append(buttons[1])
                     mouse.rightButton.append(buttons[2])
                     mouse.time.append(mouse.mouseClock.getTime())
-        # *Submit* updates
+        # *SubmitEN* updates
         
-        # if Submit is starting this frame...
-        if Submit.status == NOT_STARTED and Scale.rating:
+        # if SubmitEN is starting this frame...
+        if SubmitEN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            Submit.frameNStart = frameN  # exact frame index
-            Submit.tStart = t  # local t and not account for scr refresh
-            Submit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Submit, 'tStartRefresh')  # time at next scr refresh
+            SubmitEN.frameNStart = frameN  # exact frame index
+            SubmitEN.tStart = t  # local t and not account for scr refresh
+            SubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Submit.started')
+            thisExp.timestampOnFlip(win, 'SubmitEN.started')
             # update status
-            Submit.status = STARTED
-            Submit.setAutoDraw(True)
+            SubmitEN.status = STARTED
+            SubmitEN.setAutoDraw(True)
         
-        # if Submit is active this frame...
-        if Submit.status == STARTED:
+        # if SubmitEN is active this frame...
+        if SubmitEN.status == STARTED:
             # update params
             pass
-            # check whether Submit has been pressed
-            if Submit.isClicked:
-                if not Submit.wasClicked:
+            # check whether SubmitEN has been pressed
+            if SubmitEN.isClicked:
+                if not SubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    Submit.timesOn.append(Submit.buttonClock.getTime())
-                    Submit.timesOff.append(Submit.buttonClock.getTime())
-                elif len(Submit.timesOff):
+                    SubmitEN.timesOn.append(SubmitEN.buttonClock.getTime())
+                    SubmitEN.timesOff.append(SubmitEN.buttonClock.getTime())
+                elif len(SubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    Submit.timesOff[-1] = Submit.buttonClock.getTime()
-                if not Submit.wasClicked:
-                    # end routine when Submit is clicked
+                    SubmitEN.timesOff[-1] = SubmitEN.buttonClock.getTime()
+                if not SubmitEN.wasClicked:
+                    # end routine when SubmitEN is clicked
                     continueRoutine = False
-                if not Submit.wasClicked:
-                    # run callback code when Submit is clicked
+                if not SubmitEN.wasClicked:
+                    # run callback code when SubmitEN is clicked
                     pass
-        # take note of whether Submit was clicked, so that next frame we know if clicks are new
-        Submit.wasClicked = Submit.isClicked and Submit.status == STARTED
+        # take note of whether SubmitEN was clicked, so that next frame we know if clicks are new
+        SubmitEN.wasClicked = SubmitEN.isClicked and SubmitEN.status == STARTED
+        # *SubmitCN* updates
+        
+        # if SubmitCN is starting this frame...
+        if SubmitCN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            SubmitCN.frameNStart = frameN  # exact frame index
+            SubmitCN.tStart = t  # local t and not account for scr refresh
+            SubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'SubmitCN.started')
+            # update status
+            SubmitCN.status = STARTED
+            SubmitCN.setAutoDraw(True)
+        
+        # if SubmitCN is active this frame...
+        if SubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether SubmitCN has been pressed
+            if SubmitCN.isClicked:
+                if not SubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    SubmitCN.timesOn.append(SubmitCN.buttonClock.getTime())
+                    SubmitCN.timesOff.append(SubmitCN.buttonClock.getTime())
+                elif len(SubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    SubmitCN.timesOff[-1] = SubmitCN.buttonClock.getTime()
+                if not SubmitCN.wasClicked:
+                    # end routine when SubmitCN is clicked
+                    continueRoutine = False
+                if not SubmitCN.wasClicked:
+                    # run callback code when SubmitCN is clicked
+                    pass
+        # take note of whether SubmitCN was clicked, so that next frame we know if clicks are new
+        SubmitCN.wasClicked = SubmitCN.isClicked and SubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2538,13 +2809,20 @@ for thisRatingCond in RatingCond:
     RatingCond.addData('mouse.midButton', mouse.midButton)
     RatingCond.addData('mouse.rightButton', mouse.rightButton)
     RatingCond.addData('mouse.time', mouse.time)
-    RatingCond.addData('Submit.numClicks', Submit.numClicks)
-    if Submit.numClicks:
-       RatingCond.addData('Submit.timesOn', Submit.timesOn)
-       RatingCond.addData('Submit.timesOff', Submit.timesOff)
+    RatingCond.addData('SubmitEN.numClicks', SubmitEN.numClicks)
+    if SubmitEN.numClicks:
+       RatingCond.addData('SubmitEN.timesOn', SubmitEN.timesOn)
+       RatingCond.addData('SubmitEN.timesOff', SubmitEN.timesOff)
     else:
-       RatingCond.addData('Submit.timesOn', "")
-       RatingCond.addData('Submit.timesOff', "")
+       RatingCond.addData('SubmitEN.timesOn', "")
+       RatingCond.addData('SubmitEN.timesOff', "")
+    RatingCond.addData('SubmitCN.numClicks', SubmitCN.numClicks)
+    if SubmitCN.numClicks:
+       RatingCond.addData('SubmitCN.timesOn', SubmitCN.timesOn)
+       RatingCond.addData('SubmitCN.timesOff', SubmitCN.timesOff)
+    else:
+       RatingCond.addData('SubmitCN.timesOn', "")
+       RatingCond.addData('SubmitCN.timesOff', "")
     # the Routine "Rating" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -2564,7 +2842,7 @@ RatingCond.saveAsExcel(filename + '.xlsx', sheetName='RatingCond',
 # set up handler to look after randomisation of conditions etc
 ExtInstText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:6'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:5'),
     seed=None, name='ExtInstText')
 thisExp.addLoop(ExtInstText)  # add the loop to the experiment
 thisExtInstText = ExtInstText.trialList[0]  # so we can initialise stimuli with some values
@@ -2598,10 +2876,12 @@ for thisExtInstText in ExtInstText:
     ExtMouse.rightButton = []
     ExtMouse.time = []
     gotValidClick = False  # until a click is received
-    # reset ExtSubmit to account for continued clicks & clear times on/off
-    ExtSubmit.reset()
+    # reset ExtSubmitEN to account for continued clicks & clear times on/off
+    ExtSubmitEN.reset()
+    # reset ExtSubmitCN to account for continued clicks & clear times on/off
+    ExtSubmitCN.reset()
     # keep track of which components have finished
-    ExtInstComponents = [ExtImage, ExtImageOverview, ExtInstEN, ExtInstCN, ExtRespKey, ExtMouse, ExtSubmit]
+    ExtInstComponents = [ExtImage, ExtImageOverview, ExtInstEN, ExtInstCN, ExtRespKey, ExtMouse, ExtSubmitEN, ExtSubmitCN]
     for thisComponent in ExtInstComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2758,42 +3038,78 @@ for thisExtInstText in ExtInstText:
                     ExtMouse.midButton.append(buttons[1])
                     ExtMouse.rightButton.append(buttons[2])
                     ExtMouse.time.append(ExtMouse.mouseClock.getTime())
-        # *ExtSubmit* updates
+        # *ExtSubmitEN* updates
         
-        # if ExtSubmit is starting this frame...
-        if ExtSubmit.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+        # if ExtSubmitEN is starting this frame...
+        if ExtSubmitEN.status == NOT_STARTED and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            ExtSubmit.frameNStart = frameN  # exact frame index
-            ExtSubmit.tStart = t  # local t and not account for scr refresh
-            ExtSubmit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ExtSubmit, 'tStartRefresh')  # time at next scr refresh
+            ExtSubmitEN.frameNStart = frameN  # exact frame index
+            ExtSubmitEN.tStart = t  # local t and not account for scr refresh
+            ExtSubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtSubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ExtSubmit.started')
+            thisExp.timestampOnFlip(win, 'ExtSubmitEN.started')
             # update status
-            ExtSubmit.status = STARTED
-            ExtSubmit.setAutoDraw(True)
+            ExtSubmitEN.status = STARTED
+            ExtSubmitEN.setAutoDraw(True)
         
-        # if ExtSubmit is active this frame...
-        if ExtSubmit.status == STARTED:
+        # if ExtSubmitEN is active this frame...
+        if ExtSubmitEN.status == STARTED:
             # update params
             pass
-            # check whether ExtSubmit has been pressed
-            if ExtSubmit.isClicked:
-                if not ExtSubmit.wasClicked:
+            # check whether ExtSubmitEN has been pressed
+            if ExtSubmitEN.isClicked:
+                if not ExtSubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    ExtSubmit.timesOn.append(ExtSubmit.buttonClock.getTime())
-                    ExtSubmit.timesOff.append(ExtSubmit.buttonClock.getTime())
-                elif len(ExtSubmit.timesOff):
+                    ExtSubmitEN.timesOn.append(ExtSubmitEN.buttonClock.getTime())
+                    ExtSubmitEN.timesOff.append(ExtSubmitEN.buttonClock.getTime())
+                elif len(ExtSubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    ExtSubmit.timesOff[-1] = ExtSubmit.buttonClock.getTime()
-                if not ExtSubmit.wasClicked:
-                    # end routine when ExtSubmit is clicked
+                    ExtSubmitEN.timesOff[-1] = ExtSubmitEN.buttonClock.getTime()
+                if not ExtSubmitEN.wasClicked:
+                    # end routine when ExtSubmitEN is clicked
                     continueRoutine = False
-                if not ExtSubmit.wasClicked:
-                    # run callback code when ExtSubmit is clicked
+                if not ExtSubmitEN.wasClicked:
+                    # run callback code when ExtSubmitEN is clicked
                     pass
-        # take note of whether ExtSubmit was clicked, so that next frame we know if clicks are new
-        ExtSubmit.wasClicked = ExtSubmit.isClicked and ExtSubmit.status == STARTED
+        # take note of whether ExtSubmitEN was clicked, so that next frame we know if clicks are new
+        ExtSubmitEN.wasClicked = ExtSubmitEN.isClicked and ExtSubmitEN.status == STARTED
+        # *ExtSubmitCN* updates
+        
+        # if ExtSubmitCN is starting this frame...
+        if ExtSubmitCN.status == NOT_STARTED and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            ExtSubmitCN.frameNStart = frameN  # exact frame index
+            ExtSubmitCN.tStart = t  # local t and not account for scr refresh
+            ExtSubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExtSubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ExtSubmitCN.started')
+            # update status
+            ExtSubmitCN.status = STARTED
+            ExtSubmitCN.setAutoDraw(True)
+        
+        # if ExtSubmitCN is active this frame...
+        if ExtSubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether ExtSubmitCN has been pressed
+            if ExtSubmitCN.isClicked:
+                if not ExtSubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    ExtSubmitCN.timesOn.append(ExtSubmitCN.buttonClock.getTime())
+                    ExtSubmitCN.timesOff.append(ExtSubmitCN.buttonClock.getTime())
+                elif len(ExtSubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    ExtSubmitCN.timesOff[-1] = ExtSubmitCN.buttonClock.getTime()
+                if not ExtSubmitCN.wasClicked:
+                    # end routine when ExtSubmitCN is clicked
+                    continueRoutine = False
+                if not ExtSubmitCN.wasClicked:
+                    # run callback code when ExtSubmitCN is clicked
+                    pass
+        # take note of whether ExtSubmitCN was clicked, so that next frame we know if clicks are new
+        ExtSubmitCN.wasClicked = ExtSubmitCN.isClicked and ExtSubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2832,13 +3148,20 @@ for thisExtInstText in ExtInstText:
     ExtInstText.addData('ExtMouse.midButton', ExtMouse.midButton)
     ExtInstText.addData('ExtMouse.rightButton', ExtMouse.rightButton)
     ExtInstText.addData('ExtMouse.time', ExtMouse.time)
-    ExtInstText.addData('ExtSubmit.numClicks', ExtSubmit.numClicks)
-    if ExtSubmit.numClicks:
-       ExtInstText.addData('ExtSubmit.timesOn', ExtSubmit.timesOn)
-       ExtInstText.addData('ExtSubmit.timesOff', ExtSubmit.timesOff)
+    ExtInstText.addData('ExtSubmitEN.numClicks', ExtSubmitEN.numClicks)
+    if ExtSubmitEN.numClicks:
+       ExtInstText.addData('ExtSubmitEN.timesOn', ExtSubmitEN.timesOn)
+       ExtInstText.addData('ExtSubmitEN.timesOff', ExtSubmitEN.timesOff)
     else:
-       ExtInstText.addData('ExtSubmit.timesOn', "")
-       ExtInstText.addData('ExtSubmit.timesOff', "")
+       ExtInstText.addData('ExtSubmitEN.timesOn', "")
+       ExtInstText.addData('ExtSubmitEN.timesOff', "")
+    ExtInstText.addData('ExtSubmitCN.numClicks', ExtSubmitCN.numClicks)
+    if ExtSubmitCN.numClicks:
+       ExtInstText.addData('ExtSubmitCN.timesOn', ExtSubmitCN.timesOn)
+       ExtInstText.addData('ExtSubmitCN.timesOff', ExtSubmitCN.timesOff)
+    else:
+       ExtInstText.addData('ExtSubmitCN.timesOn', "")
+       ExtInstText.addData('ExtSubmitCN.timesOff', "")
     # the Routine "ExtInst" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1.0 repeats of 'ExtInstText'
@@ -2871,7 +3194,7 @@ for thisExt in Ext:
     # If skipPhases is True, end the current routine and break the loop
     if skipPhases:
         continueRoutine = False  # Set continueRoutine to False to end the routine
-        PreCond.finished = True  # Set PreCond.finished to True to break the loop
+        Ext.finished = True  # Set PreCond.finished to True to break the loop
     
     # If parallelTrigger is True, perform parallel triggering
     if parallelTrigger:
@@ -2954,7 +3277,7 @@ for thisExt in Ext:
         # *ExtTriggMouse* updates
         
         # if ExtTriggMouse is starting this frame...
-        if ExtTriggMouse.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
+        if ExtTriggMouse.status == NOT_STARTED and ExtName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggMouse.frameNStart = frameN  # exact frame index
             ExtTriggMouse.tStart = t  # local t and not account for scr refresh
@@ -2997,7 +3320,7 @@ for thisExt in Ext:
         waitOnFlip = False
         
         # if ExtTriggKey is starting this frame...
-        if ExtTriggKey.status == NOT_STARTED and ExtName=="Stimuli/Trig.BMP":
+        if ExtTriggKey.status == NOT_STARTED and ExtName=="stimuli/Trig.BMP":
             # keep track of start time/frame for later
             ExtTriggKey.frameNStart = frameN  # exact frame index
             ExtTriggKey.tStart = t  # local t and not account for scr refresh
@@ -3175,7 +3498,7 @@ Ext.saveAsExcel(filename + '.xlsx', sheetName='Ext',
 # set up handler to look after randomisation of conditions etc
 RatingExt = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('4_Rating.xlsx'),
+    trialList=data.importConditions('schedules/4_Rating.xlsx'),
     seed=None, name='RatingExt')
 thisExp.addLoop(RatingExt)  # add the loop to the experiment
 thisRatingExt = RatingExt.trialList[0]  # so we can initialise stimuli with some values
@@ -3209,10 +3532,12 @@ for thisRatingExt in RatingExt:
     mouse.rightButton = []
     mouse.time = []
     gotValidClick = False  # until a click is received
-    # reset Submit to account for continued clicks & clear times on/off
-    Submit.reset()
+    # reset SubmitEN to account for continued clicks & clear times on/off
+    SubmitEN.reset()
+    # reset SubmitCN to account for continued clicks & clear times on/off
+    SubmitCN.reset()
     # keep track of which components have finished
-    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, Submit]
+    RatingComponents = [image, RatingInstEN, RatingInstCN, Scale, RatingKey, mouse, SubmitEN, SubmitCN]
     for thisComponent in RatingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3369,42 +3694,78 @@ for thisRatingExt in RatingExt:
                     mouse.midButton.append(buttons[1])
                     mouse.rightButton.append(buttons[2])
                     mouse.time.append(mouse.mouseClock.getTime())
-        # *Submit* updates
+        # *SubmitEN* updates
         
-        # if Submit is starting this frame...
-        if Submit.status == NOT_STARTED and Scale.rating:
+        # if SubmitEN is starting this frame...
+        if SubmitEN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'EN':
             # keep track of start time/frame for later
-            Submit.frameNStart = frameN  # exact frame index
-            Submit.tStart = t  # local t and not account for scr refresh
-            Submit.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Submit, 'tStartRefresh')  # time at next scr refresh
+            SubmitEN.frameNStart = frameN  # exact frame index
+            SubmitEN.tStart = t  # local t and not account for scr refresh
+            SubmitEN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitEN, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Submit.started')
+            thisExp.timestampOnFlip(win, 'SubmitEN.started')
             # update status
-            Submit.status = STARTED
-            Submit.setAutoDraw(True)
+            SubmitEN.status = STARTED
+            SubmitEN.setAutoDraw(True)
         
-        # if Submit is active this frame...
-        if Submit.status == STARTED:
+        # if SubmitEN is active this frame...
+        if SubmitEN.status == STARTED:
             # update params
             pass
-            # check whether Submit has been pressed
-            if Submit.isClicked:
-                if not Submit.wasClicked:
+            # check whether SubmitEN has been pressed
+            if SubmitEN.isClicked:
+                if not SubmitEN.wasClicked:
                     # if this is a new click, store time of first click and clicked until
-                    Submit.timesOn.append(Submit.buttonClock.getTime())
-                    Submit.timesOff.append(Submit.buttonClock.getTime())
-                elif len(Submit.timesOff):
+                    SubmitEN.timesOn.append(SubmitEN.buttonClock.getTime())
+                    SubmitEN.timesOff.append(SubmitEN.buttonClock.getTime())
+                elif len(SubmitEN.timesOff):
                     # if click is continuing from last frame, update time of clicked until
-                    Submit.timesOff[-1] = Submit.buttonClock.getTime()
-                if not Submit.wasClicked:
-                    # end routine when Submit is clicked
+                    SubmitEN.timesOff[-1] = SubmitEN.buttonClock.getTime()
+                if not SubmitEN.wasClicked:
+                    # end routine when SubmitEN is clicked
                     continueRoutine = False
-                if not Submit.wasClicked:
-                    # run callback code when Submit is clicked
+                if not SubmitEN.wasClicked:
+                    # run callback code when SubmitEN is clicked
                     pass
-        # take note of whether Submit was clicked, so that next frame we know if clicks are new
-        Submit.wasClicked = Submit.isClicked and Submit.status == STARTED
+        # take note of whether SubmitEN was clicked, so that next frame we know if clicks are new
+        SubmitEN.wasClicked = SubmitEN.isClicked and SubmitEN.status == STARTED
+        # *SubmitCN* updates
+        
+        # if SubmitCN is starting this frame...
+        if SubmitCN.status == NOT_STARTED and Scale.rating and expInfo['Language'] == 'CN':
+            # keep track of start time/frame for later
+            SubmitCN.frameNStart = frameN  # exact frame index
+            SubmitCN.tStart = t  # local t and not account for scr refresh
+            SubmitCN.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(SubmitCN, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'SubmitCN.started')
+            # update status
+            SubmitCN.status = STARTED
+            SubmitCN.setAutoDraw(True)
+        
+        # if SubmitCN is active this frame...
+        if SubmitCN.status == STARTED:
+            # update params
+            pass
+            # check whether SubmitCN has been pressed
+            if SubmitCN.isClicked:
+                if not SubmitCN.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    SubmitCN.timesOn.append(SubmitCN.buttonClock.getTime())
+                    SubmitCN.timesOff.append(SubmitCN.buttonClock.getTime())
+                elif len(SubmitCN.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    SubmitCN.timesOff[-1] = SubmitCN.buttonClock.getTime()
+                if not SubmitCN.wasClicked:
+                    # end routine when SubmitCN is clicked
+                    continueRoutine = False
+                if not SubmitCN.wasClicked:
+                    # run callback code when SubmitCN is clicked
+                    pass
+        # take note of whether SubmitCN was clicked, so that next frame we know if clicks are new
+        SubmitCN.wasClicked = SubmitCN.isClicked and SubmitCN.status == STARTED
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3445,13 +3806,20 @@ for thisRatingExt in RatingExt:
     RatingExt.addData('mouse.midButton', mouse.midButton)
     RatingExt.addData('mouse.rightButton', mouse.rightButton)
     RatingExt.addData('mouse.time', mouse.time)
-    RatingExt.addData('Submit.numClicks', Submit.numClicks)
-    if Submit.numClicks:
-       RatingExt.addData('Submit.timesOn', Submit.timesOn)
-       RatingExt.addData('Submit.timesOff', Submit.timesOff)
+    RatingExt.addData('SubmitEN.numClicks', SubmitEN.numClicks)
+    if SubmitEN.numClicks:
+       RatingExt.addData('SubmitEN.timesOn', SubmitEN.timesOn)
+       RatingExt.addData('SubmitEN.timesOff', SubmitEN.timesOff)
     else:
-       RatingExt.addData('Submit.timesOn', "")
-       RatingExt.addData('Submit.timesOff', "")
+       RatingExt.addData('SubmitEN.timesOn', "")
+       RatingExt.addData('SubmitEN.timesOff', "")
+    RatingExt.addData('SubmitCN.numClicks', SubmitCN.numClicks)
+    if SubmitCN.numClicks:
+       RatingExt.addData('SubmitCN.timesOn', SubmitCN.timesOn)
+       RatingExt.addData('SubmitCN.timesOff', SubmitCN.timesOff)
+    else:
+       RatingExt.addData('SubmitCN.timesOn', "")
+       RatingExt.addData('SubmitCN.timesOff', "")
     # the Routine "Rating" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -3471,7 +3839,7 @@ RatingExt.saveAsExcel(filename + '.xlsx', sheetName='RatingExt',
 # set up handler to look after randomisation of conditions etc
 EndText = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('0_Instructions.xlsx', selection='0:1'),
+    trialList=data.importConditions('schedules/0_Instructions.xlsx', selection='0:1'),
     seed=None, name='EndText')
 thisExp.addLoop(EndText)  # add the loop to the experiment
 thisEndText = EndText.trialList[0]  # so we can initialise stimuli with some values
