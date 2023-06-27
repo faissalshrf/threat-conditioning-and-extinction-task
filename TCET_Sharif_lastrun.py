@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.1),
-    on June 15, 2023, at 18:54
+    on June 28, 2023, at 00:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -109,7 +109,7 @@ if expInfo['Version'] == 'Short':
 # Print the schedule files being used
 print("Schedule files used:", schedule_files)
 
-skipPhases = False  # Flag to determine if phases should be skipped (only show instructions and ratings)
+skipPhases = True  # Flag to determine if phases should be skipped (only show instructions and ratings)
 
 parallelTrigger = False  # Flag to determine if parallel triggering is enabled
 lfpTrigger = False  # Flag to determine if LFP parallel triggering (for Jingyu device) is enabled
@@ -752,7 +752,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondImage* updates
         
         # if PreCondImage is starting this frame...
-        if PreCondImage.status == NOT_STARTED and PreCondInstTextImage=="Stimuli/Raw_Trig.BMP":
+        if PreCondImage.status == NOT_STARTED and PreCondInstTextImage=="stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             PreCondImage.frameNStart = frameN  # exact frame index
             PreCondImage.tStart = t  # local t and not account for scr refresh
@@ -772,7 +772,7 @@ for thisPreCondInstText in PreCondInstText:
         # *PreCondImageOverview* updates
         
         # if PreCondImageOverview is starting this frame...
-        if PreCondImageOverview.status == NOT_STARTED and PreCondInstTextImage=="Stimuli/Raw_3Faces.BMP":
+        if PreCondImageOverview.status == NOT_STARTED and PreCondInstTextImage=="stimuli/Raw_3Faces.BMP":
             # keep track of start time/frame for later
             PreCondImageOverview.frameNStart = frameN  # exact frame index
             PreCondImageOverview.tStart = t  # local t and not account for scr refresh
@@ -1749,7 +1749,7 @@ for thisCondInstText in CondInstText:
         # *CondImage* updates
         
         # if CondImage is starting this frame...
-        if CondImage.status == NOT_STARTED and CondInstTextImage=="Stimuli/Raw_Trig.BMP":
+        if CondImage.status == NOT_STARTED and CondInstTextImage=="stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             CondImage.frameNStart = frameN  # exact frame index
             CondImage.tStart = t  # local t and not account for scr refresh
@@ -1769,7 +1769,7 @@ for thisCondInstText in CondInstText:
         # *CondImageOverview* updates
         
         # if CondImageOverview is starting this frame...
-        if CondImageOverview.status == NOT_STARTED and CondInstTextImage=="Stimuli/Raw_3Faces.BMP":
+        if CondImageOverview.status == NOT_STARTED and CondInstTextImage=="stimuli/Raw_3Faces.BMP":
             # keep track of start time/frame for later
             CondImageOverview.frameNStart = frameN  # exact frame index
             CondImageOverview.tStart = t  # local t and not account for scr refresh
@@ -2899,7 +2899,7 @@ for thisExtInstText in ExtInstText:
         # *ExtImage* updates
         
         # if ExtImage is starting this frame...
-        if ExtImage.status == NOT_STARTED and ExtInstTextImage=="Stimuli/Raw_Trig.BMP":
+        if ExtImage.status == NOT_STARTED and ExtInstTextImage=="stimuli/Raw_Trig.BMP":
             # keep track of start time/frame for later
             ExtImage.frameNStart = frameN  # exact frame index
             ExtImage.tStart = t  # local t and not account for scr refresh
@@ -2919,7 +2919,7 @@ for thisExtInstText in ExtInstText:
         # *ExtImageOverview* updates
         
         # if ExtImageOverview is starting this frame...
-        if ExtImageOverview.status == NOT_STARTED and ExtInstTextImage=="Stimuli/Raw_3Faces.BMP":
+        if ExtImageOverview.status == NOT_STARTED and ExtInstTextImage=="stimuli/Raw_3Faces.BMP":
             # keep track of start time/frame for later
             ExtImageOverview.frameNStart = frameN  # exact frame index
             ExtImageOverview.tStart = t  # local t and not account for scr refresh
