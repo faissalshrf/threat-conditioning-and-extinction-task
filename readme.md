@@ -3,6 +3,18 @@
 ## Overview
 The Threat Conditioning and Extinction Task (TCET) is a three-phase task designed to assess participants' emotional responses to faces during **Preconditioning**, **Conditioning**, and **Extinction** phases. Faces are displayed, and participants rate their emotional response to the faces on a scale from negative to positive. In the conditioning phase, a subset of faces are paired with an unconditioned stimulus (UCS), either a negative scream or a positive laugh, presented with an 80% likelihood.
 
+</br></br>
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0c5b17d5-78f3-4c85-8a23-9f83e9219044" alt="figureTCET-1" height="300"/>
+  <img src="https://github.com/user-attachments/assets/df76a93d-ab5c-4d98-9ded-1c0592c21e54" alt="Screenshot 2023-06-28" height="300"/>
+</p>
+
+</br>
+
+
+
 ## Phases Breakdown
 1. **Preconditioning Phase**:
     - Neutral faces are shown without any emotional expressions.
